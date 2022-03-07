@@ -1,0 +1,1770 @@
+/src/tsommerfeld/qchem/exe/qcprog.exe .input1.442424.847.qcin.1 /src/jdavis/qchem.scratch/qchem847/
+
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 5.4 (devel), Q-Chem, Inc., Pleasanton, CA (2021)
+
+ E. Epifanovsky,  A. T. B. Gilbert,  Xintian Feng,  Joonho Lee,  Yuezhi Mao,  
+ N. Mardirossian,  P. Pokhilko,  A. White,  M. Wormit,  M. P. Coons,  
+ A. L. Dempwolff,  Zhengting Gan,  D. Hait,  P. R. Horn,  L. D. Jacobson,  
+ I. Kaliman,  J. Kussmann,  A. W. Lange,  Ka Un Lao,  D. S. Levine,  Jie Liu,  
+ S. C. McKenzie,  A. F. Morrison,  K. Nanda,  F. Plasser,  D. R. Rehn,  
+ M. L. Vidal,  Zhi-Qiang You,  Ying Zhu,  B. Alam,  B. Albrecht,  
+ A. Aldossary,  E. Alguire,  J. H. Andersen,  D. Barton,  K. Begam,  A. Behn,  
+ Y. A. Bernard,  E. J. Berquist,  H. Burton,  A. Carreras,  K. Carter-Fenk,  
+ R. Chakraborty,  A. D. Chien,  K. D. Closser,  V. Cofer-Shabica,  
+ S. Dasgupta,  Jia Deng,  M. de Wergifosse,  M. Diedenhofen,  Hainam Do,  
+ S. Ehlert,  Po-Tung Fang,  S. Fatehi,  Qingguo Feng,  T. Friedhoff,  
+ J. Gayvert,  Qinghui Ge,  G. Gidofalvi,  M. Goldey,  J. Gomes,  
+ C. Gonzalez-Espinoza,  S. Gulania,  A. Gunina,  M. W. D. Hanson-Heine,  
+ P. H. P. Harbach,  A. W. Hauser,  M. F. Herbst,  M. Hernandez Vera,  
+ M. Hodecker,  Z. C. Holden,  S. Houck,  Xunkun Huang,  Kerwin Hui,  
+ B. C. Huynh,  M. Ivanov,  Hyunjun Ji,  Hanjie Jiang,  B. Kaduk,  S. Kaehler,  
+ K. Khistyaev,  Jaehoon Kim,  P. Klunzinger,  Z. Koczor-Benda,  
+ Joong Hoon Koh,  D. Kosenkov,  L. Koulias,  T. Kowalczyk,  C. M. Krauter,  
+ K. Kue,  A. Kunitsa,  T. Kus,  A. Landau,  K. V. Lawler,  D. Lefrancois,  
+ S. Lehtola,  Rain Li,  Yi-Pei Li,  Jiashu Liang,  M. Liebenthal,  
+ Hung-Hsuan Lin,  You-Sheng Lin,  Fenglai Liu,  Kuan-Yu Liu,  
+ M. Loipersberger,  A. Luenser,  A. Manjanath,  P. Manohar,  E. Mansoor,  
+ S. F. Manzer,  Shan-Ping Mao,  A. V. Marenich,  T. Markovich,  S. Mason,  
+ S. A. Maurer,  P. F. McLaughlin,  M. F. S. J. Menger,  J.-M. Mewes,  
+ S. A. Mewes,  P. Morgante,  J. W. Mullinax,  K. J. Oosterbaan,  G. Paran,  
+ Alexander C. Paul,  Suranjan K. Paul,  F. Pavosevic,  Zheng Pei,  S. Prager,  
+ E. I. Proynov,  E. Ramos,  B. Rana,  A. E. Rask,  A. Rettig,  R. M. Richard,  
+ F. Rob,  E. Rossomme,  T. Scheele,  M. Scheurer,  M. Schneider,  
+ N. Sergueev,  S. M. Sharada,  W. Skomorowski,  D. W. Small,  C. J. Stein,  
+ Yu-Chuan Su,  E. J. Sundstrom,  Zhen Tao,  J. Thirman,  T. Tsuchimochi,  
+ N. M. Tubman,  S. P. Veccham,  O. Vydrov,  J. Wenzel,  J. Witte,  A. Yamada,  
+ Kun Yao,  S. Yeganeh,  S. R. Yost,  A. Zech,  Igor Ying Zhang,  Xing Zhang,  
+ Yu Zhang,  D. Zuev,  A. Aspuru-Guzik,  A. T. Bell,  N. A. Besley,  
+ K. B. Bravaya,  B. R. Brooks,  D. Casanova,  Jeng-Da Chai,  S. Coriani,  
+ C. J. Cramer,  A. E. DePrince, III,  R. A. DiStasio Jr.,  A. Dreuw,  
+ B. D. Dunietz,  T. R. Furlani,  W. A. Goddard III,  S. Grimme,  
+ S. Hammes-Schiffer,  T. Head-Gordon,  W. J. Hehre,  Chao-Ping Hsu,  
+ T.-C. Jagau,  Yousung Jung,  A. Klamt,  Jing Kong,  D. S. Lambrecht,  
+ WanZhen Liang,  N. J. Mayhall,  C. W. McCurdy,  J. B. Neaton,  
+ C. Ochsenfeld,  J. A. Parkhill,  R. Peverati,  V. A. Rassolov,  Yihan Shao,  
+ L. V. Slipchenko,  T. Stauch,  R. P. Steele,  J. E. Subotnik,  
+ A. J. W. Thom,  A. Tkatchenko,  D. G. Truhlar,  T. Van Voorhis,  
+ T. A. Wesolowski,  K. B. Whaley,  H. L. Woodcock III,  P. M. Zimmerman,  
+ S. Faraji,  P. M. W. Gill,  M. Head-Gordon,  J. M. Herbert,  A. I. Krylov
+
+ Additional authors for Version 5.4.1: 
+ S. Kotaru,  Shaozhi Li,  Xiangyuan Li,  F. Matz,  A. Molle,  Haisheng Ren,  
+ Yingli Su,  Hung-Yi Tsai,  C. Utku,  Fang Wang
+
+ Contributors to earlier versions of Q-Chem not listed above: 
+ R. D. Adamson,  B. Austin,  R. Baer,  J. Baker,  G. J. O. Beran,  
+ K. Brandhorst,  S. T. Brown,  E. F. C. Byrd,  A. K. Chakraborty,  
+ G. K. L. Chan,  Chun-Min Chang,  Yunqing Chen,  C.-L. Cheng,  
+ Siu Hung Chien,  D. M. Chipman,  D. L. Crittenden,  H. Dachsel,  
+ R. J. Doerksen,  A. D. Dutoi,  R. G. Edgar,  J. Fosso-Tande,  
+ L. Fusti-Molnar,  D. Ghosh,  A. Ghysels,  A. Golubeva-Zadorozhnaya,  
+ J. Gonthier,  M. S. Gordon,  S. R. Gwaltney,  G. Hawkins,  J. E. Herr,  
+ A. Heyden,  S. Hirata,  E. G. Hohenstein,  G. Kedziora,  F. J. Keil,  
+ C. Kelley,  Jihan Kim,  R. A. King,  R. Z. Khaliullin,  P. P. Korambath,  
+ W. Kurlancheek,  A. Laurent,  A. M. Lee,  M. S. Lee,  S. V. Levchenko,  
+ Ching Yeh Lin,  D. Liotard,  E. Livshits,  R. C. Lochan,  I. Lotan,  
+ L. A. Martinez-Martinez,  P. E. Maslen,  N. Nair,  D. P. O'Neill,  
+ D. Neuhauser,  E. Neuscamman,  C. M. Oana,  R. Olivares-Amaya,  R. Olson,  
+ T. M. Perrine,  B. Peters,  P. A. Pieniazek,  A. Prociuk,  Y. M. Rhee,  
+ J. Ritchie,  M. A. Rohrdanz,  E. Rosta,  N. J. Russ,  H. F. Schaefer III,  
+ M. W. Schmidt,  N. E. Schultz,  S. Sharma,  N. Shenvi,  C. D. Sherrill,  
+ A. C. Simmonett,  A. Sodt,  T. Stein,  D. Stuck,  K. S. Thanthiriwatte,  
+ V. Vanovschi,  L. Vogt,  Tao Wang,  A. Warshel,  M. A. Watson,  
+ C. F. Williams,  Q. Wu,  X. Xu,  Jun Yang,  W. Zhang,  Yan Zhao
+
+ Please cite Q-Chem as follows:
+ Y. Shao et al., Mol. Phys. 113, 184-215 (2015)
+ DOI: 10.1080/00268976.2014.952696
+
+ Q-Chem 5.4.1 for Intel X86 EM64T Linux
+
+ Parts of Q-Chem use Armadillo 9.900.5 (Nocturnal Misbehaviour).
+ http://arma.sourceforge.net/
+
+ Q-Chem begins on Thu Mar  3 02:52:45 2022  
+
+ Host: node01
+0
+
+     Scratch files written to /src/jdavis/qchem.scratch/qchem847//
+ Processing $rem in /src/tsommerfeld/qchem/config/preferences:
+ Processing $rem in /home/jdavis/.qchemrc:
+
+ Checking the input file for inconsistencies... 	...done.
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+$molecule
+-1 1
+C        -0.6645000000    0.0000000000    1.1619088658
+C         0.6645000000    0.0000000000    1.1619088658
+H        -1.1590800000    0.0000000000    0.1995598658
+H         1.1590800000    0.0000000000    0.1995598658
+H        -1.1590800000    0.0000000000    2.1242568658
+H         1.1590800000    0.0000000000    2.1242568658
+O         0.0000000000    0.0000000000   -1.5841414040
+H         0.0000000000    0.0000000000   -2.5471307683
+$end
+$rem
+   METHOD adc(2)
+   BASIS gen
+   PURECART 11
+   EE_STATES [0,10,0,0]
+   scf_convergence 8
+   ADC_DAVIDSON_MAXITER 120
+   ADC_DAVIDSON_MAXSUBSPACE 200
+   adc_nguess_singles 100
+   THRESH 14
+   S2THRESH 14
+   adc_davidson_conv 5
+   adc_davidson_thresh 14
+   THREADS 10
+   MEM_TOTAL 95000
+   STATE_ANALYSIS TRUE
+$end
+$basis
+C     1
+S    10   1.00
+      8.236000D+03           5.310000D-04
+      1.235000D+03           4.108000D-03
+      2.808000D+02           2.108700D-02
+      7.927000D+01           8.185300D-02
+      2.559000D+01           2.348170D-01
+      8.997000D+00           4.344010D-01
+      3.319000D+00           3.461290D-01
+      9.059000D-01           3.937800D-02
+      3.643000D-01          -8.983000D-03
+      1.285000D-01           2.385000D-03
+S    1   1.00
+      9.059000D-01           1.000000D+00
+S    10   1.00
+      8.236000D+03          -1.130000D-04
+      1.235000D+03          -8.780000D-04
+      2.808000D+02          -4.540000D-03
+      7.927000D+01          -1.813300D-02
+      2.559000D+01          -5.576000D-02
+      8.997000D+00          -1.268950D-01
+      3.319000D+00          -1.703520D-01
+      9.059000D-01           1.403820D-01
+      3.643000D-01           5.986840D-01
+      1.285000D-01           3.953890D-01
+S    1   1.00
+      1.285000D-01           1.000000D+00
+P    1   1.00
+      3.827000D-01           1.000000D+00
+P    5   1.00
+      1.871000D+01           1.403100D-02
+      4.133000D+00           8.686600D-02
+      1.200000D+00           2.902160D-01
+      3.827000D-01           5.010080D-01
+      1.209000D-01           3.434060D-01
+P    1   1.00
+      1.209000D-01           1.000000D+00
+P   1   1.00
+      0.0498255      1.0000000
+P   1   1.00
+      0.0249127      1.0000000
+D    1   1.00
+      1.097000D+00           1.000000D+00
+D    1   1.00
+      3.180000D-01           1.000000D+00
+F    1   1.00
+      7.610000D-01           1.0000000
+****
+C     2
+S    10   1.00
+      8.236000D+03           5.310000D-04
+      1.235000D+03           4.108000D-03
+      2.808000D+02           2.108700D-02
+      7.927000D+01           8.185300D-02
+      2.559000D+01           2.348170D-01
+      8.997000D+00           4.344010D-01
+      3.319000D+00           3.461290D-01
+      9.059000D-01           3.937800D-02
+      3.643000D-01          -8.983000D-03
+      1.285000D-01           2.385000D-03
+S    1   1.00
+      9.059000D-01           1.000000D+00
+S    10   1.00
+      8.236000D+03          -1.130000D-04
+      1.235000D+03          -8.780000D-04
+      2.808000D+02          -4.540000D-03
+      7.927000D+01          -1.813300D-02
+      2.559000D+01          -5.576000D-02
+      8.997000D+00          -1.268950D-01
+      3.319000D+00          -1.703520D-01
+      9.059000D-01           1.403820D-01
+      3.643000D-01           5.986840D-01
+      1.285000D-01           3.953890D-01
+S    1   1.00
+      1.285000D-01           1.000000D+00
+P    1   1.00
+      3.827000D-01           1.000000D+00
+P    5   1.00
+      1.871000D+01           1.403100D-02
+      4.133000D+00           8.686600D-02
+      1.200000D+00           2.902160D-01
+      3.827000D-01           5.010080D-01
+      1.209000D-01           3.434060D-01
+P    1   1.00
+      1.209000D-01           1.000000D+00
+P   1   1.00
+      0.0498255      1.0000000
+P   1   1.00
+      0.0249127      1.0000000
+D    1   1.00
+      1.097000D+00           1.000000D+00
+D    1   1.00
+      3.180000D-01           1.000000D+00
+F    1   1.00
+      7.610000D-01           1.0000000
+****
+H 3
+cc-pVTZ
+****
+H 4
+cc-pVTZ
+****
+H 5
+cc-pVTZ
+****
+H 6
+cc-pVTZ
+****
+O 7
+aug-cc-pVTZ
+****
+H 8
+cc-pVTZ
+****
+$end
+--------------------------------------------------------------
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      C      -0.6645000000    -0.0000000000     1.0270977517
+    2      C       0.6645000000     0.0000000000     1.0270977517
+    3      H      -1.1590800000    -0.0000000000     0.0647487517
+    4      H       1.1590800000     0.0000000000     0.0647487517
+    5      H      -1.1590800000    -0.0000000000     1.9894457517
+    6      H       1.1590800000     0.0000000000     1.9894457517
+    7      O       0.0000000000    -0.0000000000    -1.7189525181
+    8      H       0.0000000000    -0.0000000000    -2.6819418824
+ ----------------------------------------------------------------
+ Molecular Point Group                 C2v   NOp =  4
+ Largest Abelian Subgroup              C2v   NOp =  4
+ Nuclear Repulsion Energy =          64.38561153 hartrees
+ There are       13 alpha and       13 beta electrons
+ Requested basis set is non-standard
+ There are 68 shells and 188 basis functions
+ Total memory of 95000 MB is distributed as follows: 
+   MEM_STATIC is set to 192 MB
+   QALLOC/CCMAN JOB total memory use is  94808 MB
+ Warning: actual memory use might exceed 95000 MB
+
+ Total QAlloc Memory Limit  95000 MB
+ Mega-Array Size       188 MB
+ MEM_STATIC part       192 MB
+
+                       Distance Matrix (Angstroms)
+             C (  1)   C (  2)   H (  3)   H (  4)   H (  5)   H (  6)
+   C (  2)  1.329000
+   H (  3)  1.082000  2.061931
+   H (  4)  2.061931  1.082000  2.318160
+   H (  5)  1.082000  2.061931  1.924697  3.013026
+   H (  6)  2.061931  1.082000  3.013026  1.924697  2.318160
+   O (  7)  2.825306  2.825306  2.127218  2.127218  3.885316  3.885316
+   H (  8)  3.768094  3.768094  2.981237  2.981237  4.813037  4.813037
+             O (  7)
+   H (  8)  0.962989
+ 
+ A cutoff of  1.0D-14 yielded   2306 shell pairs
+ There are     17662 function pairs (     22530 Cartesian)
+ Smallest overlap matrix eigenvalue = 7.06E-04
+
+ Scale SEOQF with 1.000000e-01/1.000000e-01/1.000000e-01
+
+ Standard Electronic Orientation quadrupole field applied
+ Nucleus-field energy     =    -0.0000000051 hartrees
+ ================ Generating on-the-fly SAD Guess ================
+Attempting to make child job directory: /src/jdavis/qchem.scratch/qchem847//Frg1/
+Attempting to make child job directory: /src/jdavis/qchem.scratch/qchem847//Frg2/
+Attempting to make child job directory: /src/jdavis/qchem.scratch/qchem847//Frg3/
+Creating input file /src/jdavis/qchem.scratch/qchem847/Frg1.input
+using default PutDataFrgm: nothing
+calling putenv with: QCSCRATCH=/src/jdavis/qchem.scratch/qchem847/ 
+Spawning Job For Fragment 0
+Done Job For Fragment 0
+calling putenv with: QCSCRATCH=/src/jdavis/qchem.scratch 
+calling putenv with: QCTHREADS=1 
+Creating input file /src/jdavis/qchem.scratch/qchem847/Frg2.input
+using default PutDataFrgm: nothing
+calling putenv with: QCSCRATCH=/src/jdavis/qchem.scratch/qchem847/ 
+Spawning Job For Fragment 1
+Done Job For Fragment 1
+calling putenv with: QCSCRATCH=/src/jdavis/qchem.scratch 
+calling putenv with: QCTHREADS=1 
+Creating input file /src/jdavis/qchem.scratch/qchem847/Frg3.input
+using default PutDataFrgm: nothing
+calling putenv with: QCSCRATCH=/src/jdavis/qchem.scratch/qchem847/ 
+Spawning Job For Fragment 2
+Done Job For Fragment 2
+calling putenv with: QCSCRATCH=/src/jdavis/qchem.scratch 
+calling putenv with: QCTHREADS=1 
+ Time for running child jobs:  CPU 1.73 s  wall 82.28 s
+ ============= Method Specific SAD Guess Constructed =============
+ Guess from on-the-fly superposition of atomic densities
+ Warning: Energy on first SCF cycle will be non-variational
+ A restricted Hartree-Fock SCF calculation will be
+ performed using Pulay DIIS extrapolation
+ SCF converges when DIIS error is below 1.0E-08
+ using 10 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module                
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh 
+ -------------------------------------------------------
+ ---------------------------------------
+  Cycle       Energy         DIIS Error
+ ---------------------------------------
+    1    -153.5929655957      2.89E-02
+    2    -153.3266766101      5.98E-03
+    3    -153.3903152119      5.26E-03
+    4    -153.4797117607      3.69E-04
+    5    -153.4806561430      1.14E-04
+    6    -153.4807400275      2.55E-05
+    7    -153.4807460763      6.27E-06
+    8    -153.4807466291      2.00E-06
+    9    -153.4807466922      4.48E-07
+   10    -153.4807466947      7.89E-08
+   11    -153.4807466948      2.12E-08
+   12    -153.4807466948      7.66E-09 Convergence criterion met
+ ---------------------------------------
+ SCF time:  CPU 55.53 s  wall 5.56 s
+ SCF   energy in the final basis set = -153.48074669
+ Total energy in the final basis set = -153.48074669
+================================================================================
+|                                                                              |
+|                                 A D C  M A N                                 |
+|                                                                              |
+ ------------------------------------------------------------------------------ 
+|                                                                              |
+| Components:                                                                  |
+|                                                                              |
+| - libvmm - 1.3-trunk                                                         |
+|   Authors:                                                                   |
+|   Evgeny Epifanovsky, Ilya Kaliman                                           |
+|                                                                              |
+| - libtensor - 2.5-trunk                                                      |
+|   Authors:                                                                   |
+|   Evgeny Epifanovsky, Michael Wormit, Dmitry Zuev, Sam Manzer,               |
+|   Ilya Kaliman                                                               |
+|                                                                              |
+| - libwfa - 1.1-trunk                                                         |
+|   Authors:                                                                   |
+|   Felix Plasser, Stefanie Mewes (Baeppler), Benjamin Thomitzni,              |
+|   Michael Wormit, Feng Chen, Anna I. Krylov, Pavel Pokhilko                  |
+|                                                                              |
+| - libadc - 1.1-trunk                                                         |
+|   Authors:                                                                   |
+|   Michael Wormit, Adrian L. Dempwolff, Philipp H. P. Harbach,                |
+|   Caroline Krauter, Dirk Rehn, Matthias Schneider, Jan Wenzel                |
+|                                                                              |
+| - adcman - 2.6-trunk                                                         |
+|   Authors:                                                                   |
+|   Michael Wormit, Adrian L. Dempwolff, Philipp H. P. Harbach,                |
+|   Caroline Krauter, Daniel Lefrancois, Jan-Michael Mewes, Dirk Rehn,         |
+|   Matthias Schneider, Jan Wenzel, Andreas Dreuw                              |
+|                                                                              |
+| Authors of earlier versions of ADCMAN:                                       |
+| Andreas Dreuw, Jan Hendrik Starcke, Dirk Rehn, Michael Wormit                |
+|                                                                              |
+================================================================================
+
+ 
+ Alpha MOs, Restricted
+ -- Occupied --                  
+-20.202 -11.040 -11.038  -0.928  -0.852  -0.597  -0.473  -0.385
+  1 A1    2 A1    1 B1    3 A1    4 A1    2 B1    5 A1    6 A1                 
+ -0.329  -0.271  -0.195  -0.131  -0.130
+  3 B1    7 A1    1 B2    4 B1    2 B2                                         
+ -- Virtual --                   
+  0.145   0.155   0.165   0.173   0.181   0.188   0.278   0.288
+  5 B1    8 A1    3 B2    1 A2    6 B1    9 A1   10 A1   11 A1                 
+  0.297   0.308   0.336   0.348   0.351   0.399   0.417   0.439
+  2 A2    7 B1   12 A1    8 B1    4 B2    5 B2    9 B1   13 A1                 
+  0.441   0.478   0.502   0.502   0.581   0.603   0.618   0.630
+  3 A2   14 A1   10 B1   15 A1   16 A1   11 B1   12 B1   17 A1                 
+  0.776   0.794   0.801   0.808   0.828   0.862   0.864   0.875
+ 18 A1    6 B2   13 B1   19 A1   20 A1    7 B2   14 B1   21 A1                 
+  0.909   0.927   0.936   0.966   0.977   1.014   1.025   1.053
+  4 A2    5 A2   15 B1   22 A1   23 A1   16 B1    8 B2   17 B1                 
+  1.055   1.081   1.146   1.162   1.212   1.221   1.251   1.311
+  6 A2    9 B2   18 B1   24 A1   25 A1   19 B1   10 B2   26 A1                 
+  1.404   1.407   1.419   1.464   1.520   1.569   1.577   1.579
+ 11 B2    7 A2   20 B1   12 B2   27 A1   28 A1   21 B1    8 A2                 
+  1.607   1.625   1.656   1.669   1.753   1.829   1.832   1.867
+ 13 B2   29 A1   30 A1   22 B1   23 B1    9 A2   31 A1   24 B1                 
+  1.906   1.978   2.106   2.107   2.145   2.240   2.407   2.425
+ 25 B1   32 A1   33 A1   26 B1   34 A1   27 B1   14 B2   10 A2                 
+  2.482   2.484   2.494   2.528   2.534   2.543   2.557   2.721
+ 28 B1   15 B2   35 A1   36 A1   11 A2   29 B1   37 A1   16 B2                 
+  2.741   2.771   2.799   2.814   2.837   2.863   2.957   2.984
+ 38 A1   17 B2   39 A1   30 B1   12 A2   40 A1   18 B2   41 A1                 
+  3.044   3.089   3.137   3.174   3.295   3.313   3.330   3.353
+ 31 B1   32 B1   42 A1   19 B2   20 B2   21 B2   43 A1   44 A1                 
+  3.362   3.447   3.491   3.503   3.510   3.608   3.626   3.639
+ 13 A2   14 A2   45 A1   33 B1   34 B1   15 A2   16 A2   35 B1                 
+  3.672   3.702   3.730   3.735   3.831   3.847   3.959   4.038
+ 36 B1   46 A1   37 B1   22 B2   47 A1   23 B2   48 A1   38 B1                 
+  4.118   4.126   4.154   4.174   4.177   4.201   4.257   4.308
+ 49 A1   39 B1   17 A2   40 B1   18 A2   50 A1   24 B2   51 A1                 
+  4.365   4.380   4.403   4.403   4.490   4.502   4.522   4.528
+ 19 A2   52 A1   41 B1   25 B2   26 B2   42 B1   43 B1   27 B2                 
+  4.531   4.547   4.608   4.757   4.792   4.823   4.825   4.935
+ 53 A1   20 A2   28 B2   44 B1   54 A1   55 A1   21 A2   45 B1                 
+  4.999   5.004   5.026   5.136   5.208   5.286   5.368   5.407
+ 22 A2   46 B1   56 A1   29 B2   57 A1   47 B1   58 A1   30 B2                 
+  5.494   5.499   5.531   5.616   5.630   5.732   5.737   5.815
+ 48 B1   59 A1   60 A1   23 A2   31 B2   49 B1   24 A2   50 B1                 
+  5.819   6.048   6.189   6.390   6.458   6.584   6.782   6.884
+ 61 A1   62 A1   51 B1   63 A1   52 B1   64 A1   53 B1   32 B2                 
+  6.898   6.904   6.992   7.093   7.431   7.448   7.461   7.531
+ 25 A2   54 B1   65 A1   55 B1   26 A2   66 A1   33 B2   34 B2                 
+  7.555   7.664   7.796   8.409  12.239  12.505  15.141
+ 56 B1   57 B1   67 A1   68 A1   69 A1   70 A1   58 B1                         
+ 
+ Beta MOs, Restricted
+ -- Occupied --                  
+-20.202 -11.040 -11.038  -0.928  -0.852  -0.597  -0.473  -0.385
+  1 A1    2 A1    1 B1    3 A1    4 A1    2 B1    5 A1    6 A1                 
+ -0.329  -0.271  -0.195  -0.131  -0.130
+  3 B1    7 A1    1 B2    4 B1    2 B2                                         
+ -- Virtual --                   
+  0.145   0.155   0.165   0.173   0.181   0.188   0.278   0.288
+  5 B1    8 A1    3 B2    1 A2    6 B1    9 A1   10 A1   11 A1                 
+  0.297   0.308   0.336   0.348   0.351   0.399   0.417   0.439
+  2 A2    7 B1   12 A1    8 B1    4 B2    5 B2    9 B1   13 A1                 
+  0.441   0.478   0.502   0.502   0.581   0.603   0.618   0.630
+  3 A2   14 A1   10 B1   15 A1   16 A1   11 B1   12 B1   17 A1                 
+  0.776   0.794   0.801   0.808   0.828   0.862   0.864   0.875
+ 18 A1    6 B2   13 B1   19 A1   20 A1    7 B2   14 B1   21 A1                 
+  0.909   0.927   0.936   0.966   0.977   1.014   1.025   1.053
+  4 A2    5 A2   15 B1   22 A1   23 A1   16 B1    8 B2   17 B1                 
+  1.055   1.081   1.146   1.162   1.212   1.221   1.251   1.311
+  6 A2    9 B2   18 B1   24 A1   25 A1   19 B1   10 B2   26 A1                 
+  1.404   1.407   1.419   1.464   1.520   1.569   1.577   1.579
+ 11 B2    7 A2   20 B1   12 B2   27 A1   28 A1   21 B1    8 A2                 
+  1.607   1.625   1.656   1.669   1.753   1.829   1.832   1.867
+ 13 B2   29 A1   30 A1   22 B1   23 B1    9 A2   31 A1   24 B1                 
+  1.906   1.978   2.106   2.107   2.145   2.240   2.407   2.425
+ 25 B1   32 A1   33 A1   26 B1   34 A1   27 B1   14 B2   10 A2                 
+  2.482   2.484   2.494   2.528   2.534   2.543   2.557   2.721
+ 28 B1   15 B2   35 A1   36 A1   11 A2   29 B1   37 A1   16 B2                 
+  2.741   2.771   2.799   2.814   2.837   2.863   2.957   2.984
+ 38 A1   17 B2   39 A1   30 B1   12 A2   40 A1   18 B2   41 A1                 
+  3.044   3.089   3.137   3.174   3.295   3.313   3.330   3.353
+ 31 B1   32 B1   42 A1   19 B2   20 B2   21 B2   43 A1   44 A1                 
+  3.362   3.447   3.491   3.503   3.510   3.608   3.626   3.639
+ 13 A2   14 A2   45 A1   33 B1   34 B1   15 A2   16 A2   35 B1                 
+  3.672   3.702   3.730   3.735   3.831   3.847   3.959   4.038
+ 36 B1   46 A1   37 B1   22 B2   47 A1   23 B2   48 A1   38 B1                 
+  4.118   4.126   4.154   4.174   4.177   4.201   4.257   4.308
+ 49 A1   39 B1   17 A2   40 B1   18 A2   50 A1   24 B2   51 A1                 
+  4.365   4.380   4.403   4.403   4.490   4.502   4.522   4.528
+ 19 A2   52 A1   41 B1   25 B2   26 B2   42 B1   43 B1   27 B2                 
+  4.531   4.547   4.608   4.757   4.792   4.823   4.825   4.935
+ 53 A1   20 A2   28 B2   44 B1   54 A1   55 A1   21 A2   45 B1                 
+  4.999   5.004   5.026   5.136   5.208   5.286   5.368   5.407
+ 22 A2   46 B1   56 A1   29 B2   57 A1   47 B1   58 A1   30 B2                 
+  5.494   5.499   5.531   5.616   5.630   5.732   5.737   5.815
+ 48 B1   59 A1   60 A1   23 A2   31 B2   49 B1   24 A2   50 B1                 
+  5.819   6.048   6.189   6.390   6.458   6.584   6.782   6.884
+ 61 A1   62 A1   51 B1   63 A1   52 B1   64 A1   53 B1   32 B2                 
+  6.898   6.904   6.992   7.093   7.431   7.448   7.461   7.531
+ 25 A2   54 B1   65 A1   55 B1   26 A2   66 A1   33 B2   34 B2                 
+  7.555   7.664   7.796   8.409  12.239  12.505  15.141
+ 56 B1   57 B1   67 A1   68 A1   69 A1   70 A1   58 B1                         
+
+--------------------------------------------------------------------------------
+                                   HF Summary                                   
+--------------------------------------------------------------------------------
+  Energy:                                                 -153.4807466948 a.u.
+  Dip. moment [a.u.]:                  [  -0.000000,    0.000000,    2.053865]
+  Total dipole [Debye]:                                               5.220406
+  <r^2> [a.u.]:                        [  55.658171,   19.633305,  208.137762]
+  Total <r^2> [a.u.]:                                               283.429238
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+                                 MP(2) Summary                                  
+--------------------------------------------------------------------------------
+  MP energy contribution:                                   -0.6750921984 a.u.
+  Total energy:                                           -154.1558388932 a.u.
+  Dip. moment [a.u.]:                  [  -0.000000,   -0.000000,    2.129591]
+  Total dipole [Debye]:                                               5.412881
+  <r^2> [a.u.]:                        [  56.377876,   20.100882,  209.143459]
+  Total <r^2> [a.u.]:                                               285.622216
+
+  Density matrix analysis:
+  ------------------------
+  NOs
+    Occupation of frontier NOs:
+       0.0452   1.9307
+    Number of electrons: 26.000000
+    Number of unpaired electrons: n_u =  0.78637, n_u,nl =  0.09726
+    NO participation ratio (PR_NO): 24.345335
+  
+  
+  Mulliken Population Analysis
+  Atom      Charge (e)              h+              e-           Del q
+  --------------------------------------------------------------------
+   1 C       -0.337688        0.092762       -0.118484       -0.025722
+   2 C       -0.337688        0.092762       -0.118484       -0.025722
+   3 H        0.234441        0.026360       -0.012294        0.014065
+   4 H        0.234441        0.026360       -0.012294        0.014065
+   5 H        0.103874        0.026710       -0.010230        0.016480
+   6 H        0.103874        0.026710       -0.010230        0.016480
+   7 O       -1.125169        0.264864       -0.261841        0.003023
+   8 H        0.123915        0.019922       -0.032593       -0.012671
+  --------------------------------------------------------------------
+  Sum:       -1.000000        0.576449       -0.576449        0.000000
+  
+  Multipole moment analysis of the density matrix
+    Molecular charge:                      -1.000000
+    Number of electrons:                   26.000000
+      Center of electronic charge [Ang]: [  0.000000,   0.000000,  -0.043343]
+    Total nuclear charge:                  25.000000
+      Center of nuclear charge [Ang]:    [  0.000000,   0.000000,  -0.000000]
+    Dipole moment [D]:                     5.412879
+      Cartesian components [D]:          [ -0.000000,  -0.000000,   5.412879]
+    RMS size of the density [Ang]:         1.753387
+      Cartesian components [Ang]:        [  0.779236,   0.465288,   1.500222]
+  
+  Exciton analysis of the difference density matrix
+    <r_h> [Ang]:                  [ -0.000000,  -0.000000,  -0.372028]
+    <r_e> [Ang]:                  [  0.000000,   0.000000,  -0.441543]
+    |<r_e - r_h>| [Ang]:            0.069515
+    Hole size [Ang]:                1.973251
+      Cartesian components [Ang]: [  0.877112,   0.757817,   1.596906]
+    Electron size [Ang]:            2.214153
+      Cartesian components [Ang]: [  1.057802,   0.895224,   1.726876]
+--------------------------------------------------------------------------------
+  Starting Davidson for singlet states of irrep A2 ... 
+--------------------------------------------------------------------------------
+   It NVec Conv  Avg. Norm  Max. Norm  Conv. states           Remark
+--------------------------------------------------------------------------------
+       100    0  1.592e-01  5.653e-01  0.2622 n n n n n n n n Guess.
+    1  110    0  2.284e-02  1.392e-01  0.0857 n n n n n n n n 
+    2  120    0  7.822e-03  4.525e-02  0.0842 n n n n n n n n 
+    3  130    0  7.297e-03  6.951e-02  0.0842 n n n n n n n n 
+    4  140    0  1.749e-03  1.543e-02  0.0842 n n n n n n n n 
+    5  150    3  3.183e-04  2.421e-03  0.0842 y y y n n n n n 
+    6  160    4  5.081e-05  4.384e-04  0.0842 y y y n y n n n 
+    7  170    7  7.325e-06  6.237e-05  0.0842 y y y y y n y n 
+    8  180   10  9.765e-07  7.835e-06  0.0842 y y y y y y y y Converged.
+--------------------------------------------------------------------------------
+  Davidson Summary: 
+ ------------------------------------------------------------
+  State  0: excitation energy =   0.0842 a.u.   (converged)
+  State  1: excitation energy =   0.0949 a.u.   (converged)
+  State  2: excitation energy =   0.1053 a.u.   (converged)
+  State  3: excitation energy =   0.2178 a.u.   (converged)
+  State  4: excitation energy =   0.2240 a.u.   (converged)
+  State  5: excitation energy =   0.2332 a.u.   (converged)
+  State  6: excitation energy =   0.2441 a.u.   (converged)
+  State  7: excitation energy =   0.2512 a.u.   (converged)
+  State  8: excitation energy =   0.2581 a.u.   (converged)
+  State  9: excitation energy =   0.2646 a.u.   (converged)
+ ------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+                   State-averaged natural transition orbitals
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+                             Excited State Summary
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+  Excited state 1 (singlet, A2)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  1 (1) A2                                    R^2 =  9.82264e-09
+
+  Total energy:                                           -154.0716688500 a.u.
+  Excitation energy:                                               2.290383 eV
+
+  Osc. strength:                                                      0.000000
+  Trans. dip. moment [a.u.]:           [   0.000000,    0.000000,   -0.000000]
+  <i|r^2|0> [a.u.]:                    [  -0.000000,   -0.000000,   -0.000000]
+
+  Dip. moment [a.u.]:                  [   0.000000,    0.000000,   -3.679823]
+  Total dipole [Debye]:                                               9.353180
+  <r^2> [a.u.]:                        [ 105.800559,   33.340745,  216.326071]
+  Total <r^2> [a.u.]:                                               355.467375
+
+  V1^2 = 0.8651, V2^2 = 0.1349
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     2 (B2) A               5 (B1) A                  0.5902
+     2 (B2) A               6 (B1) A                 -0.2709
+    ---------------------------------------------------------
+
+  Density matrix analysis:
+  ------------------------
+  NOs
+    Occupation of frontier NOs:
+       0.9616   0.9986
+    Number of electrons: 26.000000
+    Number of unpaired electrons: n_u =  2.80449, n_u,nl =  2.12249
+    NO participation ratio (PR_NO):  4.022891
+  
+  
+  Mulliken Population Analysis
+  Atom      Charge (e)              h+              e-           Del q
+  --------------------------------------------------------------------
+   1 C       -0.799535        0.042783       -0.504630       -0.461847
+   2 C       -0.799535        0.042783       -0.504630       -0.461847
+   3 H        0.185125        0.006933       -0.056250       -0.049316
+   4 H        0.185125        0.006933       -0.056250       -0.049316
+   5 H        0.100252        0.035483       -0.039105       -0.003622
+   6 H        0.100252        0.035483       -0.039105       -0.003622
+   7 O       -0.205153        1.393945       -0.473930        0.920016
+   8 H        0.233470        0.138981       -0.029426        0.109555
+  --------------------------------------------------------------------
+  Sum:       -1.000000        1.703325       -1.703325        0.000000
+  
+  Multipole moment analysis of the density matrix
+    Molecular charge:                      -1.000000
+    Number of electrons:                   26.000000
+      Center of electronic charge [Ang]: [ -0.000000,  -0.000000,   0.074895]
+    Total nuclear charge:                  25.000000
+      Center of nuclear charge [Ang]:    [  0.000000,   0.000000,  -0.000000]
+    Dipole moment [D]:                     9.353177
+      Cartesian components [D]:          [  0.000000,   0.000000,  -9.353177]
+    RMS size of the density [Ang]:         1.955221
+      Cartesian components [Ang]:        [  1.067477,   0.599242,   1.524563]
+  
+  Exciton analysis of the difference density matrix
+    <r_h> [Ang]:                  [  0.000000,   0.000000,  -1.453959]
+    <r_e> [Ang]:                  [ -0.000000,  -0.000000,   0.350870]
+    |<r_e - r_h>| [Ang]:            1.804829
+    Hole size [Ang]:                1.792757
+      Cartesian components [Ang]: [  0.850669,   0.868508,   1.317587]
+    Electron size [Ang]:            4.085033
+      Cartesian components [Ang]: [  2.974691,   1.712003,   2.215345]
+
+  Transition density matrix analysis:
+  -----------------------------------
+  
+  CT numbers (Mulliken)
+    omega =     0.8481
+    <Phe> =     0.0002
+  
+  Exciton analysis of the transition density matrix
+    Trans. dipole moment [D]:             0.000000
+      Cartesian components [D]:         [  0.000000,   0.000000,  -0.000000]
+    <r_h> [Ang]:                        [ -0.000000,  -0.000000,  -1.746415]
+    <r_e> [Ang]:                        [ -0.000000,  -0.000000,   1.422942]
+    |<r_e - r_h>| [Ang]:                  3.169357
+    Hole size [Ang]:                      1.090224
+      Cartesian components [Ang]:       [  0.473166,   0.813729,   0.550042]
+    Electron size [Ang]:                  4.843347
+      Cartesian components [Ang]:       [  3.810030,   2.152509,   2.075666]
+    RMS electron-hole separation [Ang]:   5.887840
+      Cartesian components [Ang]:       [  3.838932,   2.298804,   3.826848]
+    Covariance(r_h, r_e) [Ang^2]:         0.012379
+    Correlation coefficient:              0.002344
+    Center-of-mass size [Ang]:            2.483513
+      Cartesian components [Ang]:       [  1.919832,   1.151781,   1.074934]
+
+  Decomposition into state-averaged NTOs
+    H- 0 -> L+ 0:  0.6077 ( 73.9%)
+    H- 0 -> L+ 4:  0.1998 (  8.0%)
+    H- 0 -> L+ 2: -0.0872 (  1.5%)
+                   omega =  84.8%
+  ----------------------------------------------------------------------------
+
+
+  Excited state 2 (singlet, A2)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  2 (1) A2                                    R^2 =  1.52067e-08
+
+  Total energy:                                           -154.0609530498 a.u.
+  Excitation energy:                                               2.581975 eV
+
+  Osc. strength:                                                      0.000000
+  Trans. dip. moment [a.u.]:           [  -0.000000,   -0.000000,   -0.000000]
+  <i|r^2|0> [a.u.]:                    [   0.000000,   -0.000000,    0.000000]
+
+  Dip. moment [a.u.]:                  [  -0.000000,   -0.000000,   -3.163909]
+  Total dipole [Debye]:                                               8.041856
+  <r^2> [a.u.]:                        [  69.284387,   64.806306,  212.985928]
+  Total <r^2> [a.u.]:                                               347.076621
+
+  V1^2 = 0.8670, V2^2 = 0.1330
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     4 (B1) A               3 (B2) A                 -0.6540
+     4 (B1) A               5 (B2) A                 -0.0655
+    ---------------------------------------------------------
+
+  Density matrix analysis:
+  ------------------------
+  NOs
+    Occupation of frontier NOs:
+       0.9627   0.9994
+    Number of electrons: 26.000000
+    Number of unpaired electrons: n_u =  2.80178, n_u,nl =  2.12137
+    NO participation ratio (PR_NO):  4.008549
+  
+  
+  Mulliken Population Analysis
+  Atom      Charge (e)              h+              e-           Del q
+  --------------------------------------------------------------------
+   1 C       -0.820605        0.059199       -0.542116       -0.482917
+   2 C       -0.820605        0.059199       -0.542116       -0.482917
+   3 H        0.187439       -0.000014       -0.046989       -0.047002
+   4 H        0.187439       -0.000014       -0.046989       -0.047002
+   5 H        0.123952        0.024370       -0.004291        0.020078
+   6 H        0.123952        0.024370       -0.004291        0.020078
+   7 O       -0.214199        1.391033       -0.480063        0.910970
+   8 H        0.232627        0.137262       -0.028550        0.108712
+  --------------------------------------------------------------------
+  Sum:       -1.000000        1.695405       -1.695405        0.000000
+  
+  Multipole moment analysis of the density matrix
+    Molecular charge:                      -1.000000
+    Number of electrons:                   26.000000
+      Center of electronic charge [Ang]: [  0.000000,   0.000000,   0.064395]
+    Total nuclear charge:                  25.000000
+      Center of nuclear charge [Ang]:    [  0.000000,   0.000000,  -0.000000]
+    Dipole moment [D]:                     8.041853
+      Cartesian components [D]:          [ -0.000000,  -0.000000,  -8.041853]
+    RMS size of the density [Ang]:         1.932351
+      Cartesian components [Ang]:        [  0.863838,   0.835455,   1.513202]
+  
+  Exciton analysis of the difference density matrix
+    <r_h> [Ang]:                  [  0.000000,   0.000000,  -1.450163]
+    <r_e> [Ang]:                  [  0.000000,   0.000000,   0.202067]
+    |<r_e - r_h>| [Ang]:            1.652230
+    Hole size [Ang]:                1.788454
+      Cartesian components [Ang]: [  0.917367,   0.783380,   1.320349]
+    Electron size [Ang]:            3.925694
+      Cartesian components [Ang]: [  1.724332,   2.828009,   2.107159]
+
+  Transition density matrix analysis:
+  -----------------------------------
+  
+  CT numbers (Mulliken)
+    omega =     0.8497
+    <Phe> =     0.0001
+  
+  Exciton analysis of the transition density matrix
+    Trans. dipole moment [D]:             0.000000
+      Cartesian components [D]:         [ -0.000000,  -0.000000,  -0.000000]
+    <r_h> [Ang]:                        [ -0.000000,   0.000000,  -1.726587]
+    <r_e> [Ang]:                        [ -0.000000,   0.000000,   1.177526]
+    |<r_e - r_h>| [Ang]:                  2.904114
+    Hole size [Ang]:                      1.128539
+      Cartesian components [Ang]:       [  0.812880,   0.465655,   0.629279]
+    Electron size [Ang]:                  4.661039
+      Cartesian components [Ang]:       [  2.136374,   3.622786,   2.009132]
+    RMS electron-hole separation [Ang]:   5.604868
+      Cartesian components [Ang]:       [  2.283025,   3.652529,   3.586276]
+    Covariance(r_h, r_e) [Ang^2]:         0.009107
+    Correlation coefficient:              0.001731
+    Center-of-mass size [Ang]:            2.398807
+      Cartesian components [Ang]:       [  1.144283,   1.826325,   1.053294]
+
+  Decomposition into state-averaged NTOs
+    H- 1 -> L+ 7:  0.5839 ( 68.2%)
+    H- 1 -> L+ 5:  0.2478 ( 12.3%)
+    H- 1 -> L+ 1:  0.1484 (  4.4%)
+                   omega =  85.0%
+  ----------------------------------------------------------------------------
+
+
+  Excited state 3 (singlet, A2)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  3 (1) A2                                    R^2 =  1.31115e-08
+
+  Total energy:                                           -154.0505710933 a.u.
+  Excitation energy:                                               2.864483 eV
+
+  Osc. strength:                                                      0.000000
+  Trans. dip. moment [a.u.]:           [   0.000000,   -0.000000,   -0.000000]
+  <i|r^2|0> [a.u.]:                    [  -0.000000,   -0.000000,   -0.000000]
+
+  Dip. moment [a.u.]:                  [  -0.000000,    0.000000,   -2.426345]
+  Total dipole [Debye]:                                               6.167156
+  <r^2> [a.u.]:                        [  99.392286,   31.230098,  236.968079]
+  Total <r^2> [a.u.]:                                               367.590463
+
+  V1^2 = 0.8677, V2^2 = 0.1323
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     2 (B2) A               6 (B1) A                 -0.5914
+     2 (B2) A               5 (B1) A                 -0.2688
+    ---------------------------------------------------------
+
+  Density matrix analysis:
+  ------------------------
+  NOs
+    Occupation of frontier NOs:
+       0.9619   1.0010
+    Number of electrons: 26.000000
+    Number of unpaired electrons: n_u =  2.79730, n_u,nl =  2.12012
+    NO participation ratio (PR_NO):  4.001336
+  
+  
+  Mulliken Population Analysis
+  Atom      Charge (e)              h+              e-           Del q
+  --------------------------------------------------------------------
+   1 C       -0.772911        0.041608       -0.476831       -0.435223
+   2 C       -0.772911        0.041608       -0.476831       -0.435223
+   3 H        0.155525       -0.001677       -0.077238       -0.078916
+   4 H        0.155525       -0.001677       -0.077238       -0.078916
+   5 H        0.091693        0.035035       -0.047216       -0.012181
+   6 H        0.091693        0.035035       -0.047216       -0.012181
+   7 O       -0.186346        1.395106       -0.456282        0.938823
+   8 H        0.237731        0.143853       -0.030037        0.113816
+  --------------------------------------------------------------------
+  Sum:       -1.000000        1.688890       -1.688890       -0.000000
+  
+  Multipole moment analysis of the density matrix
+    Molecular charge:                      -1.000000
+    Number of electrons:                   26.000000
+      Center of electronic charge [Ang]: [  0.000000,  -0.000000,   0.049383]
+    Total nuclear charge:                  25.000000
+      Center of nuclear charge [Ang]:    [  0.000000,   0.000000,  -0.000000]
+    Dipole moment [D]:                     6.167154
+      Cartesian components [D]:          [ -0.000000,   0.000000,  -6.167154]
+    RMS size of the density [Ang]:         1.989128
+      Cartesian components [Ang]:        [  1.034644,   0.579964,   1.596805]
+  
+  Exciton analysis of the difference density matrix
+    <r_h> [Ang]:                  [  0.000000,   0.000000,  -1.459107]
+    <r_e> [Ang]:                  [  0.000000,  -0.000000,  -0.031602]
+    |<r_e - r_h>| [Ang]:            1.427505
+    Hole size [Ang]:                1.804241
+      Cartesian components [Ang]: [  0.841176,   0.871620,   1.337157]
+    Electron size [Ang]:            4.355931
+      Cartesian components [Ang]: [  2.799935,   1.614006,   2.920527]
+
+  Transition density matrix analysis:
+  -----------------------------------
+  
+  CT numbers (Mulliken)
+    omega =     0.8506
+    <Phe> =    -0.0002
+  
+  Exciton analysis of the transition density matrix
+    Trans. dipole moment [D]:             0.000000
+      Cartesian components [D]:         [  0.000000,  -0.000000,  -0.000000]
+    <r_h> [Ang]:                        [ -0.000000,  -0.000000,  -1.749371]
+    <r_e> [Ang]:                        [  0.000000,  -0.000000,   0.727031]
+    |<r_e - r_h>| [Ang]:                  2.476403
+    Hole size [Ang]:                      1.085599
+      Cartesian components [Ang]:       [  0.472793,   0.813713,   0.541169]
+    Electron size [Ang]:                  5.321044
+      Cartesian components [Ang]:       [  3.562747,   2.009811,   3.403087]
+    RMS electron-hole separation [Ang]:   5.966844
+      Cartesian components [Ang]:       [  3.593726,   2.168080,   4.241201]
+    Covariance(r_h, r_e) [Ang^2]:         0.010688
+    Correlation coefficient:              0.001850
+    Center-of-mass size [Ang]:            2.716312
+      Cartesian components [Ang]:       [  1.797118,   1.084247,   1.724276]
+
+  Decomposition into state-averaged NTOs
+    H- 0 -> L+ 4:  0.5307 ( 56.3%)
+    H- 0 -> L+ 2: -0.2643 ( 14.0%)
+    H- 0 -> L+ 0: -0.2108 (  8.9%)
+    H- 0 -> L+ 3: -0.1485 (  4.4%)
+    H- 0 -> L+ 8: -0.0840 (  1.4%)
+                   omega =  85.1%
+  ----------------------------------------------------------------------------
+
+
+  Excited state 4 (singlet, A2)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  4 (1) A2                                    R^2 =  2.62492e-07
+
+  Total energy:                                           -153.9380068056 a.u.
+  Excitation energy:                                               5.927513 eV
+
+  Osc. strength:                                                      0.000000
+  Trans. dip. moment [a.u.]:           [  -0.000000,   -0.000000,    0.000000]
+  <i|r^2|0> [a.u.]:                    [   0.000000,    0.000000,    0.000000]
+
+  Dip. moment [a.u.]:                  [  -0.000000,   -0.000000,   -3.497010]
+  Total dipole [Debye]:                                               8.888515
+  <r^2> [a.u.]:                        [  89.510599,   28.853846,  211.854598]
+  Total <r^2> [a.u.]:                                               330.219043
+
+  V1^2 = 0.8679, V2^2 = 0.1321
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     2 (B2) A               7 (B1) A                 -0.6035
+     2 (B2) A               8 (B1) A                  0.1927
+    ---------------------------------------------------------
+
+  Density matrix analysis:
+  ------------------------
+  NOs
+    Occupation of frontier NOs:
+       0.9541   0.9981
+    Number of electrons: 26.000000
+    Number of unpaired electrons: n_u =  2.88380, n_u,nl =  2.15242
+    NO participation ratio (PR_NO):  4.268380
+  
+  
+  Mulliken Population Analysis
+  Atom      Charge (e)              h+              e-           Del q
+  --------------------------------------------------------------------
+   1 C       -1.039571        0.064996       -0.766879       -0.701883
+   2 C       -1.039571        0.064996       -0.766879       -0.701883
+   3 H        0.267445        0.010596        0.022408        0.033004
+   4 H        0.267445        0.010596        0.022408        0.033004
+   5 H        0.315685        0.029351        0.182460        0.211811
+   6 H        0.315685        0.029351        0.182460        0.211811
+   7 O       -0.310190        1.312679       -0.497700        0.814979
+   8 H        0.223072        0.125888       -0.026731        0.099157
+  --------------------------------------------------------------------
+  Sum:       -1.000000        1.648453       -1.648453       -0.000000
+  
+  Multipole moment analysis of the density matrix
+    Molecular charge:                      -1.000000
+    Number of electrons:                   26.000000
+      Center of electronic charge [Ang]: [  0.000000,   0.000000,   0.071175]
+    Total nuclear charge:                  25.000000
+      Center of nuclear charge [Ang]:    [  0.000000,   0.000000,  -0.000000]
+    Dipole moment [D]:                     8.888513
+      Cartesian components [D]:          [ -0.000000,  -0.000000,  -8.888513]
+    RMS size of the density [Ang]:         1.884543
+      Cartesian components [Ang]:        [  0.981865,   0.557463,   1.508866]
+  
+  Exciton analysis of the difference density matrix
+    <r_h> [Ang]:                  [ -0.000000,  -0.000000,  -1.398510]
+    <r_e> [Ang]:                  [  0.000000,   0.000000,   0.407710]
+    |<r_e - r_h>| [Ang]:            1.806221
+    Hole size [Ang]:                1.799154
+      Cartesian components [Ang]: [  0.850078,   0.857056,   1.334083]
+    Electron size [Ang]:            3.549983
+      Cartesian components [Ang]: [  2.520120,   1.490451,   2.007469]
+
+  Transition density matrix analysis:
+  -----------------------------------
+  
+  CT numbers (Mulliken)
+    omega =     0.8492
+    <Phe> =    -0.0002
+  
+  Exciton analysis of the transition density matrix
+    Trans. dipole moment [D]:             0.000000
+      Cartesian components [D]:         [ -0.000000,  -0.000000,   0.000000]
+    <r_h> [Ang]:                        [ -0.000000,  -0.000000,  -1.614898]
+    <r_e> [Ang]:                        [  0.000000,   0.000000,   1.464703]
+    |<r_e - r_h>| [Ang]:                  3.079602
+    Hole size [Ang]:                      1.248633
+      Cartesian components [Ang]:       [  0.488847,   0.814170,   0.810703]
+    Electron size [Ang]:                  4.007882
+      Cartesian components [Ang]:       [  3.155298,   1.828317,   1.662667]
+    RMS electron-hole separation [Ang]:   5.186386
+      Cartesian components [Ang]:       [  3.192118,   1.998531,   3.565789]
+    Covariance(r_h, r_e) [Ang^2]:         0.103775
+    Correlation coefficient:              0.020737
+    Center-of-mass size [Ang]:            2.111264
+      Cartesian components [Ang]:       [  1.596883,   1.002136,   0.950329]
+
+  Decomposition into state-averaged NTOs
+    H- 0 -> L+ 8:  0.5160 ( 53.3%)
+    H- 0 -> L+ 3:  0.3045 ( 18.5%)
+    H- 0 -> L+ 4:  0.1820 (  6.6%)
+    H- 2 -> L+ 0: -0.1322 (  3.5%)
+    H- 0 -> L+ 2:  0.0946 (  1.8%)
+    H- 0 -> L+ 0: -0.0761 (  1.2%)
+                   omega =  84.9%
+  ----------------------------------------------------------------------------
+
+
+  Excited state 5 (singlet, A2)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  5 (1) A2                                    R^2 =  1.25602e-07
+
+  Total energy:                                           -153.9318023354 a.u.
+  Excitation energy:                                               6.096345 eV
+
+  Osc. strength:                                                      0.000000
+  Trans. dip. moment [a.u.]:           [  -0.000000,   -0.000000,    0.000000]
+  <i|r^2|0> [a.u.]:                    [   0.000000,    0.000000,   -0.000000]
+
+  Dip. moment [a.u.]:                  [  -0.000000,    0.000000,   -0.958097]
+  Total dipole [Debye]:                                               2.435239
+  <r^2> [a.u.]:                        [  95.981252,   30.357955,  234.107712]
+  Total <r^2> [a.u.]:                                               360.446919
+
+  V1^2 = 0.9365, V2^2 = 0.0635
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     1 (B2) A               5 (B1) A                  0.6452
+     1 (B2) A               7 (B1) A                  0.1654
+    ---------------------------------------------------------
+
+  Density matrix analysis:
+  ------------------------
+  NOs
+    Occupation of frontier NOs:
+       0.9569   1.0198
+    Number of electrons: 26.000000
+    Number of unpaired electrons: n_u =  2.71477, n_u,nl =  2.09985
+    NO participation ratio (PR_NO):  3.870652
+  
+  
+  Mulliken Population Analysis
+  Atom      Charge (e)              h+              e-           Del q
+  --------------------------------------------------------------------
+   1 C       -0.477843        0.518339       -0.658494       -0.140155
+   2 C       -0.477843        0.518339       -0.658494       -0.140155
+   3 H        0.305444        0.070250        0.000754        0.071003
+   4 H        0.305444        0.070250        0.000754        0.071003
+   5 H        0.147222        0.113931       -0.070583        0.043348
+   6 H        0.147222        0.113931       -0.070583        0.043348
+   7 O       -1.104842        0.095927       -0.075600        0.020327
+   8 H        0.155194        0.036811       -0.005532        0.031279
+  --------------------------------------------------------------------
+  Sum:       -1.000000        1.537778       -1.537778       -0.000000
+  
+  Multipole moment analysis of the density matrix
+    Molecular charge:                      -1.000000
+    Number of electrons:                   26.000000
+      Center of electronic charge [Ang]: [  0.000000,  -0.000000,   0.019500]
+    Total nuclear charge:                  25.000000
+      Center of nuclear charge [Ang]:    [  0.000000,   0.000000,  -0.000000]
+    Dipole moment [D]:                     2.435239
+      Cartesian components [D]:          [ -0.000000,   0.000000,  -2.435239]
+    RMS size of the density [Ang]:         1.970216
+      Cartesian components [Ang]:        [  1.016735,   0.571809,   1.587777]
+  
+  Exciton analysis of the difference density matrix
+    <r_h> [Ang]:                  [ -0.000000,   0.000000,   0.803300]
+    <r_e> [Ang]:                  [  0.000000,  -0.000000,   1.865829]
+    |<r_e - r_h>| [Ang]:            1.062529
+    Hole size [Ang]:                1.893022
+      Cartesian components [Ang]: [  1.071781,   0.896911,   1.276859]
+    Electron size [Ang]:            3.791180
+      Cartesian components [Ang]: [  2.891447,   1.634704,   1.827654]
+
+  Transition density matrix analysis:
+  -----------------------------------
+  
+  CT numbers (Mulliken)
+    omega =     0.9045
+    <Phe> =    -0.0012
+  
+  Exciton analysis of the transition density matrix
+    Trans. dipole moment [D]:             0.000000
+      Cartesian components [D]:         [ -0.000000,  -0.000000,   0.000000]
+    <r_h> [Ang]:                        [ -0.000000,  -0.000000,   0.925989]
+    <r_e> [Ang]:                        [ -0.000000,  -0.000000,   2.543005]
+    |<r_e - r_h>| [Ang]:                  1.617017
+    Hole size [Ang]:                      1.396883
+      Cartesian components [Ang]:       [  0.755704,   0.883201,   0.774693]
+    Electron size [Ang]:                  4.380967
+      Cartesian components [Ang]:       [  3.513085,   1.975302,   1.717350]
+    RMS electron-hole separation [Ang]:   4.825190
+      Cartesian components [Ang]:       [  3.590210,   2.158771,   2.394276]
+    Covariance(r_h, r_e) [Ang^2]:         0.238220
+    Correlation coefficient:              0.038927
+    Center-of-mass size [Ang]:            2.324898
+      Cartesian components [Ang]:       [  1.798339,   1.084370,   0.997631]
+
+  Decomposition into state-averaged NTOs
+    H- 2 -> L+ 0: -0.6595 ( 87.0%)
+    H- 0 -> L+ 8: -0.0882 (  1.6%)
+    H- 0 -> L+ 3: -0.0845 (  1.4%)
+                   omega =  90.4%
+  ----------------------------------------------------------------------------
+
+
+  Excited state 6 (singlet, A2)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  6 (1) A2                                    R^2 =  1.27501e-06
+
+  Total energy:                                           -153.9226866320 a.u.
+  Excitation energy:                                               6.344396 eV
+
+  Osc. strength:                                                      0.000000
+  Trans. dip. moment [a.u.]:           [  -0.000000,   -0.000000,    0.000000]
+  <i|r^2|0> [a.u.]:                    [  -0.000000,   -0.000000,   -0.000000]
+
+  Dip. moment [a.u.]:                  [  -0.000000,    0.000000,    1.172516]
+  Total dipole [Debye]:                                               2.980240
+  <r^2> [a.u.]:                        [  58.506283,   33.650402,  214.800217]
+  Total <r^2> [a.u.]:                                               306.956902
+
+  V1^2 = 0.9003, V2^2 = 0.0997
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     4 (B1) A               4 (B2) A                  0.4798
+     4 (B1) A               5 (B2) A                 -0.4650
+    ---------------------------------------------------------
+
+  Density matrix analysis:
+  ------------------------
+  NOs
+    Occupation of frontier NOs:
+       0.9701   1.0057
+    Number of electrons: 26.000000
+    Number of unpaired electrons: n_u =  2.74300, n_u,nl =  2.09901
+    NO participation ratio (PR_NO):  3.846374
+  
+  
+  Mulliken Population Analysis
+  Atom      Charge (e)              h+              e-           Del q
+  --------------------------------------------------------------------
+   1 C       -0.403992        0.056372       -0.122676       -0.066304
+   2 C       -0.403992        0.056372       -0.122676       -0.066304
+   3 H        0.201820       -0.000897       -0.031724       -0.032621
+   4 H        0.201820       -0.000897       -0.031724       -0.032621
+   5 H        0.114753        0.014968       -0.004089        0.010879
+   6 H        0.114753        0.014968       -0.004089        0.010879
+   7 O       -1.044044        1.254570       -1.173445        0.081125
+   8 H        0.218883        0.125438       -0.030470        0.094968
+  --------------------------------------------------------------------
+  Sum:       -1.000000        1.520893       -1.520893       -0.000000
+  
+  Multipole moment analysis of the density matrix
+    Molecular charge:                      -1.000000
+    Number of electrons:                   26.000000
+      Center of electronic charge [Ang]: [  0.000000,  -0.000000,  -0.023864]
+    Total nuclear charge:                  25.000000
+      Center of nuclear charge [Ang]:    [  0.000000,   0.000000,  -0.000000]
+    Dipole moment [D]:                     2.980239
+      Cartesian components [D]:          [ -0.000000,   0.000000,   2.980239]
+    RMS size of the density [Ang]:         1.818092
+      Cartesian components [Ang]:        [  0.793808,   0.602018,   1.520822]
+  
+  Exciton analysis of the difference density matrix
+    <r_h> [Ang]:                  [  0.000000,   0.000000,  -1.518797]
+    <r_e> [Ang]:                  [  0.000000,  -0.000000,  -1.185794]
+    |<r_e - r_h>| [Ang]:            0.333003
+    Hole size [Ang]:                1.648024
+      Cartesian components [Ang]: [  0.884284,   0.687461,   1.208894]
+    Electron size [Ang]:            2.746778
+      Cartesian components [Ang]: [  1.083440,   1.722601,   1.844882]
+
+  Transition density matrix analysis:
+  -----------------------------------
+  
+  CT numbers (Mulliken)
+    omega =     0.8777
+    <Phe> =    -0.0023
+  
+  Exciton analysis of the transition density matrix
+    Trans. dipole moment [D]:             0.000000
+      Cartesian components [D]:         [ -0.000000,  -0.000000,   0.000000]
+    <r_h> [Ang]:                        [ -0.000000,   0.000000,  -1.732698]
+    <r_e> [Ang]:                        [  0.000000,  -0.000000,  -1.212350]
+    |<r_e - r_h>| [Ang]:                  0.520348
+    Hole size [Ang]:                      1.107431
+      Cartesian components [Ang]:       [  0.804325,   0.461659,   0.605256]
+    Electron size [Ang]:                  3.177090
+      Cartesian components [Ang]:       [  1.216011,   2.074153,   2.076802]
+    RMS electron-hole separation [Ang]:   3.396742
+      Cartesian components [Ang]:       [  1.456509,   2.124121,   2.214622]
+    Covariance(r_h, r_e) [Ang^2]:         0.026604
+    Correlation coefficient:              0.007562
+    Center-of-mass size [Ang]:            1.686232
+      Cartesian components [Ang]:       [  0.729696,   1.062849,   1.086864]
+
+  Decomposition into state-averaged NTOs
+    H- 1 -> L+ 1:  0.5586 ( 62.4%)
+    H- 1 -> L+ 5: -0.3541 ( 25.1%)
+                   omega =  87.8%
+  ----------------------------------------------------------------------------
+
+
+  Excited state 7 (singlet, A2)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  7 (1) A2                                    R^2 =  8.52887e-07
+
+  Total energy:                                           -153.9117252940 a.u.
+  Excitation energy:                                               6.642669 eV
+
+  Osc. strength:                                                      0.000000
+  Trans. dip. moment [a.u.]:           [  -0.000000,    0.000000,    0.000000]
+  <i|r^2|0> [a.u.]:                    [   0.000000,   -0.000000,    0.000000]
+
+  Dip. moment [a.u.]:                  [  -0.000000,   -0.000000,   -1.003367]
+  Total dipole [Debye]:                                               2.550304
+  <r^2> [a.u.]:                        [  74.640442,   24.391210,  222.328870]
+  Total <r^2> [a.u.]:                                               321.360522
+
+  V1^2 = 0.8764, V2^2 = 0.1236
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     2 (B2) A               8 (B1) A                 -0.5813
+     2 (B2) A               9 (B1) A                 -0.2458
+    ---------------------------------------------------------
+
+  Density matrix analysis:
+  ------------------------
+  NOs
+    Occupation of frontier NOs:
+       0.9688   0.9921
+    Number of electrons: 26.000000
+    Number of unpaired electrons: n_u =  2.80325, n_u,nl =  2.12068
+    NO participation ratio (PR_NO):  4.018828
+  
+  
+  Mulliken Population Analysis
+  Atom      Charge (e)              h+              e-           Del q
+  --------------------------------------------------------------------
+   1 C       -0.958875        0.065250       -0.686437       -0.621187
+   2 C       -0.958875        0.065250       -0.686437       -0.621187
+   3 H        0.320826       -0.002245        0.088630        0.086385
+   4 H        0.320826       -0.002245        0.088630        0.086385
+   5 H        0.269616        0.029986        0.135756        0.165742
+   6 H        0.269616        0.029986        0.135756        0.165742
+   7 O       -0.494346        1.312238       -0.681414        0.630823
+   8 H        0.231211        0.142523       -0.035227        0.107296
+  --------------------------------------------------------------------
+  Sum:       -1.000000        1.640744       -1.640744        0.000000
+  
+  Multipole moment analysis of the density matrix
+    Molecular charge:                      -1.000000
+    Number of electrons:                   26.000000
+      Center of electronic charge [Ang]: [  0.000000,   0.000000,   0.020421]
+    Total nuclear charge:                  25.000000
+      Center of nuclear charge [Ang]:    [  0.000000,   0.000000,  -0.000000]
+    Dipole moment [D]:                     2.550303
+      Cartesian components [D]:          [ -0.000000,  -0.000000,  -2.550303]
+    RMS size of the density [Ang]:         1.860307
+      Cartesian components [Ang]:        [  0.896606,   0.512544,   1.547300]
+  
+  Exciton analysis of the difference density matrix
+    <r_h> [Ang]:                  [  0.000000,   0.000000,  -1.483973]
+    <r_e> [Ang]:                  [  0.000000,  -0.000000,  -0.473523]
+    |<r_e - r_h>| [Ang]:            1.010450
+    Hole size [Ang]:                1.727204
+      Cartesian components [Ang]: [  0.822270,   0.857890,   1.253447]
+    Electron size [Ang]:            3.325764
+      Cartesian components [Ang]: [  1.947571,   1.211699,   2.408207]
+
+  Transition density matrix analysis:
+  -----------------------------------
+  
+  CT numbers (Mulliken)
+    omega =     0.8576
+    <Phe> =    -0.0014
+  
+  Exciton analysis of the transition density matrix
+    Trans. dipole moment [D]:             0.000000
+      Cartesian components [D]:         [ -0.000000,   0.000000,   0.000000]
+    <r_h> [Ang]:                        [ -0.000000,  -0.000000,  -1.736386]
+    <r_e> [Ang]:                        [  0.000000,  -0.000000,  -0.032688]
+    |<r_e - r_h>| [Ang]:                  1.703698
+    Hole size [Ang]:                      1.099871
+      Cartesian components [Ang]:       [  0.473213,   0.810834,   0.573004]
+    Electron size [Ang]:                  3.980730
+      Cartesian components [Ang]:       [  2.398709,   1.449128,   2.827090]
+    RMS electron-hole separation [Ang]:   4.463599
+      Cartesian components [Ang]:       [  2.444419,   1.659387,   3.345887]
+    Covariance(r_h, r_e) [Ang^2]:         0.017401
+    Correlation coefficient:              0.003974
+    Center-of-mass size [Ang]:            2.067047
+      Cartesian components [Ang]:       [  1.222731,   0.830855,   1.444746]
+
+  Decomposition into state-averaged NTOs
+    H- 0 -> L+ 3: -0.5393 ( 58.2%)
+    H- 0 -> L+ 8:  0.2747 ( 15.1%)
+    H- 0 -> L+ 2:  0.2415 ( 11.7%)
+                   omega =  85.8%
+  ----------------------------------------------------------------------------
+
+
+  Excited state 8 (singlet, A2)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  8 (1) A2                                    R^2 =  5.40717e-06
+
+  Total energy:                                           -153.9046037703 a.u.
+  Excitation energy:                                               6.836455 eV
+
+  Osc. strength:                                                      0.000000
+  Trans. dip. moment [a.u.]:           [   0.000000,   -0.000000,   -0.000000]
+  <i|r^2|0> [a.u.]:                    [   0.000000,   -0.000000,   -0.000000]
+
+  Dip. moment [a.u.]:                  [  -0.000000,   -0.000000,   -2.697228]
+  Total dipole [Debye]:                                               6.855672
+  <r^2> [a.u.]:                        [  88.374849,   51.702461,  207.928391]
+  Total <r^2> [a.u.]:                                               348.005701
+
+  V1^2 = 0.8695, V2^2 = 0.1305
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     7 (A1) A               1 (A2) A                 -0.6288
+     7 (A1) A               2 (A2) A                  0.1815
+    ---------------------------------------------------------
+
+  Density matrix analysis:
+  ------------------------
+  NOs
+    Occupation of frontier NOs:
+       0.9856   0.9913
+    Number of electrons: 26.000000
+    Number of unpaired electrons: n_u =  2.86409, n_u,nl =  2.14177
+    NO participation ratio (PR_NO):  4.118197
+  
+  
+  Mulliken Population Analysis
+  Atom      Charge (e)              h+              e-           Del q
+  --------------------------------------------------------------------
+   1 C       -0.800356        0.072632       -0.535300       -0.462668
+   2 C       -0.800356        0.072632       -0.535300       -0.462668
+   3 H        0.195406        0.006641       -0.045676       -0.039035
+   4 H        0.195406        0.006641       -0.045676       -0.039035
+   5 H        0.127959        0.027118       -0.003033        0.024085
+   6 H        0.127959        0.027118       -0.003033        0.024085
+   7 O       -0.430086        1.195763       -0.500680        0.695083
+   8 H        0.384070        0.280735       -0.020580        0.260155
+  --------------------------------------------------------------------
+  Sum:       -1.000000        1.689279       -1.689279        0.000000
+  
+  Multipole moment analysis of the density matrix
+    Molecular charge:                      -1.000000
+    Number of electrons:                   26.000000
+      Center of electronic charge [Ang]: [  0.000000,   0.000000,   0.054897]
+    Total nuclear charge:                  25.000000
+      Center of nuclear charge [Ang]:    [  0.000000,   0.000000,  -0.000000]
+    Dipole moment [D]:                     6.855670
+      Cartesian components [D]:          [ -0.000000,  -0.000000,  -6.855670]
+    RMS size of the density [Ang]:         1.935232
+      Cartesian components [Ang]:        [  0.975616,   0.746225,   1.495474]
+  
+  Exciton analysis of the difference density matrix
+    <r_h> [Ang]:                  [ -0.000000,  -0.000000,  -1.399950]
+    <r_e> [Ang]:                  [ -0.000000,   0.000000,   0.112082]
+    |<r_e - r_h>| [Ang]:            1.512031
+    Hole size [Ang]:                1.791738
+      Cartesian components [Ang]: [  0.837515,   0.758396,   1.390586]
+    Electron size [Ang]:            3.936853
+      Cartesian components [Ang]: [  2.450614,   2.411161,   1.918230]
+
+  Transition density matrix analysis:
+  -----------------------------------
+  
+  CT numbers (Mulliken)
+    omega =     0.8492
+    <Phe> =    -0.0002
+  
+  Exciton analysis of the transition density matrix
+    Trans. dipole moment [D]:             0.000000
+      Cartesian components [D]:         [  0.000000,  -0.000000,  -0.000000]
+    <r_h> [Ang]:                        [  0.000000,   0.000000,  -1.684132]
+    <r_e> [Ang]:                        [  0.000000,   0.000000,   1.019456]
+    |<r_e - r_h>| [Ang]:                  2.703588
+    Hole size [Ang]:                      1.166071
+      Cartesian components [Ang]:       [  0.463222,   0.403668,   0.991060]
+    Electron size [Ang]:                  4.712191
+      Cartesian components [Ang]:       [  3.102248,   3.067885,   1.780136]
+    RMS electron-hole separation [Ang]:   5.556588
+      Cartesian components [Ang]:       [  3.136900,   3.094819,   3.384911]
+    Covariance(r_h, r_e) [Ang^2]:        -0.000912
+    Correlation coefficient:             -0.000166
+    Center-of-mass size [Ang]:            2.427068
+      Cartesian components [Ang]:       [  1.568191,   1.546918,   1.019060]
+
+  Decomposition into state-averaged NTOs
+    H- 3 -> L+ 6: -0.6495 ( 84.4%)
+                   omega =  84.9%
+  ----------------------------------------------------------------------------
+
+
+  Excited state 9 (singlet, A2)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  9 (1) A2                                    R^2 =  7.83532e-06
+
+  Total energy:                                           -153.8977803459 a.u.
+  Excitation energy:                                               7.022130 eV
+
+  Osc. strength:                                                      0.000000
+  Trans. dip. moment [a.u.]:           [   0.000000,    0.000000,   -0.000000]
+  <i|r^2|0> [a.u.]:                    [  -0.000000,   -0.000000,   -0.000000]
+
+  Dip. moment [a.u.]:                  [  -0.000000,   -0.000000,   -2.188906]
+  Total dipole [Debye]:                                               5.563645
+  <r^2> [a.u.]:                        [  62.385656,   44.280433,  206.273689]
+  Total <r^2> [a.u.]:                                               312.939778
+
+  V1^2 = 0.8801, V2^2 = 0.1199
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     4 (B1) A               5 (B2) A                 -0.4781
+     4 (B1) A               4 (B2) A                 -0.4490
+    ---------------------------------------------------------
+
+  Density matrix analysis:
+  ------------------------
+  NOs
+    Occupation of frontier NOs:
+       0.9729   0.9890
+    Number of electrons: 26.000000
+    Number of unpaired electrons: n_u =  2.80174, n_u,nl =  2.11851
+    NO participation ratio (PR_NO):  4.012575
+  
+  
+  Mulliken Population Analysis
+  Atom      Charge (e)              h+              e-           Del q
+  --------------------------------------------------------------------
+   1 C       -0.678380        0.070889       -0.411581       -0.340692
+   2 C       -0.678380        0.070889       -0.411581       -0.340692
+   3 H        0.180507       -0.001591       -0.052343       -0.053934
+   4 H        0.180507       -0.001591       -0.052343       -0.053934
+   5 H        0.101820        0.004049       -0.006103       -0.002054
+   6 H        0.101820        0.004049       -0.006103       -0.002054
+   7 O       -0.425635        1.334512       -0.634978        0.699534
+   8 H        0.217741        0.120114       -0.026288        0.093826
+  --------------------------------------------------------------------
+  Sum:       -1.000000        1.601319       -1.601319        0.000000
+  
+  Multipole moment analysis of the density matrix
+    Molecular charge:                      -1.000000
+    Number of electrons:                   26.000000
+      Center of electronic charge [Ang]: [  0.000000,   0.000000,   0.044551]
+    Total nuclear charge:                  25.000000
+      Center of nuclear charge [Ang]:    [  0.000000,   0.000000,  -0.000000]
+    Dipole moment [D]:                     5.563644
+      Cartesian components [D]:          [ -0.000000,  -0.000000,  -5.563644]
+    RMS size of the density [Ang]:         1.835342
+      Cartesian components [Ang]:        [  0.819704,   0.690590,   1.489849]
+  
+  Exciton analysis of the difference density matrix
+    <r_h> [Ang]:                  [  0.000000,   0.000000,  -1.500169]
+    <r_e> [Ang]:                  [  0.000000,   0.000000,  -0.073064]
+    |<r_e - r_h>| [Ang]:            1.427105
+    Hole size [Ang]:                1.711080
+      Cartesian components [Ang]: [  0.895698,   0.793638,   1.222972]
+    Electron size [Ang]:            3.154376
+      Cartesian components [Ang]: [  1.361204,   2.204139,   1.799717]
+
+  Transition density matrix analysis:
+  -----------------------------------
+  
+  CT numbers (Mulliken)
+    omega =     0.8598
+    <Phe> =     0.0007
+  
+  Exciton analysis of the transition density matrix
+    Trans. dipole moment [D]:             0.000000
+      Cartesian components [D]:         [  0.000000,   0.000000,  -0.000000]
+    <r_h> [Ang]:                        [ -0.000000,   0.000000,  -1.719298]
+    <r_e> [Ang]:                        [ -0.000000,   0.000000,   0.635236]
+    |<r_e - r_h>| [Ang]:                  2.354534
+    Hole size [Ang]:                      1.131706
+      Cartesian components [Ang]:       [  0.807296,   0.464482,   0.642874]
+    Electron size [Ang]:                  3.568457
+      Cartesian components [Ang]:       [  1.586541,   2.703232,   1.705670]
+    RMS electron-hole separation [Ang]:   4.417130
+      Cartesian components [Ang]:       [  1.772122,   2.742378,   2.974892]
+    Covariance(r_h, r_e) [Ang^2]:         0.023717
+    Correlation coefficient:              0.005873
+    Center-of-mass size [Ang]:            1.874972
+      Cartesian components [Ang]:       [  0.894044,   1.371657,   0.913652]
+
+  Decomposition into state-averaged NTOs
+    H- 1 -> L+ 5:  0.4863 ( 47.3%)
+    H- 1 -> L+ 1:  0.3285 ( 21.6%)
+    H- 1 -> L+ 7: -0.2858 ( 16.3%)
+                   omega =  86.0%
+  ----------------------------------------------------------------------------
+
+
+  Excited state 10 (singlet, A2)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  10 (1) A2                                   R^2 =  1.50952e-06
+
+  Total energy:                                           -153.8912290506 a.u.
+  Excitation energy:                                               7.200400 eV
+
+  Osc. strength:                                                      0.000000
+  Trans. dip. moment [a.u.]:           [   0.000000,   -0.000000,    0.000000]
+  <i|r^2|0> [a.u.]:                    [   0.000000,    0.000000,    0.000000]
+
+  Dip. moment [a.u.]:                  [  -0.000000,   -0.000000,    0.452089]
+  Total dipole [Debye]:                                               1.149095
+  <r^2> [a.u.]:                        [  77.457101,   25.853110,  218.645848]
+  Total <r^2> [a.u.]:                                               321.956059
+
+  V1^2 = 0.8974, V2^2 = 0.1026
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     2 (B2) A               9 (B1) A                 -0.6073
+     2 (B2) A               8 (B1) A                  0.2105
+    ---------------------------------------------------------
+
+  Density matrix analysis:
+  ------------------------
+  NOs
+    Occupation of frontier NOs:
+       0.9746   0.9957
+    Number of electrons: 26.000000
+    Number of unpaired electrons: n_u =  2.77331, n_u,nl =  2.10635
+    NO participation ratio (PR_NO):  3.904964
+  
+  
+  Mulliken Population Analysis
+  Atom      Charge (e)              h+              e-           Del q
+  --------------------------------------------------------------------
+   1 C       -0.800265        0.019555       -0.482131       -0.462577
+   2 C       -0.800265        0.019555       -0.482131       -0.462577
+   3 H        0.547638        0.048752        0.264445        0.313197
+   4 H        0.547638        0.048752        0.264445        0.313197
+   5 H        0.207000        0.007846        0.095280        0.103126
+   6 H        0.207000        0.007846        0.095280        0.103126
+   7 O       -1.120070        1.247244       -1.242145        0.005099
+   8 H        0.211323        0.120975       -0.033567        0.087408
+  --------------------------------------------------------------------
+  Sum:       -1.000000        1.520526       -1.520526       -0.000000
+  
+  Multipole moment analysis of the density matrix
+    Molecular charge:                      -1.000000
+    Number of electrons:                   26.000000
+      Center of electronic charge [Ang]: [  0.000000,   0.000000,  -0.009201]
+    Total nuclear charge:                  25.000000
+      Center of nuclear charge [Ang]:    [  0.000000,   0.000000,  -0.000000]
+    Dipole moment [D]:                     1.149095
+      Cartesian components [D]:          [ -0.000000,  -0.000000,   1.149095]
+    RMS size of the density [Ang]:         1.862119
+      Cartesian components [Ang]:        [  0.913366,   0.527680,   1.534537]
+  
+  Exciton analysis of the difference density matrix
+    <r_h> [Ang]:                  [  0.000000,  -0.000000,  -1.541747]
+    <r_e> [Ang]:                  [  0.000000,  -0.000000,  -0.957939]
+    |<r_e - r_h>| [Ang]:            0.583808
+    Hole size [Ang]:                1.747632
+      Cartesian components [Ang]: [  0.857661,   0.884381,   1.239559]
+    Electron size [Ang]:            3.347387
+      Cartesian components [Ang]: [  2.148872,   1.357016,   2.178499]
+
+  Transition density matrix analysis:
+  -----------------------------------
+  
+  CT numbers (Mulliken)
+    omega =     0.8751
+    <Phe> =    -0.0069
+  
+  Exciton analysis of the transition density matrix
+    Trans. dipole moment [D]:             0.000000
+      Cartesian components [D]:         [  0.000000,  -0.000000,   0.000000]
+    <r_h> [Ang]:                        [ -0.000000,  -0.000000,  -1.743903]
+    <r_e> [Ang]:                        [ -0.000000,  -0.000000,  -0.868230]
+    |<r_e - r_h>| [Ang]:                  0.875674
+    Hole size [Ang]:                      1.081367
+      Cartesian components [Ang]:       [  0.471185,   0.804968,   0.547145]
+    Electron size [Ang]:                  3.855975
+      Cartesian components [Ang]:       [  2.530452,   1.567807,   2.450987]
+    RMS electron-hole separation [Ang]:   4.090180
+      Cartesian components [Ang]:       [  2.573445,   1.760311,   2.647311]
+    Covariance(r_h, r_e) [Ang^2]:         0.037567
+    Correlation coefficient:              0.009009
+    Center-of-mass size [Ang]:            2.007052
+      Cartesian components [Ang]:       [  1.287224,   0.882226,   1.262137]
+
+  Decomposition into state-averaged NTOs
+    H- 0 -> L+ 2:  0.5425 ( 58.9%)
+    H- 0 -> L+ 4:  0.2608 ( 13.6%)
+    H- 0 -> L+ 8: -0.2444 ( 11.9%)
+    H- 0 -> L+ 3:  0.1050 (  2.2%)
+                   omega =  87.5%
+  ----------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+  Time of ADC calculation:  CPU 809.55 s  wall 143.08 s
+================================================================================
+ 
+ --------------------------------------------------------------
+             Orbital Energies (a.u.) and Symmetries
+ --------------------------------------------------------------
+ 
+ Alpha MOs, Restricted
+ -- Occupied --                  
+-20.202 -11.040 -11.038  -0.928  -0.852  -0.597  -0.473  -0.385
+  1 A1    2 A1    1 B1    3 A1    4 A1    2 B1    5 A1    6 A1                 
+ -0.329  -0.271  -0.195  -0.131  -0.130
+  3 B1    7 A1    1 B2    4 B1    2 B2                                         
+ -- Virtual --                   
+  0.145   0.155   0.165   0.173   0.181   0.188   0.278   0.288
+  5 B1    8 A1    3 B2    1 A2    6 B1    9 A1   10 A1   11 A1                 
+  0.297   0.308   0.336   0.348   0.351   0.399   0.417   0.439
+  2 A2    7 B1   12 A1    8 B1    4 B2    5 B2    9 B1   13 A1                 
+  0.441   0.478   0.502   0.502   0.581   0.603   0.618   0.630
+  3 A2   14 A1   10 B1   15 A1   16 A1   11 B1   12 B1   17 A1                 
+  0.776   0.794   0.801   0.808   0.828   0.862   0.864   0.875
+ 18 A1    6 B2   13 B1   19 A1   20 A1    7 B2   14 B1   21 A1                 
+  0.909   0.927   0.936   0.966   0.977   1.014   1.025   1.053
+  4 A2    5 A2   15 B1   22 A1   23 A1   16 B1    8 B2   17 B1                 
+  1.055   1.081   1.146   1.162   1.212   1.221   1.251   1.311
+  6 A2    9 B2   18 B1   24 A1   25 A1   19 B1   10 B2   26 A1                 
+  1.404   1.407   1.419   1.464   1.520   1.569   1.577   1.579
+ 11 B2    7 A2   20 B1   12 B2   27 A1   28 A1   21 B1    8 A2                 
+  1.607   1.625   1.656   1.669   1.753   1.829   1.832   1.867
+ 13 B2   29 A1   30 A1   22 B1   23 B1    9 A2   31 A1   24 B1                 
+  1.906   1.978   2.106   2.107   2.145   2.240   2.407   2.425
+ 25 B1   32 A1   33 A1   26 B1   34 A1   27 B1   14 B2   10 A2                 
+  2.482   2.484   2.494   2.528   2.534   2.543   2.557   2.721
+ 28 B1   15 B2   35 A1   36 A1   11 A2   29 B1   37 A1   16 B2                 
+  2.741   2.771   2.799   2.814   2.837   2.863   2.957   2.984
+ 38 A1   17 B2   39 A1   30 B1   12 A2   40 A1   18 B2   41 A1                 
+  3.044   3.089   3.137   3.174   3.295   3.313   3.330   3.353
+ 31 B1   32 B1   42 A1   19 B2   20 B2   21 B2   43 A1   44 A1                 
+  3.362   3.447   3.491   3.503   3.510   3.608   3.626   3.639
+ 13 A2   14 A2   45 A1   33 B1   34 B1   15 A2   16 A2   35 B1                 
+  3.672   3.702   3.730   3.735   3.831   3.847   3.959   4.038
+ 36 B1   46 A1   37 B1   22 B2   47 A1   23 B2   48 A1   38 B1                 
+  4.118   4.126   4.154   4.174   4.177   4.201   4.257   4.308
+ 49 A1   39 B1   17 A2   40 B1   18 A2   50 A1   24 B2   51 A1                 
+  4.365   4.380   4.403   4.403   4.490   4.502   4.522   4.528
+ 19 A2   52 A1   41 B1   25 B2   26 B2   42 B1   43 B1   27 B2                 
+  4.531   4.547   4.608   4.757   4.792   4.823   4.825   4.935
+ 53 A1   20 A2   28 B2   44 B1   54 A1   55 A1   21 A2   45 B1                 
+  4.999   5.004   5.026   5.136   5.208   5.286   5.368   5.407
+ 22 A2   46 B1   56 A1   29 B2   57 A1   47 B1   58 A1   30 B2                 
+  5.494   5.499   5.531   5.616   5.630   5.732   5.737   5.815
+ 48 B1   59 A1   60 A1   23 A2   31 B2   49 B1   24 A2   50 B1                 
+  5.819   6.048   6.189   6.390   6.458   6.584   6.782   6.884
+ 61 A1   62 A1   51 B1   63 A1   52 B1   64 A1   53 B1   32 B2                 
+  6.898   6.904   6.992   7.093   7.431   7.448   7.461   7.531
+ 25 A2   54 B1   65 A1   55 B1   26 A2   66 A1   33 B2   34 B2                 
+  7.555   7.664   7.796   8.409  12.239  12.505  15.141
+ 56 B1   57 B1   67 A1   68 A1   69 A1   70 A1   58 B1                         
+ 
+ Beta MOs, Restricted
+ -- Occupied --                  
+-20.202 -11.040 -11.038  -0.928  -0.852  -0.597  -0.473  -0.385
+  1 A1    2 A1    1 B1    3 A1    4 A1    2 B1    5 A1    6 A1                 
+ -0.329  -0.271  -0.195  -0.131  -0.130
+  3 B1    7 A1    1 B2    4 B1    2 B2                                         
+ -- Virtual --                   
+  0.145   0.155   0.165   0.173   0.181   0.188   0.278   0.288
+  5 B1    8 A1    3 B2    1 A2    6 B1    9 A1   10 A1   11 A1                 
+  0.297   0.308   0.336   0.348   0.351   0.399   0.417   0.439
+  2 A2    7 B1   12 A1    8 B1    4 B2    5 B2    9 B1   13 A1                 
+  0.441   0.478   0.502   0.502   0.581   0.603   0.618   0.630
+  3 A2   14 A1   10 B1   15 A1   16 A1   11 B1   12 B1   17 A1                 
+  0.776   0.794   0.801   0.808   0.828   0.862   0.864   0.875
+ 18 A1    6 B2   13 B1   19 A1   20 A1    7 B2   14 B1   21 A1                 
+  0.909   0.927   0.936   0.966   0.977   1.014   1.025   1.053
+  4 A2    5 A2   15 B1   22 A1   23 A1   16 B1    8 B2   17 B1                 
+  1.055   1.081   1.146   1.162   1.212   1.221   1.251   1.311
+  6 A2    9 B2   18 B1   24 A1   25 A1   19 B1   10 B2   26 A1                 
+  1.404   1.407   1.419   1.464   1.520   1.569   1.577   1.579
+ 11 B2    7 A2   20 B1   12 B2   27 A1   28 A1   21 B1    8 A2                 
+  1.607   1.625   1.656   1.669   1.753   1.829   1.832   1.867
+ 13 B2   29 A1   30 A1   22 B1   23 B1    9 A2   31 A1   24 B1                 
+  1.906   1.978   2.106   2.107   2.145   2.240   2.407   2.425
+ 25 B1   32 A1   33 A1   26 B1   34 A1   27 B1   14 B2   10 A2                 
+  2.482   2.484   2.494   2.528   2.534   2.543   2.557   2.721
+ 28 B1   15 B2   35 A1   36 A1   11 A2   29 B1   37 A1   16 B2                 
+  2.741   2.771   2.799   2.814   2.837   2.863   2.957   2.984
+ 38 A1   17 B2   39 A1   30 B1   12 A2   40 A1   18 B2   41 A1                 
+  3.044   3.089   3.137   3.174   3.295   3.313   3.330   3.353
+ 31 B1   32 B1   42 A1   19 B2   20 B2   21 B2   43 A1   44 A1                 
+  3.362   3.447   3.491   3.503   3.510   3.608   3.626   3.639
+ 13 A2   14 A2   45 A1   33 B1   34 B1   15 A2   16 A2   35 B1                 
+  3.672   3.702   3.730   3.735   3.831   3.847   3.959   4.038
+ 36 B1   46 A1   37 B1   22 B2   47 A1   23 B2   48 A1   38 B1                 
+  4.118   4.126   4.154   4.174   4.177   4.201   4.257   4.308
+ 49 A1   39 B1   17 A2   40 B1   18 A2   50 A1   24 B2   51 A1                 
+  4.365   4.380   4.403   4.403   4.490   4.502   4.522   4.528
+ 19 A2   52 A1   41 B1   25 B2   26 B2   42 B1   43 B1   27 B2                 
+  4.531   4.547   4.608   4.757   4.792   4.823   4.825   4.935
+ 53 A1   20 A2   28 B2   44 B1   54 A1   55 A1   21 A2   45 B1                 
+  4.999   5.004   5.026   5.136   5.208   5.286   5.368   5.407
+ 22 A2   46 B1   56 A1   29 B2   57 A1   47 B1   58 A1   30 B2                 
+  5.494   5.499   5.531   5.616   5.630   5.732   5.737   5.815
+ 48 B1   59 A1   60 A1   23 A2   31 B2   49 B1   24 A2   50 B1                 
+  5.819   6.048   6.189   6.390   6.458   6.584   6.782   6.884
+ 61 A1   62 A1   51 B1   63 A1   52 B1   64 A1   53 B1   32 B2                 
+  6.898   6.904   6.992   7.093   7.431   7.448   7.461   7.531
+ 25 A2   54 B1   65 A1   55 B1   26 A2   66 A1   33 B2   34 B2                 
+  7.555   7.664   7.796   8.409  12.239  12.505  15.141
+ 56 B1   57 B1   67 A1   68 A1   69 A1   70 A1   58 B1                         
+ --------------------------------------------------------------
+ 
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -0.311966
+      2 C                    -0.311966
+      3 H                     0.220376
+      4 H                     0.220376
+      5 H                     0.087394
+      6 H                     0.087394
+      7 O                    -1.128192
+      8 H                     0.136585
+  ----------------------------------------
+  Sum of atomic charges =    -1.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                -4.8032
+    Dipole Moment (Debye)
+         X      -0.0000      Y       0.0000      Z       5.2204
+       Tot       5.2204
+    Quadrupole Moments (Debye-Ang)
+        XX     -23.5995     XY      -0.0000     YY     -26.4075
+        XZ      -0.0000     YZ      -0.0000     ZZ     -32.9979
+    Octopole Moments (Debye-Ang^2)
+       XXX      -0.0000    XXY       0.0000    XYY       0.0000
+       YYY       0.0000    XXZ       1.0013    XYZ       0.0000
+       YYZ      -0.2970    XZZ      -0.0000    YZZ       0.0000
+       ZZZ       6.4579
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX     -87.6064   XXXY      -0.0000   XXYY     -21.5356
+      XYYY      -0.0000   YYYY     -39.2098   XXXZ      -0.0000
+      XXYZ      -0.0000   XYYZ       0.0000   YYYZ      -0.0000
+      XXZZ     -70.0674   XYZZ      -0.0000   YYZZ     -65.3477
+      XZZZ      -0.0000   YZZZ      -0.0000   ZZZZ    -291.9525
+ -----------------------------------------------------------------
+ Total job time:  258.00s(wall), 899.47s(cpu) 
+ Thu Mar  3 02:57:03 2022
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using Q-Chem.  Have a nice day.  *
+        *                                                           *
+        *************************************************************
+
+
