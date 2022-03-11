@@ -1,0 +1,35 @@
+#!/bin/bash
+
+echo Running on $HOSTNAME
+
+OrcaPath=/home/thomas/Packages/Orca_5_0_1/
+export PATH=$PATH:$OrcaPath
+
+WorkDir=/src/jdavis/orca.scratch
+CurrDir=$PWD
+
+if [ ! -d $WorkDir ]
+then
+    mkdir $WorkDir
+else
+    if [ ! -d $WorkDir ]
+    then
+        echo "could not make" $WorkDir
+        exit
+    fi
+fi
+cd $WorkDir
+rm -rf $WorkDir/*
+
+
+
+cat > input << EOF
+!HF cc-pvdz freq
+* xyz -1 1
+O 0.0 0.0 0.0
+H 0.0 0.0 0.9653
+*
+EOF
+
+$OrcaPath/orca input
+

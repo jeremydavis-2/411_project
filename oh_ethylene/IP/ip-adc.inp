@@ -1,0 +1,30 @@
+#ethylene geometry from CRC Handbook 102nd Edition
+$molecule
+-1 1
+O         0.0000000000    0.0000000000   -1.5841414040
+H         0.0000000000    0.0000000000   -2.5471307683
+$end
+
+$rem
+   BASIS gen
+   METHOD adc(2)
+   IP_STATES [0,0,5,0]
+   scf_convergence 8
+   adc_nguess_singles 10
+   THRESH 14
+   S2THRESH 14
+   adc_davidson_conv 5
+   adc_davidson_thresh 14
+   THREADS 4
+   MEM_TOTAL 95000
+   STATE_ANALYSIS TRUE
+$end
+
+$basis
+O 1
+aug-cc-pvdz
+****
+H 2
+aug-cc-pvdz
+****
+$end
