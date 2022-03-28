@@ -1,0 +1,55 @@
+$molecule
+-1 1
+C       0.000000      0.664500   -0.176471
+C       0.000000     -0.664500   -0.176471
+H       0.000000      1.159080    0.785878
+H       0.000000     -1.159080    0.785878
+H       0.000000      1.159080   -1.138819
+H       0.000000     -1.159080   -1.138819
+H       0.000000      0.000000    2.823529
+$end
+
+$rem
+   JOBTYPE opt
+   METHOD MP2
+   BASIS gen
+   PURECART 11
+   THRESH 14
+   S2THRESH 14
+   THREADS 10
+   MEM_TOTAL 95000
+$end
+$basis
+C     1
+cc-pvtz
+****
+C     2
+cc-pvtz
+****
+H     3
+cc-pvtz
+****
+H     4
+cc-pvtz
+****
+H     5
+cc-pvtz
+****
+H     6
+cc-pvtz
+****
+H     7
+aug-cc-pvtz
+****
+$end
+$opt
+FIXED
+1 xyz
+2 xyz
+3 xyz
+4 xyz
+5 xyz
+6 xyz
+7 xz
+ENDFIXED
+$end

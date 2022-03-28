@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+
+for file in input*; do
+
+echo $file
+qchem $file > outputs/"output${file:5}"
+rm $file
+done
+echo 'done'
+echo 'z, close, small basis, increased subspace'
