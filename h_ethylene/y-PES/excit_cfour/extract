@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+
+echo "R E st1 st2 st3" > results.csv
+for file in outputs/output*; do
+echo "${file:14}  $(c4_ene.py ${file} ccsd| tail -1)  $(acex_eom ${file}| tail -1) " >> results.csv
+
+done
+
+
+
+
+
+#echo $file
+#./$file > outputs/"output${file:5}"
+#rm $file
+#done
+#echo 'done'

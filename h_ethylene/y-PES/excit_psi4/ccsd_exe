@@ -1,0 +1,47 @@
+import numpy as np
+memory 10000 mb
+
+
+set{
+	reference RHF
+	roots_per_irrep [0,0,3,0]
+}
+
+basis{
+	assign C cc-pvdz
+	assign H cc-pvdz
+	assign H7 cc-pvdz
+}
+
+
+molecule eth {
+        -1 1
+        C       0.000000      0.0   -0.664500
+        C       0.000000      0.0    0.664500
+        H       0.962348      0.0   -1.159080
+        H       0.962348      0.0    1.159080
+        H      -0.962348      0.0   -1.159080
+        H      -0.962348      0.0    1.159080
+        H7      0.000000      R      0.000000
+}
+
+rs = np.linspace(0.2, 5, num=5, endpoint=True)
+Es = {}
+st1 = np.zeros(len(rs))
+st2 = np.zeros(len(rs))
+st3 = np.zeros(len(rs))
+
+for i,R in enumerate(rs):
+	eth.R = R
+	Es[R]=energy('eom-ccsd')	
+	st1[i] = get_variable('CC ROOT 1 TOTAL ENERGY')
+	st2[i] = get_variable('CC ROOT 2 TOTAL ENERGY')
+	st3[i] = get_variable('CC ROOT 3 TOTAL ENERGY')
+
+psi4.print_out("\n")
+psi4.print_out("PES of 3 states")
+psi4.print_out("        R [Ang]         E    st1     st2    st3            \n")
+psi4.print_out("-----------------------------------------------------\n")
+for i,R in enumerate(rs):
+   e = Es[R]
+   psi4.print_out("   %3.1f            %10.6f     %10.6f      %10.6f      %10.6f\n" % (R, e, st1[i], st2[i], st3[i]))
