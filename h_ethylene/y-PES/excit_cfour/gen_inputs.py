@@ -42,8 +42,6 @@ ESTATE_SYM=0/3/0/0
 CC_PROG=VCC
 CHARGE=-1
 COORDINATES=CARTESIAN
-SCF_DAMP=500
-SCF_MAXCYC=300
 BASIS=SPECIAL
 REFERENCE=RHF
 MEM_SIZE=90,MEM_UNIT=GB)
@@ -64,7 +62,7 @@ time xcfour
 	return string
 
 
-for R in np.linspace(0.5, 5, num=30, endpoint=True):
+for R in np.linspace(0.5, 5, num=100, endpoint=True):
 	input = open("input"+str(round(R,6)),"w")
 	input.write(infile(R))
 	os.chmod("input"+str(round(R,6)), 0o775)
