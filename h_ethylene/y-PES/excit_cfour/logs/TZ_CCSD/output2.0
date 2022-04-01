@@ -34,7 +34,7 @@ CFour on node02
                        Version 2.1
  
                      node02                                            
-                     Fri Apr  1 10:07:44 CST 2022                      
+                     Thu Mar 31 13:55:31 CST 2022                      
                      integer*8 version is running
  
 ********************************************************************************
@@ -49,7 +49,7 @@ H      -0.962348      0.0   -1.159080
 H      -0.962348      0.0    1.159080                                           
 H      0.000000      2.0      0.000000                                          
                                                                                 
-*CFOUR(CALC=CCSD(T)                                                             
+*CFOUR(CALC=CCSD                                                                
 #EXCITE=EOMEE                                                                   
 #ESTATE_SYM=0/3/0/0                                                             
 CC_PROG=VCC                                                                     
@@ -93,7 +93,7 @@ H:aug-cc-pVTZ
        BRUECKNER            IBRKNR         OFF         [  0]    ***   
        BUFFERSIZE           IBUFFS              4096            ***   
        CACHE_RECS           ICHREC             10               ***   
-       CALCLEVEL            ICLLVL         CCSD(T)     [ 22]    ***   
+       CALCLEVEL            ICLLVL         CCSD        [ 10]    ***   
        CCORBOPT             ICCORB         OFF         [  0]  x 0.01  
        CC_CONV              ICCCNV          10D-  7             ***   
        CC_EXPORDER          ICCEOR              5               ***   
@@ -329,8 +329,8 @@ H:aug-cc-pVTZ
   @GTFLGS-W, Keyword #ESTATE_SYM not known and is ignored.
   There are  139 basis functions.
  @GEOPT-W, Archive file not created for single-point calculation.
- @CHECKOUT-I, Total execution time (CPU/WALL):        0.12/       0.13 seconds.
---executable xjoda finished with status     0 in        0.15 seconds (walltime).
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.13/       0.15 seconds.
+--executable xjoda finished with status     0 in        0.17 seconds (walltime).
  --invoking executable--
 /home/tsommerfeld/zscale/bin/xvmol
  SERIAL VERSION OF MOLECULE STARTED
@@ -440,16 +440,16 @@ FINISH
   @TWOEL-I,    1823293 INTEGRALS OF SYMMETRY TYPE  I I J J
   @TWOEL-I,    2991764 INTEGRALS OF SYMMETRY TYPE  I J K L
   @TWOEL-I, TOTAL NUMBER OF 2-E INTEGRALS    9049417.
-  @MOLECU-I, TWO ELECTRON INTEGRALS (CPU/WALL):       42.32/       4.62 SECONDS.
- @CHECKOUT-I, Total execution time (CPU/WALL):       42.37/       4.67 seconds.
+  @MOLECU-I, TWO ELECTRON INTEGRALS (CPU/WALL):       29.16/       4.66 SECONDS.
+ @CHECKOUT-I, Total execution time (CPU/WALL):       29.21/       4.71 seconds.
 
-Running with 12 threads/proc
+Running with 8 threads/proc
 
---executable xvmol finished with status     0 in        4.69 seconds (walltime).
+--executable xvmol finished with status     0 in        4.74 seconds (walltime).
  --invoking executable--
 /home/tsommerfeld/zscale/bin/xvmol2ja
  @GETMEM-I,  Allocated   85830 MB of main memory.
- @CHECKOUT-I, Total execution time (CPU/WALL):        0.10/       0.02 seconds.
+ @CHECKOUT-I, Total execution time (CPU/WALL):        0.08/       0.02 seconds.
 --executable xvmol2ja finished with status     0 in        0.04 seconds (walltime).
  --invoking executable--
 /home/tsommerfeld/zscale/bin/xvscf
@@ -759,8 +759,8 @@ Running with 12 threads/proc
 
   VSCF finished.
 
- @CHECKOUT-I, Total execution time (CPU/WALL):       25.22/       2.12 seconds.
---executable xvscf finished with status     0 in        2.14 seconds (walltime).
+ @CHECKOUT-I, Total execution time (CPU/WALL):       14.93/       1.88 seconds.
+--executable xvscf finished with status     0 in        1.90 seconds (walltime).
  --invoking executable--
 /home/tsommerfeld/zscale/bin/xvtran
  @GETMEM-I,  Allocated   85830 MB of main memory.
@@ -904,11 +904,12 @@ Running with 12 threads/proc
    4.36052104256525        4.78708094229514        5.19339970942744     
    5.59286315151002        5.60607338045870        6.28431615060554     
    7.04181497724719     
- @CHECKOUT-I, Total execution time (CPU/WALL):       17.57/       2.63 seconds.
---executable xvtran finished with status     0 in        2.65 seconds (walltime).
+ @CHECKOUT-I, Total execution time (CPU/WALL):       12.37/       2.66 seconds.
+--executable xvtran finished with status     0 in        2.68 seconds (walltime).
  --invoking executable--
 /home/tsommerfeld/zscale/bin/xintprc
  @GETMEM-I,  Allocated   85830 MB of main memory.
+  Processing integrals for CCSD calculation.
   @GMOIAA-I, Processing MO integrals for spin case AA.
   @GMOIAA-I, Generation of integral list completed.
                       TYPE                NUMBER
@@ -942,13 +943,13 @@ Running with 12 threads/proc
 -----------------------------------------------------------------------------
    Norm of T2AB vector (   345906 symmetry allowed elements):  0.3465317697.
 -----------------------------------------------------------------------------
- @CHECKOUT-I, Total execution time (CPU/WALL):        5.14/       2.89 seconds.
---executable xintprc finished with status     0 in        2.92 seconds (walltime).
+ @CHECKOUT-I, Total execution time (CPU/WALL):        4.11/       2.83 seconds.
+--executable xintprc finished with status     0 in        2.85 seconds (walltime).
   calling xvcc 
  --invoking executable--
 /home/tsommerfeld/zscale/bin/xvcc
  @GETMEM-I,  Allocated   85830 MB of main memory.
-   CCSD(T) energy will be calculated.
+   CCSD energy will be calculated.
    The total correlation energy is -0.412223296824 a.u.
    The total correlation energy is -0.428877007577 a.u.
   Convergence information after     1 iterations: 
@@ -1065,10 +1066,10 @@ Running with 12 threads/proc
            16        -0.445507011580     -78.930808332689  DIIS 
       -----------------------------------------------------------
       A miracle has come to pass. The CC iterations have converged.
-        E(CCSD)           =     -78.930808332689
-        E(CCSD + T(CCSD)) =     -78.949713745569
-        E(CCSD(T))        =     -78.949189309058
- @CHECKOUT-I, Total execution time (CPU/WALL):      199.06/      16.60 seconds.
---executable xvcc finished with status     0 in       16.62 seconds (walltime).
-  The final electronic energy is       -78.949189309057857 a.u. 
-  This computation required                           29.24 seconds (walltime).
+      The reference energy is       -78.48530132110868 a.u.
+      The correlation energy is      -0.44550701158040 a.u.
+      The total energy is           -78.93080833268908 a.u.
+ @CHECKOUT-I, Total execution time (CPU/WALL):       76.80/       9.62 seconds.
+--executable xvcc finished with status     0 in        9.64 seconds (walltime).
+  The final electronic energy is       -78.930808332689082 a.u. 
+  This computation required                           22.04 seconds (walltime).
