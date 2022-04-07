@@ -83,12 +83,12 @@
  Parts of Q-Chem use Armadillo 9.900.5 (Nocturnal Misbehaviour).
  http://arma.sourceforge.net/
 
- Q-Chem begins on Mon Apr  4 16:35:36 2022  
+ Q-Chem begins on Wed Apr  6 20:22:50 2022  
 
  Host: node01
 0
 
-     Scratch files written to /src/jdavis/qchem.scratch/qchem28727//
+     Scratch files written to /src/jdavis/qchem.scratch/qchem30465//
  Processing $rem in /src/tsommerfeld/qchem/config/preferences:
  Processing $rem in /home/jdavis/.qchemrc:
  Core orbitals will be frozen
@@ -99,8 +99,8 @@
 User input:
 --------------------------------------------------------------
 $comment
-	Ethylene CAP-EOM-CCSD
-	Basis: C: jun-TZ+4p1d, H: TZ
+        Ethylene CAP-EOM-CCSD
+        Basis: C: jun-TZ+4p1d, H: TZ
 $end
 
 $molecule
@@ -114,22 +114,24 @@ H      -1.1590799571     0.9623485159     0.0000000000
 $end
 
 $rem
-	method eom-ccsd
-	basis gen
+        method eom-ccsd
+        basis gen
         EA_STATES [0,0,10,0,0,0,0,0]
-	complex_ccman 1
-	xc_grid 000250000974
-	scf_convergence 8
-	thresh 14
-	mem_total 95000
-	threads 12
+        complex_ccman 1
+        xc_grid 000250000974
+        scf_convergence 8
+        thresh 14
+        mem_total 95000
+        threads 12
 $end
 
 $complex_ccman
-	cap_type 2 
-	proj_cap 3
-	cap_eta 300 
-	cap_x 3500
+        cap_type 2
+        proj_cap 3
+	CAP_ETA         50
+	ETA_STEP        50
+	NSTEPS          100
+        cap_x 3500
 $end
 
 $basis
@@ -249,23 +251,23 @@ $end
 
  Standard Electronic Orientation quadrupole field applied
  ================ Generating on-the-fly SAD Guess ================
-Attempting to make child job directory: /src/jdavis/qchem.scratch/qchem28727//Frg1/
-Attempting to make child job directory: /src/jdavis/qchem.scratch/qchem28727//Frg2/
-Creating input file /src/jdavis/qchem.scratch/qchem28727/Frg1.input
+Attempting to make child job directory: /src/jdavis/qchem.scratch/qchem30465//Frg1/
+Attempting to make child job directory: /src/jdavis/qchem.scratch/qchem30465//Frg2/
+Creating input file /src/jdavis/qchem.scratch/qchem30465/Frg1.input
 using default PutDataFrgm: nothing
-calling putenv with: QCSCRATCH=/src/jdavis/qchem.scratch/qchem28727/ 
+calling putenv with: QCSCRATCH=/src/jdavis/qchem.scratch/qchem30465/ 
 Spawning Job For Fragment 0
 Done Job For Fragment 0
 calling putenv with: QCSCRATCH=/src/jdavis/qchem.scratch 
 calling putenv with: QCTHREADS=1 
-Creating input file /src/jdavis/qchem.scratch/qchem28727/Frg2.input
+Creating input file /src/jdavis/qchem.scratch/qchem30465/Frg2.input
 using default PutDataFrgm: nothing
-calling putenv with: QCSCRATCH=/src/jdavis/qchem.scratch/qchem28727/ 
+calling putenv with: QCSCRATCH=/src/jdavis/qchem.scratch/qchem30465/ 
 Spawning Job For Fragment 1
 Done Job For Fragment 1
 calling putenv with: QCSCRATCH=/src/jdavis/qchem.scratch 
 calling putenv with: QCTHREADS=1 
- Time for running child jobs:  CPU 2.12 s  wall 1.50 s
+ Time for running child jobs:  CPU 2.11 s  wall 1.51 s
  ============= Method Specific SAD Guess Constructed =============
  Guess from on-the-fly superposition of atomic densities
  Warning: Energy on first SCF cycle will be non-variational
@@ -290,19 +292,19 @@ calling putenv with: QCTHREADS=1
   Cycle       Energy         DIIS error
  ---------------------------------------
     1     -78.4638144751      2.97e-02  
-    2     -78.0364511858      2.22e-03  
-    3     -78.0582288571      6.08e-04  
-    4     -78.0600409431      2.14e-04  
-    5     -78.0602554876      2.39e-05  
-    6     -78.0602607083      5.01e-06  
-    7     -78.0602610276      1.33e-06  
-    8     -78.0602610454      1.53e-07  
-    9     -78.0602610539      1.98e-08  
-   10     -78.0602610489      2.87e-09  Convergence criterion met
+    2     -78.0364511930      2.22e-03  
+    3     -78.0582288573      6.08e-04  
+    4     -78.0600409366      2.14e-04  
+    5     -78.0602554945      2.39e-05  
+    6     -78.0602607114      5.01e-06  
+    7     -78.0602610225      1.33e-06  
+    8     -78.0602610562      1.53e-07  
+    9     -78.0602610436      2.01e-08  
+   10     -78.0602610504      3.78e-09  Convergence criterion met
  ---------------------------------------
- SCF time:   CPU 25.50s  wall 3.00s 
- SCF   energy in the final basis set =      -78.0602610489
- Total energy in the final basis set =      -78.0602610489
+ SCF time:   CPU 25.53s  wall 2.00s 
+ SCF   energy in the final basis set =      -78.0602610504
+ Total energy in the final basis set =      -78.0602610504
  CAP matrix will be calculated and saved for subsequent use
 
 
@@ -455,9 +457,9 @@ calling putenv with: QCTHREADS=1
 
  Import integrals:   CPU 0.00 s  wall 0.00 s
 
- Import integrals:   CPU 68.18 s  wall 6.26 s
+ Import integrals:   CPU 68.11 s  wall 6.30 s
 
- MP2 amplitudes:   CPU 6.59 s  wall 5.64 s
+ MP2 amplitudes:   CPU 6.33 s  wall 5.39 s
 
 Running a double precision version
            CCSD T amplitudes will be solved using DIIS.
@@ -530,7 +532,7 @@ Running a double precision version
  ------------------------------------------------------------------------------
                                    CCSD Lambda converged.
 
- CCSD calculation:   CPU 204.15 s  wall 40.55 s
+ CCSD calculation:   CPU 203.98 s  wall 40.29 s
 
         Solving for EOMEA-CCSD/MP2 B2g transitions.
 
@@ -547,23 +549,23 @@ Running a double precision version
  ------------------------------------------------------------------------------
       0    0      10    5.10e-02   0.4354   1.1517   2.2839   3.7963   5.5390   7.1052   9.8824   17.4197   23.7236   32.8107   
       1    0      20    5.04e-02   0.4334   1.1341   2.1657   3.2828   4.9311   6.9393   9.2661   16.8408   22.6194   23.8751   
-      2    1      30    3.17e-02   0.4327*  1.1224   1.9926   2.8229   4.6187   6.8444   8.8627   13.3582   14.3533   15.5912   
-      3    2      39    2.13e-03   0.4327*  1.1219*  1.9825   2.8052   4.6047   6.8367   8.8069   10.7270   11.0565   11.7595   
+      2    1      30    3.17e-02   0.4327*  1.1224   1.9926   2.8229   4.6187   6.8444   8.8627   13.3582   14.3533   15.5913   
+      3    2      39    2.13e-03   0.4327*  1.1219*  1.9825   2.8052   4.6047   6.8367   8.8069   10.7270   11.0565   11.7594   
       4    4      47    4.34e-03   0.4327*  1.1219*  1.9810*  2.8025*  4.6017   6.8332   8.6007   9.1473   9.7735   10.3632   
       5    5      53    3.02e-03   0.4327*  1.1219*  1.9810*  2.8024*  4.6014*  6.8311   7.7362   8.8201   9.2673   9.5579   
       6    5      58    2.05e-03   0.4327*  1.1218*  1.9809*  2.8024*  4.6014*  6.8267   7.0217   8.0114   8.8343   9.4283   
-      7    5      63    1.21e-03   0.4327*  1.1218*  1.9809*  2.8024*  4.6014*  6.6985   6.8349   7.5284   8.7723   9.2943   
-      8    5      68    3.00e-03   0.4327*  1.1218*  1.9809*  2.8024*  4.6014*  6.6437   6.8328   7.3650   8.1430   8.6465   
-      9    6      73    8.90e-04   0.4327*  1.1218*  1.9809*  2.8024*  4.6014*  6.6363   6.8325*  6.9376   7.3087   8.4929   
+      7    5      63    1.21e-03   0.4327*  1.1218*  1.9809*  2.8024*  4.6014*  6.6985   6.8349   7.5285   8.7723   9.2943   
+      8    5      68    3.00e-03   0.4327*  1.1218*  1.9809*  2.8024*  4.6014*  6.6437   6.8328   7.3650   8.1429   8.6465   
+      9    6      73    8.90e-04   0.4327*  1.1218*  1.9809*  2.8024*  4.6014*  6.6363   6.8325*  6.9375   7.3087   8.4929   
       10   7      77    2.01e-04   0.4327*  1.1218*  1.9809*  2.8024*  4.6014*  6.6351*  6.7121   6.8324*  7.2967   8.4469   
       11   7      80    4.35e-05   0.4327*  1.1218*  1.9809*  2.8024*  4.6014*  6.6349*  6.6714   6.8324*  7.2948   8.4375   
       12   8      83    6.19e-05   0.4327*  1.1218*  1.9809*  2.8024*  4.6014*  6.6349*  6.6567   6.8324*  7.2946*  8.4319   
       13   8      85    1.45e-03   0.4327*  1.1218*  1.9809*  2.8024*  4.6014*  6.6349*  6.6415   6.8324*  7.2946*  7.6672   
-      14   8      87    2.83e-04   0.4327*  1.1218*  1.9809*  2.8024*  4.6014*  6.6328   6.6349*  6.8324*  7.2946*  7.3456   
+      14   8      87    2.83e-04   0.4327*  1.1218*  1.9809*  2.8024*  4.6014*  6.6328   6.6349*  6.8324*  7.2946*  7.3457   
       15   8      89    6.93e-05   0.4327*  1.1219*  1.9809*  2.8024*  4.6014*  6.6310   6.6349*  6.8324*  7.2810   7.2946*  
       16   9      91    2.47e-05   0.4327*  1.1219*  1.9809*  2.8024*  4.6014*  6.6307*  6.6349*  6.8324*  7.2604   7.2946*  
       17   9      92    4.82e-06   0.4327*  1.1219*  1.9809*  2.8024*  4.6014*  6.6306*  6.6349*  6.8324*  7.2547   7.2946*  
-      18   10     93    8.09e-07   0.4327*  1.1219*  1.9809*  2.8024*  4.6014*  6.6306*  6.6349*  6.8324*  7.2538*  7.2946*  
+      18   10     93    8.10e-07   0.4327*  1.1219*  1.9809*  2.8024*  4.6014*  6.6306*  6.6349*  6.8324*  7.2538*  7.2946*  
 
      Davidson procedure converged
 
@@ -573,10 +575,10 @@ Running a double precision version
  Conv-d = yes
 
  Amplitude    Transitions between orbitals
-  0.9998       infty       ->    1 (B2g) B                  
-  0.0090       infty       ->    2 (B2g) B                  
-  0.0076       infty       ->    3 (B2g) B                  
-  0.0071       infty       ->    4 (B2g) B                  
+ -0.9998       infty       ->    1 (B2g) B                  
+ -0.0090       infty       ->    2 (B2g) B                  
+ -0.0076       infty       ->    3 (B2g) B                  
+ -0.0071       infty       ->    4 (B2g) B                  
 
               Summary of significant orbitals:
 
@@ -593,10 +595,10 @@ Running a double precision version
  Conv-d = yes
 
  Amplitude    Transitions between orbitals
-  0.9953       infty       ->    2 (B2g) B                  
-  0.0617       infty       ->    3 (B2g) B                  
-  0.0532       infty       ->    4 (B2g) B                  
-  0.0231       infty       ->    5 (B2g) B                  
+ -0.9953       infty       ->    2 (B2g) B                  
+ -0.0617       infty       ->    3 (B2g) B                  
+ -0.0532       infty       ->    4 (B2g) B                  
+ -0.0231       infty       ->    5 (B2g) B                  
 
               Summary of significant orbitals:
 
@@ -613,10 +615,10 @@ Running a double precision version
  Conv-d = yes
 
  Amplitude    Transitions between orbitals
-  0.9066       infty       ->    3 (B2g) B                  
-  0.3489       infty       ->    4 (B2g) B                  
-  0.1490       infty       ->    5 (B2g) B                  
- -0.0834       infty       ->    2 (B2g) B                  
+ -0.9066       infty       ->    3 (B2g) B                  
+ -0.3489       infty       ->    4 (B2g) B                  
+ -0.1490       infty       ->    5 (B2g) B                  
+  0.0834       infty       ->    2 (B2g) B                  
 
               Summary of significant orbitals:
 
@@ -648,7 +650,7 @@ Running a double precision version
 
 
  EOMEA transition 5/B2g
- Total energy = -78.25239111 a.u.  Excitation energy = 4.6014 eV.
+ Total energy = -78.25239112 a.u.  Excitation energy = 4.6014 eV.
  R1^2 = 0.9789  R2^2 = 0.0211  Res^2 = 2.30e-08
  Conv-d = yes
 
@@ -729,32 +731,32 @@ Running a double precision version
  Conv-d = yes
 
  Amplitude    Transitions between orbitals
-  0.5561       1 (B1u) A   ->    2 (B1u) A     4 (B2g) B    
- -0.5561       1 (B1u) A   ->    4 (B2g) B     2 (B1u) A    
-  0.4309       1 (B1u) A   ->    2 (B1u) A     5 (B2g) B    
- -0.4309       1 (B1u) A   ->    5 (B2g) B     2 (B1u) A    
-  0.2778       1 (B1u) A   ->    4 (B2g) A     2 (B1u) B    
- -0.2778       1 (B1u) A   ->    2 (B1u) B     4 (B2g) A    
- -0.2771       1 (B1u) B   ->    4 (B2g) B     2 (B1u) B    
-  0.2771       1 (B1u) B   ->    2 (B1u) B     4 (B2g) B    
-  0.2767       1 (B1u) A   ->    2 (B1u) A     3 (B2g) B    
- -0.2767       1 (B1u) A   ->    3 (B2g) B     2 (B1u) A    
-  0.2154       1 (B1u) A   ->    5 (B2g) A     2 (B1u) B    
- -0.2154       1 (B1u) A   ->    2 (B1u) B     5 (B2g) A    
- -0.2150       1 (B1u) B   ->    5 (B2g) B     2 (B1u) B    
-  0.2150       1 (B1u) B   ->    2 (B1u) B     5 (B2g) B    
-  0.2110       1 (B1u) A   ->    2 (B1u) A     7 (B2g) B    
- -0.2110       1 (B1u) A   ->    7 (B2g) B     2 (B1u) A    
- -0.1412       1 (B1u) A   ->    2 (B1u) A     6 (B2g) B    
-  0.1412       1 (B1u) A   ->    6 (B2g) B     2 (B1u) A    
- -0.1380       1 (B1u) B   ->    3 (B2g) B     2 (B1u) B    
-  0.1380       1 (B1u) B   ->    2 (B1u) B     3 (B2g) B    
-  0.1379       1 (B1u) A   ->    3 (B2g) A     2 (B1u) B    
- -0.1379       1 (B1u) A   ->    2 (B1u) B     3 (B2g) A    
-  0.1054       1 (B1u) A   ->    7 (B2g) A     2 (B1u) B    
- -0.1054       1 (B1u) A   ->    2 (B1u) B     7 (B2g) A    
- -0.1054       1 (B1u) B   ->    7 (B2g) B     2 (B1u) B    
-  0.1054       1 (B1u) B   ->    2 (B1u) B     7 (B2g) B    
+ -0.5561       1 (B1u) A   ->    2 (B1u) A     4 (B2g) B    
+  0.5561       1 (B1u) A   ->    4 (B2g) B     2 (B1u) A    
+ -0.4309       1 (B1u) A   ->    2 (B1u) A     5 (B2g) B    
+  0.4309       1 (B1u) A   ->    5 (B2g) B     2 (B1u) A    
+ -0.2778       1 (B1u) A   ->    4 (B2g) A     2 (B1u) B    
+  0.2778       1 (B1u) A   ->    2 (B1u) B     4 (B2g) A    
+  0.2771       1 (B1u) B   ->    4 (B2g) B     2 (B1u) B    
+ -0.2771       1 (B1u) B   ->    2 (B1u) B     4 (B2g) B    
+ -0.2767       1 (B1u) A   ->    2 (B1u) A     3 (B2g) B    
+  0.2767       1 (B1u) A   ->    3 (B2g) B     2 (B1u) A    
+ -0.2154       1 (B1u) A   ->    5 (B2g) A     2 (B1u) B    
+  0.2154       1 (B1u) A   ->    2 (B1u) B     5 (B2g) A    
+  0.2150       1 (B1u) B   ->    5 (B2g) B     2 (B1u) B    
+ -0.2150       1 (B1u) B   ->    2 (B1u) B     5 (B2g) B    
+ -0.2110       1 (B1u) A   ->    2 (B1u) A     7 (B2g) B    
+  0.2110       1 (B1u) A   ->    7 (B2g) B     2 (B1u) A    
+  0.1412       1 (B1u) A   ->    2 (B1u) A     6 (B2g) B    
+ -0.1412       1 (B1u) A   ->    6 (B2g) B     2 (B1u) A    
+  0.1380       1 (B1u) B   ->    3 (B2g) B     2 (B1u) B    
+ -0.1380       1 (B1u) B   ->    2 (B1u) B     3 (B2g) B    
+ -0.1379       1 (B1u) A   ->    3 (B2g) A     2 (B1u) B    
+  0.1379       1 (B1u) A   ->    2 (B1u) B     3 (B2g) A    
+ -0.1054       1 (B1u) A   ->    7 (B2g) A     2 (B1u) B    
+  0.1054       1 (B1u) A   ->    2 (B1u) B     7 (B2g) A    
+  0.1054       1 (B1u) B   ->    7 (B2g) B     2 (B1u) B    
+ -0.1054       1 (B1u) B   ->    2 (B1u) B     7 (B2g) B    
 
               Summary of significant orbitals:
 
@@ -775,7 +777,7 @@ Running a double precision version
 
 
  EOMEA transition 8/B2g
- Total energy = -78.17040174 a.u.  Excitation energy = 6.8324 eV.
+ Total energy = -78.17040175 a.u.  Excitation energy = 6.8324 eV.
  R1^2 = 0.9721  R2^2 = 0.0279  Res^2 = 1.66e-08
  Conv-d = yes
 
@@ -795,8 +797,8 @@ Running a double precision version
 
 
  EOMEA transition 9/B2g
- Total energy = -78.15491668 a.u.  Excitation energy = 7.2538 eV.
- R1^2 = 0.0000  R2^2 = 1.0000  Res^2 = 5.20e-06
+ Total energy = -78.15491667 a.u.  Excitation energy = 7.2538 eV.
+ R1^2 = 0.0000  R2^2 = 1.0000  Res^2 = 5.21e-06
  Conv-d = yes
 
  Amplitude    Transitions between orbitals
@@ -848,32 +850,32 @@ Running a double precision version
  Conv-d = yes
 
  Amplitude    Transitions between orbitals
-  0.5536       1 (B1u) A   ->    3 (B1u) A     4 (B2g) B    
- -0.5536       1 (B1u) A   ->    4 (B2g) B     3 (B1u) A    
-  0.4273       1 (B1u) A   ->    3 (B1u) A     5 (B2g) B    
- -0.4273       1 (B1u) A   ->    5 (B2g) B     3 (B1u) A    
-  0.2776       1 (B1u) A   ->    4 (B2g) A     3 (B1u) B    
- -0.2776       1 (B1u) A   ->    3 (B1u) B     4 (B2g) A    
-  0.2764       1 (B1u) A   ->    3 (B1u) A     3 (B2g) B    
- -0.2764       1 (B1u) A   ->    3 (B2g) B     3 (B1u) A    
- -0.2761       1 (B1u) B   ->    4 (B2g) B     3 (B1u) B    
-  0.2761       1 (B1u) B   ->    3 (B1u) B     4 (B2g) B    
-  0.2143       1 (B1u) A   ->    5 (B2g) A     3 (B1u) B    
- -0.2143       1 (B1u) A   ->    3 (B1u) B     5 (B2g) A    
- -0.2129       1 (B1u) B   ->    5 (B2g) B     3 (B1u) B    
-  0.2129       1 (B1u) B   ->    3 (B1u) B     5 (B2g) B    
-  0.2085       1 (B1u) A   ->    3 (B1u) A     7 (B2g) B    
- -0.2085       1 (B1u) A   ->    7 (B2g) B     3 (B1u) A    
- -0.1401       1 (B1u) A   ->    3 (B1u) A     6 (B2g) B    
-  0.1401       1 (B1u) A   ->    6 (B2g) B     3 (B1u) A    
- -0.1394       1 (B1u) B   ->    3 (B2g) B     3 (B1u) B    
-  0.1394       1 (B1u) B   ->    3 (B1u) B     3 (B2g) B    
-  0.1370       1 (B1u) A   ->    3 (B2g) A     3 (B1u) B    
- -0.1370       1 (B1u) A   ->    3 (B1u) B     3 (B2g) A    
-  0.1044       1 (B1u) A   ->    7 (B2g) A     3 (B1u) B    
- -0.1044       1 (B1u) A   ->    3 (B1u) B     7 (B2g) A    
- -0.1042       1 (B1u) B   ->    7 (B2g) B     3 (B1u) B    
-  0.1042       1 (B1u) B   ->    3 (B1u) B     7 (B2g) B    
+ -0.5536       1 (B1u) A   ->    3 (B1u) A     4 (B2g) B    
+  0.5536       1 (B1u) A   ->    4 (B2g) B     3 (B1u) A    
+ -0.4273       1 (B1u) A   ->    3 (B1u) A     5 (B2g) B    
+  0.4273       1 (B1u) A   ->    5 (B2g) B     3 (B1u) A    
+ -0.2776       1 (B1u) A   ->    4 (B2g) A     3 (B1u) B    
+  0.2776       1 (B1u) A   ->    3 (B1u) B     4 (B2g) A    
+ -0.2764       1 (B1u) A   ->    3 (B1u) A     3 (B2g) B    
+  0.2764       1 (B1u) A   ->    3 (B2g) B     3 (B1u) A    
+  0.2761       1 (B1u) B   ->    4 (B2g) B     3 (B1u) B    
+ -0.2761       1 (B1u) B   ->    3 (B1u) B     4 (B2g) B    
+ -0.2143       1 (B1u) A   ->    5 (B2g) A     3 (B1u) B    
+  0.2143       1 (B1u) A   ->    3 (B1u) B     5 (B2g) A    
+  0.2129       1 (B1u) B   ->    5 (B2g) B     3 (B1u) B    
+ -0.2129       1 (B1u) B   ->    3 (B1u) B     5 (B2g) B    
+ -0.2085       1 (B1u) A   ->    3 (B1u) A     7 (B2g) B    
+  0.2085       1 (B1u) A   ->    7 (B2g) B     3 (B1u) A    
+  0.1401       1 (B1u) A   ->    3 (B1u) A     6 (B2g) B    
+ -0.1401       1 (B1u) A   ->    6 (B2g) B     3 (B1u) A    
+  0.1394       1 (B1u) B   ->    3 (B2g) B     3 (B1u) B    
+ -0.1394       1 (B1u) B   ->    3 (B1u) B     3 (B2g) B    
+ -0.1370       1 (B1u) A   ->    3 (B2g) A     3 (B1u) B    
+  0.1370       1 (B1u) A   ->    3 (B1u) B     3 (B2g) A    
+ -0.1044       1 (B1u) A   ->    7 (B2g) A     3 (B1u) B    
+  0.1044       1 (B1u) A   ->    3 (B1u) B     7 (B2g) A    
+  0.1042       1 (B1u) B   ->    7 (B2g) B     3 (B1u) B    
+ -0.1042       1 (B1u) B   ->    3 (B1u) B     7 (B2g) B    
 
               Summary of significant orbitals:
 
@@ -913,7 +915,7 @@ Running a double precision version
 
  Excited state properties for  EOMEA-CCSD transition 1/B2g
  Dipole moment (a.u.): 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
- R-squared (a.u.): 518.587740 (XX 235.212210, YY 84.448777, ZZ 198.926752)
+ R-squared (a.u.): 518.587737 (XX 235.212209, YY 84.448777, ZZ 198.926751)
  Gauge origin (a.u.): (0.000000, 0.000000, 0.000000)
  Angular momentum (a.u.) against gauge origin: 
  (X 0.000000i, Y 0.000000i, Z 0.000000i)
@@ -921,7 +923,7 @@ Running a double precision version
 
  Excited state properties for  EOMEA-CCSD transition 2/B2g
  Dipole moment (a.u.): 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
- R-squared (a.u.): 384.583985 (XX 178.159076, YY 65.245549, ZZ 141.179360)
+ R-squared (a.u.): 384.583987 (XX 178.159077, YY 65.245549, ZZ 141.179361)
  Gauge origin (a.u.): (0.000000, 0.000000, 0.000000)
  Angular momentum (a.u.) against gauge origin: 
  (X 0.000000i, Y 0.000000i, Z 0.000000i)
@@ -929,7 +931,7 @@ Running a double precision version
 
  Excited state properties for  EOMEA-CCSD transition 3/B2g
  Dipole moment (a.u.): 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
- R-squared (a.u.): 233.781059 (XX 112.414676, YY 44.408688, ZZ 76.957695)
+ R-squared (a.u.): 233.781060 (XX 112.414676, YY 44.408688, ZZ 76.957696)
  Gauge origin (a.u.): (0.000000, 0.000000, 0.000000)
  Angular momentum (a.u.) against gauge origin: 
  (X 0.000000i, Y 0.000000i, Z 0.000000i)
@@ -937,7 +939,7 @@ Running a double precision version
 
  Excited state properties for  EOMEA-CCSD transition 4/B2g
  Dipole moment (a.u.): 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
- R-squared (a.u.): 238.636311 (XX 114.117029, YY 45.321609, ZZ 79.197674)
+ R-squared (a.u.): 238.636318 (XX 114.117031, YY 45.321610, ZZ 79.197677)
  Gauge origin (a.u.): (0.000000, 0.000000, 0.000000)
  Angular momentum (a.u.) against gauge origin: 
  (X 0.000000i, Y 0.000000i, Z 0.000000i)
@@ -945,7 +947,7 @@ Running a double precision version
 
  Excited state properties for  EOMEA-CCSD transition 5/B2g
  Dipole moment (a.u.): 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
- R-squared (a.u.): 235.921168 (XX 116.256069, YY 43.822514, ZZ 75.842586)
+ R-squared (a.u.): 235.921166 (XX 116.256069, YY 43.822513, ZZ 75.842584)
  Gauge origin (a.u.): (0.000000, 0.000000, 0.000000)
  Angular momentum (a.u.) against gauge origin: 
  (X 0.000000i, Y 0.000000i, Z 0.000000i)
@@ -953,7 +955,7 @@ Running a double precision version
 
  Excited state properties for  EOMEA-CCSD transition 6/B2g
  Dipole moment (a.u.): 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
- R-squared (a.u.): 434.620570 (XX 120.367155, YY 92.159248, ZZ 222.094167)
+ R-squared (a.u.): 434.620563 (XX 120.367153, YY 92.159247, ZZ 222.094163)
  Gauge origin (a.u.): (0.000000, 0.000000, 0.000000)
  Angular momentum (a.u.) against gauge origin: 
  (X 0.000000i, Y 0.000000i, Z 0.000000i)
@@ -961,7 +963,7 @@ Running a double precision version
 
  Excited state properties for  EOMEA-CCSD transition 7/B2g
  Dipole moment (a.u.): 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
- R-squared (a.u.): 437.157780 (XX 121.058405, YY 92.621952, ZZ 223.477422)
+ R-squared (a.u.): 437.157769 (XX 121.058403, YY 92.621950, ZZ 223.477416)
  Gauge origin (a.u.): (0.000000, 0.000000, 0.000000)
  Angular momentum (a.u.) against gauge origin: 
  (X 0.000000i, Y 0.000000i, Z 0.000000i)
@@ -969,7 +971,7 @@ Running a double precision version
 
  Excited state properties for  EOMEA-CCSD transition 8/B2g
  Dipole moment (a.u.): 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
- R-squared (a.u.): 174.801718 (XX 87.531047, YY 35.548288, ZZ 51.722383)
+ R-squared (a.u.): 174.801720 (XX 87.531045, YY 35.548289, ZZ 51.722386)
  Gauge origin (a.u.): (0.000000, 0.000000, 0.000000)
  Angular momentum (a.u.) against gauge origin: 
  (X 0.000000i, Y 0.000000i, Z 0.000000i)
@@ -977,7 +979,7 @@ Running a double precision version
 
  Excited state properties for  EOMEA-CCSD transition 9/B2g
  Dipole moment (a.u.): 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
- R-squared (a.u.): 366.524336 (XX 105.965879, YY 78.736113, ZZ 181.822344)
+ R-squared (a.u.): 366.524025 (XX 105.965819, YY 78.736050, ZZ 181.822155)
  Gauge origin (a.u.): (0.000000, 0.000000, 0.000000)
  Angular momentum (a.u.) against gauge origin: 
  (X 0.000000i, Y 0.000000i, Z 0.000000i)
@@ -985,13 +987,13 @@ Running a double precision version
 
  Excited state properties for  EOMEA-CCSD transition 10/B2g
  Dipole moment (a.u.): 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
- R-squared (a.u.): 371.424535 (XX 106.995380, YY 79.715882, ZZ 184.713273)
+ R-squared (a.u.): 371.424541 (XX 106.995380, YY 79.715883, ZZ 184.713277)
  Gauge origin (a.u.): (0.000000, 0.000000, 0.000000)
  Angular momentum (a.u.) against gauge origin: 
  (X 0.000000i, Y 0.000000i, Z 0.000000i)
  Traces of the OPDMs: Tr(AA) 8.000000, Tr(BB) 9.000000
 
- EOMEA-CCSD calculation:   CPU 885.38 s  wall 139.57 s
+ EOMEA-CCSD calculation:   CPU 926.66 s  wall 143.29 s
 
 
  Start computing the transition properties
@@ -1077,7 +1079,7 @@ Running a double precision version
  ------------------------------------------------------------------------------
  State A: eomea_ccsd/b: 1/B2g
  State B: eomea_ccsd/b: 5/B2g
- Energy GAP = 0.153197 a.u. = 4.168715 eV
+ Energy GAP = 0.153197 a.u. = 4.168714 eV
  Transition dipole moment (a.u.):
    A->B: 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
    B->A: 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
@@ -1193,12 +1195,12 @@ Running a double precision version
  Electronic circular dichroism (ECD):
  Transition dipole moment/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
-   Rotatory strength, length gauge (a.u.): -0.000000
-   Rotatory strength, length gauge (1.0e-40 cgs): -0.000000
+   Rotatory strength, length gauge (a.u.): 0.000000
+   Rotatory strength, length gauge (1.0e-40 cgs): 0.000000
  Transition linear momentum/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
-   Rotatory strength, velocity gauge (a.u.): -0.000000
-   Rotatory strength, velocity gauge (1.0e-40 cgs): -0.000000
+   Rotatory strength, velocity gauge (a.u.): 0.000000
+   Rotatory strength, velocity gauge (1.0e-40 cgs): 0.000000
 
  Norm of one-particle transition density matrix:
    A->B: 0.032004;   B->A: 0.032556
@@ -1219,8 +1221,8 @@ Running a double precision version
  Electronic circular dichroism (ECD):
  Transition dipole moment/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
-   Rotatory strength, length gauge (a.u.): 0.000000
-   Rotatory strength, length gauge (1.0e-40 cgs): 0.000000
+   Rotatory strength, length gauge (a.u.): -0.000000
+   Rotatory strength, length gauge (1.0e-40 cgs): -0.000000
  Transition linear momentum/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
    Rotatory strength, velocity gauge (a.u.): -0.000000
@@ -1353,8 +1355,8 @@ Running a double precision version
    Rotatory strength, length gauge (1.0e-40 cgs): -0.000000
  Transition linear momentum/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
-   Rotatory strength, velocity gauge (a.u.): 0.000000
-   Rotatory strength, velocity gauge (1.0e-40 cgs): 0.000000
+   Rotatory strength, velocity gauge (a.u.): -0.000000
+   Rotatory strength, velocity gauge (1.0e-40 cgs): -0.000000
 
  Norm of one-particle transition density matrix:
    A->B: 0.189038;   B->A: 0.188227
@@ -1389,7 +1391,7 @@ Running a double precision version
  ------------------------------------------------------------------------------
  State A: eomea_ccsd/b: 2/B2g
  State B: eomea_ccsd/b: 9/B2g
- Energy GAP = 0.225344 a.u. = 6.131930 eV
+ Energy GAP = 0.225344 a.u. = 6.131931 eV
  Transition dipole moment (a.u.):
    A->B: 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
    B->A: 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
@@ -1405,8 +1407,8 @@ Running a double precision version
    Rotatory strength, length gauge (1.0e-40 cgs): -0.000000
  Transition linear momentum/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
-   Rotatory strength, velocity gauge (a.u.): -0.000000
-   Rotatory strength, velocity gauge (1.0e-40 cgs): -0.000000
+   Rotatory strength, velocity gauge (a.u.): 0.000000
+   Rotatory strength, velocity gauge (1.0e-40 cgs): 0.000000
 
  Norm of one-particle transition density matrix:
    A->B: 0.153541;   B->A: 0.156398
@@ -1427,8 +1429,8 @@ Running a double precision version
  Electronic circular dichroism (ECD):
  Transition dipole moment/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
-   Rotatory strength, length gauge (a.u.): 0.000000
-   Rotatory strength, length gauge (1.0e-40 cgs): 0.000000
+   Rotatory strength, length gauge (a.u.): -0.000000
+   Rotatory strength, length gauge (1.0e-40 cgs): -0.000000
  Transition linear momentum/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
    Rotatory strength, velocity gauge (a.u.): 0.000000
@@ -1535,8 +1537,8 @@ Running a double precision version
    Rotatory strength, length gauge (1.0e-40 cgs): 0.000000
  Transition linear momentum/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
-   Rotatory strength, velocity gauge (a.u.): -0.000000
-   Rotatory strength, velocity gauge (1.0e-40 cgs): -0.000000
+   Rotatory strength, velocity gauge (a.u.): 0.000000
+   Rotatory strength, velocity gauge (1.0e-40 cgs): 0.000000
 
  Norm of one-particle transition density matrix:
    A->B: 0.579286;   B->A: 0.588133
@@ -1575,7 +1577,7 @@ Running a double precision version
  Transition dipole moment (a.u.):
    A->B: 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
    B->A: 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
- Oscillator strength (a.u.): -0.000000
+ Oscillator strength (a.u.): 0.000000
  Transition angular momentum against gauge origin (a.u.):
    A->B:  (X 0.000000i, Y 0.000000i, Z 0.000000i)
    B->A:  (X 0.000000i, Y 0.000000i, Z 0.000000i)
@@ -1583,15 +1585,15 @@ Running a double precision version
  Electronic circular dichroism (ECD):
  Transition dipole moment/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
-   Rotatory strength, length gauge (a.u.): -0.000000
-   Rotatory strength, length gauge (1.0e-40 cgs): -0.000000
+   Rotatory strength, length gauge (a.u.): 0.000000
+   Rotatory strength, length gauge (1.0e-40 cgs): 0.000000
  Transition linear momentum/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
    Rotatory strength, velocity gauge (a.u.): 0.000000
    Rotatory strength, velocity gauge (1.0e-40 cgs): 0.000000
 
  Norm of one-particle transition density matrix:
-   A->B: 0.516890;   B->A: 0.525593
+   A->B: 0.516890;   B->A: 0.525594
    ||gamma^AB||*||gamma^BA||: 0.271674
 
  ------------------------------------------------------------------------------
@@ -1609,8 +1611,8 @@ Running a double precision version
  Electronic circular dichroism (ECD):
  Transition dipole moment/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
-   Rotatory strength, length gauge (a.u.): -0.000000
-   Rotatory strength, length gauge (1.0e-40 cgs): -0.000000
+   Rotatory strength, length gauge (a.u.): 0.000000
+   Rotatory strength, length gauge (1.0e-40 cgs): 0.000000
  Transition linear momentum/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
    Rotatory strength, velocity gauge (a.u.): -0.000000
@@ -1687,8 +1689,8 @@ Running a double precision version
  Electronic circular dichroism (ECD):
  Transition dipole moment/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
-   Rotatory strength, length gauge (a.u.): 0.000000
-   Rotatory strength, length gauge (1.0e-40 cgs): 0.000000
+   Rotatory strength, length gauge (a.u.): -0.000000
+   Rotatory strength, length gauge (1.0e-40 cgs): -0.000000
  Transition linear momentum/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
    Rotatory strength, velocity gauge (a.u.): -0.000000
@@ -1831,7 +1833,7 @@ Running a double precision version
  ------------------------------------------------------------------------------
  State A: eomea_ccsd/b: 5/B2g
  State B: eomea_ccsd/b: 8/B2g
- Energy GAP = 0.081989 a.u. = 2.231046 eV
+ Energy GAP = 0.081989 a.u. = 2.231045 eV
  Transition dipole moment (a.u.):
    A->B: 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
    B->A: 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
@@ -1843,8 +1845,8 @@ Running a double precision version
  Electronic circular dichroism (ECD):
  Transition dipole moment/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
-   Rotatory strength, length gauge (a.u.): 0.000000
-   Rotatory strength, length gauge (1.0e-40 cgs): 0.000000
+   Rotatory strength, length gauge (a.u.): -0.000000
+   Rotatory strength, length gauge (1.0e-40 cgs): -0.000000
  Transition linear momentum/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
    Rotatory strength, velocity gauge (a.u.): 0.000000
@@ -1873,11 +1875,11 @@ Running a double precision version
    Rotatory strength, length gauge (1.0e-40 cgs): 0.000000
  Transition linear momentum/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
-   Rotatory strength, velocity gauge (a.u.): -0.000000
-   Rotatory strength, velocity gauge (1.0e-40 cgs): -0.000000
+   Rotatory strength, velocity gauge (a.u.): 0.000000
+   Rotatory strength, velocity gauge (1.0e-40 cgs): 0.000000
 
  Norm of one-particle transition density matrix:
-   A->B: 0.233474;   B->A: 0.238081
+   A->B: 0.233475;   B->A: 0.238081
    ||gamma^AB||*||gamma^BA||: 0.055586
 
  ------------------------------------------------------------------------------
@@ -1921,15 +1923,15 @@ Running a double precision version
  Electronic circular dichroism (ECD):
  Transition dipole moment/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
-   Rotatory strength, length gauge (a.u.): -0.000000
-   Rotatory strength, length gauge (1.0e-40 cgs): -0.000000
+   Rotatory strength, length gauge (a.u.): 0.000000
+   Rotatory strength, length gauge (1.0e-40 cgs): 0.000000
  Transition linear momentum/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
    Rotatory strength, velocity gauge (a.u.): -0.000000
    Rotatory strength, velocity gauge (1.0e-40 cgs): -0.000000
 
  Norm of one-particle transition density matrix:
-   A->B: 0.809318;   B->A: 0.810055
+   A->B: 0.809317;   B->A: 0.810055
    ||gamma^AB||*||gamma^BA||: 0.655592
 
  ------------------------------------------------------------------------------
@@ -1939,7 +1941,7 @@ Running a double precision version
  Transition dipole moment (a.u.):
    A->B: 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
    B->A: 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
- Oscillator strength (a.u.): 0.000000
+ Oscillator strength (a.u.): -0.000000
  Transition angular momentum against gauge origin (a.u.):
    A->B:  (X 0.000000i, Y 0.000000i, Z 0.000000i)
    B->A:  (X 0.000000i, Y 0.000000i, Z 0.000000i)
@@ -1991,7 +1993,7 @@ Running a double precision version
  Transition dipole moment (a.u.):
    A->B: 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
    B->A: 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
- Oscillator strength (a.u.): -0.000000
+ Oscillator strength (a.u.): 0.000000
  Transition angular momentum against gauge origin (a.u.):
    A->B:  (X 0.000000i, Y 0.000000i, Z 0.000000i)
    B->A:  (X 0.000000i, Y 0.000000i, Z 0.000000i)
@@ -1999,8 +2001,8 @@ Running a double precision version
  Electronic circular dichroism (ECD):
  Transition dipole moment/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
-   Rotatory strength, length gauge (a.u.): -0.000000
-   Rotatory strength, length gauge (1.0e-40 cgs): -0.000000
+   Rotatory strength, length gauge (a.u.): 0.000000
+   Rotatory strength, length gauge (1.0e-40 cgs): 0.000000
  Transition linear momentum/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
    Rotatory strength, velocity gauge (a.u.): -0.000000
@@ -2029,11 +2031,11 @@ Running a double precision version
    Rotatory strength, length gauge (1.0e-40 cgs): -0.000000
  Transition linear momentum/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
-   Rotatory strength, velocity gauge (a.u.): -0.000000
-   Rotatory strength, velocity gauge (1.0e-40 cgs): -0.000000
+   Rotatory strength, velocity gauge (a.u.): 0.000000
+   Rotatory strength, velocity gauge (1.0e-40 cgs): 0.000000
 
  Norm of one-particle transition density matrix:
-   A->B: 0.186196;   B->A: 0.198257
+   A->B: 0.186197;   B->A: 0.198257
    ||gamma^AB||*||gamma^BA||: 0.036915
 
  ------------------------------------------------------------------------------
@@ -2043,7 +2045,7 @@ Running a double precision version
  Transition dipole moment (a.u.):
    A->B: 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
    B->A: 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
- Oscillator strength (a.u.): 0.000000
+ Oscillator strength (a.u.): -0.000000
  Transition angular momentum against gauge origin (a.u.):
    A->B:  (X 0.000000i, Y 0.000000i, Z 0.000000i)
    B->A:  (X 0.000000i, Y 0.000000i, Z 0.000000i)
@@ -2077,8 +2079,8 @@ Running a double precision version
  Electronic circular dichroism (ECD):
  Transition dipole moment/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
-   Rotatory strength, length gauge (a.u.): -0.000000
-   Rotatory strength, length gauge (1.0e-40 cgs): -0.000000
+   Rotatory strength, length gauge (a.u.): 0.000000
+   Rotatory strength, length gauge (1.0e-40 cgs): 0.000000
  Transition linear momentum/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
    Rotatory strength, velocity gauge (a.u.): 0.000000
@@ -2091,7 +2093,7 @@ Running a double precision version
  ------------------------------------------------------------------------------
  State A: eomea_ccsd/b: 8/B2g
  State B: eomea_ccsd/b: 9/B2g
- Energy GAP = 0.015485 a.u. = 0.421370 eV
+ Energy GAP = 0.015485 a.u. = 0.421371 eV
  Transition dipole moment (a.u.):
    A->B: 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
    B->A: 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
@@ -2117,7 +2119,7 @@ Running a double precision version
  ------------------------------------------------------------------------------
  State A: eomea_ccsd/b: 8/B2g
  State B: eomea_ccsd/b: 10/B2g
- Energy GAP = 0.016984 a.u. = 0.462166 eV
+ Energy GAP = 0.016984 a.u. = 0.462167 eV
  Transition dipole moment (a.u.):
    A->B: 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
    B->A: 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
@@ -2147,7 +2149,7 @@ Running a double precision version
  Transition dipole moment (a.u.):
    A->B: 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
    B->A: 0.000000 (X 0.000000, Y 0.000000, Z 0.000000)
- Oscillator strength (a.u.): -0.000000
+ Oscillator strength (a.u.): 0.000000
  Transition angular momentum against gauge origin (a.u.):
    A->B:  (X 0.000000i, Y 0.000000i, Z 0.000000i)
    B->A:  (X 0.000000i, Y 0.000000i, Z 0.000000i)
@@ -2155,12 +2157,12 @@ Running a double precision version
  Electronic circular dichroism (ECD):
  Transition dipole moment/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
-   Rotatory strength, length gauge (a.u.): -0.000000
-   Rotatory strength, length gauge (1.0e-40 cgs): -0.000000
+   Rotatory strength, length gauge (a.u.): 0.000000
+   Rotatory strength, length gauge (1.0e-40 cgs): 0.000000
  Transition linear momentum/angular momentum:
    A->B->A:  (X 0.000000, Y 0.000000, Z 0.000000)
-   Rotatory strength, velocity gauge (a.u.): -0.000000
-   Rotatory strength, velocity gauge (1.0e-40 cgs): -0.000000
+   Rotatory strength, velocity gauge (a.u.): 0.000000
+   Rotatory strength, velocity gauge (1.0e-40 cgs): 0.000000
 
  Norm of one-particle transition density matrix:
    A->B: 0.805970;   B->A: 0.806193
@@ -2169,62 +2171,62 @@ Running a double precision version
 
  All requested transition properties have been computed
 
- Transition Properties:   CPU 152.07 s  wall 29.84 s
+ Transition Properties:   CPU 157.30 s  wall 30.39 s
 
 Starting Projected CAP calculation.
 Generating CAP matrix for 10 roots.
 Performing Projected CAP-EOM calculation for B2g states.
 Number of states: 10
 Zeroth order Hamiltonian:
--7.84055884657050086e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
-0.00000000000000000e+00 -7.83802608496681330e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
-0.00000000000000000e+00 0.00000000000000000e+00 -7.83486896008593305e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
-0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.83185025000427970e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
-0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.82523911096639324e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
-0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.81778185958819307e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
-0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.81776595792550779e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
-0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.81704017366189987e+01 0.00000000000000000e+00 0.00000000000000000e+00
-0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.81549166759568550e+01 0.00000000000000000e+00
-0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.81534174428809365e+01
+-7.84055884666372407e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 -7.83802608506125722e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 -7.83486896028398121e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.83185025027178341e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.82523911155772254e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.81778185974826130e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.81776595808988617e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.81704017497817603e+01 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.81549166725217077e+01 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.81534174446125434e+01
 CAP matrix:
--4.71741489132742160e+01 -2.97342471378896285e+01 2.84374480815392090e+01 -2.08570644731616852e+01 -5.06124965755959266e+00 3.50161562906516413e-04 -3.94643376981327010e-01 -4.83026534745938285e+00 9.90677716294977029e-05 -6.49163216045104963e-01
--2.97430776612441967e+01 -4.37136348684511304e+01 2.01396044832490730e+01 -3.33281027065011459e+00 1.17179648313702973e+01 5.46943560058722744e-04 -7.68600491971752731e-01 -6.84152868167655104e+00 2.74386769154415233e-04 -3.38315810144542317e-01
-2.86477795203969485e+01 2.02829092171124650e+01 -3.08765254726832303e+01 2.68865213836746832e+01 4.72482787623455547e+00 -4.33974563532779634e-04 1.12641415028363667e+00 8.01205813699146141e+00 -3.55207756479625214e-04 1.32107533639778396e-01
--2.10630679554061189e+01 -3.36632190535317211e+00 2.69510624616065080e+01 -3.45148157409598468e+01 -1.96901664654785868e+01 2.01772184799636767e-04 5.73425003544671963e-02 -6.49519148005767910e+00 3.80854489985593681e-04 -1.87801679296316815e+00
--5.07227606452097390e+00 1.17468646780425487e+01 4.70175225613076364e+00 -1.95470454185194029e+01 -3.15507717483188017e+01 -2.76499401602792183e-04 3.00048540610405590e-01 4.37399543652643441e+00 1.61062662263233847e-04 -1.75412669630433782e-01
-4.43468275102380793e-04 6.20677880544876631e-04 -8.85429342750237991e-04 -1.42543990385352037e-04 -1.14364256816823495e-04 -6.61432954368581534e+01 -7.03264397458269741e-03 -2.82586840579579501e-03 1.19518973061678118e+01 -3.22892901310378733e-03
--3.63846589309663626e-01 -7.13545249917637459e-01 9.88193088024162059e-01 7.67099358352091309e-04 3.25653444686241023e-01 -4.68553157184103952e-03 -6.59385780871049008e+01 4.04450297797112679e+00 9.77533055526613737e-04 1.47708813744548948e+01
--4.82066559793276905e+00 -6.83225820588278321e+00 7.94126395981909106e+00 -6.41472769551571442e+00 4.36312717743234391e+00 -2.63352346273837412e-03 4.33970538476462675e+00 -1.73510080605469170e+01 3.77438228615578630e-04 2.93141952390985061e-01
--1.61088470337146170e-04 -6.84170155163046911e-05 -1.41816143143153051e-04 -1.29329564016289478e-04 9.95878422239693251e-05 1.19537099857934681e+01 9.01603919785731733e-03 4.43752827480992096e-04 -3.75768248548652650e+01 -7.97318342212349762e-03
--6.06402809705530954e-01 -2.93986515344423827e-01 1.59832658646353432e-01 -1.68374440417500271e+00 -2.54924203966106044e-01 4.93544567082793151e-03 1.47360478833131339e+01 2.41582813249167749e-01 -4.27514311023102778e-03 -4.02820659608905274e+01
+-4.71741495253836760e+01 -2.97342470911396930e+01 2.84374483165626692e+01 2.08570646305777885e+01 5.06124796378981490e+00 -3.50439581429448990e-04 -3.94644422504248360e-01 4.83026698876883298e+00 -9.91290263730511961e-05 -6.49162965064842501e-01
+-2.97430776142718862e+01 -4.37136336867110487e+01 2.01396040791081212e+01 3.33280961558992139e+00 -1.17179656970019792e+01 -5.47329020369385910e-04 -7.68601607824525246e-01 6.84152803093296669e+00 -2.74564451098621709e-04 -3.38315376035323356e-01
+2.86477797740811759e+01 2.02829088133386151e+01 -3.08765251241177090e+01 -2.68865213809664567e+01 -4.72482628885308298e+00 4.34609275519831639e-04 1.12641566689598460e+00 -8.01205914797995966e+00 3.55594463910591241e-04 1.32107067302498105e-01
+2.10630681042619123e+01 3.36632123065944722e+00 -2.69510624339950411e+01 -3.45148169232357773e+01 -1.96901657187978749e+01 2.01725683106862563e-04 -5.73412730608554022e-02 -6.49519386509054097e+00 3.81092471696820034e-04 1.87801654829146258e+00
+5.07227437318168750e+00 -1.17468655384132639e+01 -4.70175068064058888e+00 -1.95470446671254940e+01 -3.15507714795689083e+01 -2.76650820464185987e-04 -3.00049128582391689e-01 4.37399386901020382e+00 1.61306775348757370e-04 1.75413105372004496e-01
+-4.43601043739355952e-04 -6.20766431126847790e-04 8.85554739160659965e-04 -1.42562327233503039e-04 -1.14362671562340257e-04 -6.61433010868875186e+01 7.03079008266271899e-03 -2.82656758156107912e-03 1.19518572083960635e+01 3.22946362257070518e-03
+-3.63847510981325339e-01 -7.13546179577742024e-01 9.88194394268218201e-01 -7.65963204075986726e-04 -3.25653894300496183e-01 4.68420243083400578e-03 -6.59385762620542408e+01 -4.04451059436039095e+00 -9.81610737271765288e-04 1.47708821057648816e+01
+4.82066722362208999e+00 6.83225755381680155e+00 -7.94126495895731743e+00 -6.41473002607272758e+00 4.36312561779907426e+00 -2.63605216404760867e-03 -4.33971416479000549e+00 -1.73510093034010602e+01 3.77430033508874274e-04 -2.93137846960449200e-01
+1.61210473324279249e-04 6.83898182090234008e-05 1.41929224582615365e-04 -1.29569131629703183e-04 9.93300479468217645e-05 1.19536752348770836e+01 -9.01920798974042981e-03 4.43682584097548904e-04 -3.75767799898451003e+01 7.97368384696639509e-03
+-6.06402686934372936e-01 -2.93985998143938498e-01 1.59832182845820070e-01 1.68374437093309526e+00 2.54924911129698728e-01 -4.93235139518333199e-03 1.47360483267530800e+01 -2.41579333354250414e-01 4.27427889680487283e-03 -4.02820665211774909e+01
 Trajectory will be saved to B2g_traj.out
 Done with B2g states.
- Trajectory ran in:   CPU 0.06 s  wall 0.00 s
+ Trajectory ran in:   CPU 0.15 s  wall 0.15 s
 Total Projected CAP Hamiltonian:
 Number of states: 10
 Zeroth order Hamiltonian:
--7.84055884657050086e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
-0.00000000000000000e+00 -7.83802608496681330e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
-0.00000000000000000e+00 0.00000000000000000e+00 -7.83486896008593305e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
-0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.83185025000427970e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
-0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.82523911096639324e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
-0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.81778185958819307e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
-0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.81776595792550779e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
-0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.81704017366189987e+01 0.00000000000000000e+00 0.00000000000000000e+00
-0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.81549166759568550e+01 0.00000000000000000e+00
-0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.81534174428809365e+01
+-7.84055884666372407e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 -7.83802608506125722e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 -7.83486896028398121e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.83185025027178341e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.82523911155772254e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.81778185974826130e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.81776595808988617e+01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.81704017497817603e+01 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.81549166725217077e+01 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 -7.81534174446125434e+01
 CAP matrix:
--4.71741489132742160e+01 -2.97342471378896285e+01 2.84374480815392090e+01 -2.08570644731616852e+01 -5.06124965755959266e+00 3.50161562906516413e-04 -3.94643376981327010e-01 -4.83026534745938285e+00 9.90677716294977029e-05 -6.49163216045104963e-01
--2.97430776612441967e+01 -4.37136348684511304e+01 2.01396044832490730e+01 -3.33281027065011459e+00 1.17179648313702973e+01 5.46943560058722744e-04 -7.68600491971752731e-01 -6.84152868167655104e+00 2.74386769154415233e-04 -3.38315810144542317e-01
-2.86477795203969485e+01 2.02829092171124650e+01 -3.08765254726832303e+01 2.68865213836746832e+01 4.72482787623455547e+00 -4.33974563532779634e-04 1.12641415028363667e+00 8.01205813699146141e+00 -3.55207756479625214e-04 1.32107533639778396e-01
--2.10630679554061189e+01 -3.36632190535317211e+00 2.69510624616065080e+01 -3.45148157409598468e+01 -1.96901664654785868e+01 2.01772184799636767e-04 5.73425003544671963e-02 -6.49519148005767910e+00 3.80854489985593681e-04 -1.87801679296316815e+00
--5.07227606452097390e+00 1.17468646780425487e+01 4.70175225613076364e+00 -1.95470454185194029e+01 -3.15507717483188017e+01 -2.76499401602792183e-04 3.00048540610405590e-01 4.37399543652643441e+00 1.61062662263233847e-04 -1.75412669630433782e-01
-4.43468275102380793e-04 6.20677880544876631e-04 -8.85429342750237991e-04 -1.42543990385352037e-04 -1.14364256816823495e-04 -6.61432954368581534e+01 -7.03264397458269741e-03 -2.82586840579579501e-03 1.19518973061678118e+01 -3.22892901310378733e-03
--3.63846589309663626e-01 -7.13545249917637459e-01 9.88193088024162059e-01 7.67099358352091309e-04 3.25653444686241023e-01 -4.68553157184103952e-03 -6.59385780871049008e+01 4.04450297797112679e+00 9.77533055526613737e-04 1.47708813744548948e+01
--4.82066559793276905e+00 -6.83225820588278321e+00 7.94126395981909106e+00 -6.41472769551571442e+00 4.36312717743234391e+00 -2.63352346273837412e-03 4.33970538476462675e+00 -1.73510080605469170e+01 3.77438228615578630e-04 2.93141952390985061e-01
--1.61088470337146170e-04 -6.84170155163046911e-05 -1.41816143143153051e-04 -1.29329564016289478e-04 9.95878422239693251e-05 1.19537099857934681e+01 9.01603919785731733e-03 4.43752827480992096e-04 -3.75768248548652650e+01 -7.97318342212349762e-03
--6.06402809705530954e-01 -2.93986515344423827e-01 1.59832658646353432e-01 -1.68374440417500271e+00 -2.54924203966106044e-01 4.93544567082793151e-03 1.47360478833131339e+01 2.41582813249167749e-01 -4.27514311023102778e-03 -4.02820659608905274e+01
- Total ccman2 time:   CPU 1349.51 s  wall 225.69 s
+-4.71741495253836760e+01 -2.97342470911396930e+01 2.84374483165626692e+01 2.08570646305777885e+01 5.06124796378981490e+00 -3.50439581429448990e-04 -3.94644422504248360e-01 4.83026698876883298e+00 -9.91290263730511961e-05 -6.49162965064842501e-01
+-2.97430776142718862e+01 -4.37136336867110487e+01 2.01396040791081212e+01 3.33280961558992139e+00 -1.17179656970019792e+01 -5.47329020369385910e-04 -7.68601607824525246e-01 6.84152803093296669e+00 -2.74564451098621709e-04 -3.38315376035323356e-01
+2.86477797740811759e+01 2.02829088133386151e+01 -3.08765251241177090e+01 -2.68865213809664567e+01 -4.72482628885308298e+00 4.34609275519831639e-04 1.12641566689598460e+00 -8.01205914797995966e+00 3.55594463910591241e-04 1.32107067302498105e-01
+2.10630681042619123e+01 3.36632123065944722e+00 -2.69510624339950411e+01 -3.45148169232357773e+01 -1.96901657187978749e+01 2.01725683106862563e-04 -5.73412730608554022e-02 -6.49519386509054097e+00 3.81092471696820034e-04 1.87801654829146258e+00
+5.07227437318168750e+00 -1.17468655384132639e+01 -4.70175068064058888e+00 -1.95470446671254940e+01 -3.15507714795689083e+01 -2.76650820464185987e-04 -3.00049128582391689e-01 4.37399386901020382e+00 1.61306775348757370e-04 1.75413105372004496e-01
+-4.43601043739355952e-04 -6.20766431126847790e-04 8.85554739160659965e-04 -1.42562327233503039e-04 -1.14362671562340257e-04 -6.61433010868875186e+01 7.03079008266271899e-03 -2.82656758156107912e-03 1.19518572083960635e+01 3.22946362257070518e-03
+-3.63847510981325339e-01 -7.13546179577742024e-01 9.88194394268218201e-01 -7.65963204075986726e-04 -3.25653894300496183e-01 4.68420243083400578e-03 -6.59385762620542408e+01 -4.04451059436039095e+00 -9.81610737271765288e-04 1.47708821057648816e+01
+4.82066722362208999e+00 6.83225755381680155e+00 -7.94126495895731743e+00 -6.41473002607272758e+00 4.36312561779907426e+00 -2.63605216404760867e-03 -4.33971416479000549e+00 -1.73510093034010602e+01 3.77430033508874274e-04 -2.93137846960449200e-01
+1.61210473324279249e-04 6.83898182090234008e-05 1.41929224582615365e-04 -1.29569131629703183e-04 9.93300479468217645e-05 1.19536752348770836e+01 -9.01920798974042981e-03 4.43682584097548904e-04 -3.75767799898451003e+01 7.97368384696639509e-03
+-6.06402686934372936e-01 -2.93985998143938498e-01 1.59832182845820070e-01 1.68374437093309526e+00 2.54924911129698728e-01 -4.93235139518333199e-03 1.47360483267530800e+01 -2.41579333354250414e-01 4.27427889680487283e-03 -4.02820665211774909e+01
+ Total ccman2 time:   CPU 1397.52 s  wall 229.87 s
 
  
  --------------------------------------------------------------
@@ -2343,15 +2345,15 @@ CAP matrix:
     Charge (ESU x 10^10)
                  0.0000
     Dipole Moment (Debye)
-         X       0.0000      Y      -0.0000      Z       0.0000
+         X      -0.0000      Y      -0.0000      Z      -0.0000
        Tot       0.0000
     Quadrupole Moments (Debye-Ang)
         XX     -12.8319     XY       0.0000     YY     -11.9245
         XZ      -0.0000     YZ      -0.0000     ZZ     -16.1256
     Octopole Moments (Debye-Ang^2)
-       XXX       0.0000    XXY      -0.0000    XYY       0.0000
-       YYY      -0.0000    XXZ      -0.0000    XYZ       0.0000
-       YYZ       0.0000    XZZ       0.0000    YZZ      -0.0000
+       XXX      -0.0000    XXY      -0.0000    XYY      -0.0000
+       YYY      -0.0000    XXZ       0.0000    XYZ       0.0000
+       YYZ      -0.0000    XZZ      -0.0000    YZZ      -0.0000
        ZZZ       0.0000
     Hexadecapole Moments (Debye-Ang^3)
       XXXX     -67.9369   XXXY       0.0000   XXYY     -13.0892
@@ -2360,8 +2362,8 @@ CAP matrix:
       XXZZ     -15.3982   XYZZ       0.0000   YYZZ      -9.0156
       XZZZ      -0.0000   YZZZ      -0.0000   ZZZZ     -21.4680
  -----------------------------------------------------------------
- Total job time:  258.10s(wall), 1422.32s(cpu) 
- Mon Apr  4 16:39:55 2022
+ Total job time:  262.20s(wall), 1470.24s(cpu) 
+ Wed Apr  6 20:27:12 2022
 
         *************************************************************
         *                                                           *

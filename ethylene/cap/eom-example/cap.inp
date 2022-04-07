@@ -1,0 +1,52 @@
+$molecule
+   0 1
+   N   0.0  0.0 -0.54875676501
+   N   0.0  0.0  0.54875676501
+   Gh  0.0  0.0  0.0
+$end
+
+$rem
+   COMPLEX_CCMAN   1
+   METHOD          EOM-CCSD
+   BASIS           gen
+   EA_STATES       [5]
+   threads 10
+$end
+
+$complex_ccman
+   PROJ_CAP        3      Project CAP onto set of real EOM eigenvectors
+   !PROJ_PROP      1      Request first-order perturbative correction for each point
+   CAP_ETA         50
+   ETA_STEP        50
+   NSTEPS          100
+   CAP_X           2760
+   CAP_Y           2760
+   CAP_Z           4880
+   CAP_TYPE        1
+$end
+
+$basis
+N    0
+aug-cc-pvtz
+****
+Gh   0
+S    1    1.000000
+   2.88000000E-02    1.00000000E+00
+S    1    1.000000
+   1.44000000E-02    1.00000000E+00
+S    1    1.000000
+   0.72000000E-02    1.00000000E+00
+P    1    1.000000
+   2.45000000E-02    1.00000000E+00
+P    1    1.000000
+   1.22000000E-02    1.00000000E+00
+P    1    1.000000
+   0.61000000E-02    1.00000000E+00
+D    1    1.000000
+   0.755000000E-01   1.00000000E+00
+D    1    1.000000
+   0.377500000E-01   1.00000000E+00
+D    1    1.000000
+   0.188750000E-01   1.00000000E+00
+****
+$end
