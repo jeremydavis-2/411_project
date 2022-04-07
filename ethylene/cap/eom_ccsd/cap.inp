@@ -14,24 +14,22 @@ H      -1.1590799571     0.9623485159     0.0000000000
 $end
 
 $rem
-	method eom-mp2
+	method eom-ccsd
 	basis gen
-        EA_STATES [0,0,5,0,0,0,0,0]
+        EA_STATES [0,0,10,0,0,0,0,0]
 	complex_ccman 1
+	xc_grid 000250000974
 	scf_convergence 8
 	thresh 14
 	mem_total 95000
 	threads 12
 $end
 
-#	xc_grid 000250000974
 $complex_ccman
-	cap_type 2 #voronoi cap
-	proj_cap 2 # 1 for CAP/EOM-CCSD with projected CAP added at the CCSD and EOM steps
-	eta_step 20
-	cap_eta 100 
+	cap_type 2 
+	proj_cap 3
+	cap_eta 300 
 	cap_x 3500
-	nsteps 20
 $end
 
 $basis

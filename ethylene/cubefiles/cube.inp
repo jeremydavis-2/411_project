@@ -1,0 +1,29 @@
+#ethylene geometry from CRC Handbook 102nd Edition
+$molecule
+   0 1
+   C1
+   C2 C1 Rcc
+   H1 C1 Rch C2 Acch
+   H2 C1 Rch C2 Acch H1 180
+   H3 C2 Rch C1 Acch H1 180
+   H4 C2 Rch C1 Acch H2 180
+
+   Rcc = 1.329
+   Rch = 1.082
+   Acch = 117.2 
+$end
+
+$rem
+   METHOD hf
+   BASIS sto-3g
+   MAKE_CUBE_FILES    true
+$end
+
+$plots
+   Plot the HOMO and the LUMO on a line
+  100  -3.0   3.0
+  100  -3.0   3.0
+  100  -3.0   3.0
+   1   0   0   0
+   9   
+$end
