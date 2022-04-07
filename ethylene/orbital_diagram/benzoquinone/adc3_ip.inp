@@ -1,0 +1,30 @@
+#ethylene geometry from CRC Handbook 102nd Edition
+$molecule
+   0 1
+C         0.6235257508   -1.1565321456    0.0000000000
+C        -0.6235257508   -1.1565321456    0.0000000000
+C        -1.5818166948    0.0000000000    0.0000000000
+C        -0.6235257508    1.1565321456    0.0000000000
+C         0.6235257508    1.1565321456    0.0000000000
+C         1.5818166948    0.0000000000    0.0000000000
+O         2.7810421212    0.0000000000    0.0000000000
+O        -2.7810421212    0.0000000000    0.0000000000
+$end
+
+$rem
+        basis cc-pVTZ
+        method adc(3)
+        IP_STATES [0,0,0,0,0,0,3,0]
+        scf_convergence 8
+        thresh 14
+        xc_grid 000250000974
+        adc_print 3
+        adc_davidson_conv 5
+        adc_nguess_singles 100
+        adc_nguess_doubles 50
+        adc_davidson_maxsubspace 400
+        adc_davidson_maxiter 40
+        adc_davidson_thresh 14
+        mem_total 95000
+        threads 12
+$end

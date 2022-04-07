@@ -1,37 +1,36 @@
 $comment
-        Ethylene CAP-EOM-CCSD
-        Basis: C: jun-TZ+4p1d, H: TZ
+	Ethylene CAP-EOM-CCSD
+	Basis: C: jun-TZ+4p1d, H: TZ
 $end
 
 $molecule
-0 1
-C       0.6645000000    -0.0000000000    -0.0000000000
-C      -0.6645000000     0.0000000000     0.0000000000
-H       1.1590799571     0.9623485159     0.0000000000
-H       1.1590799571    -0.9623485159    -0.0000000000
-H      -1.1590799571    -0.9623485159    -0.0000000000
-H      -1.1590799571     0.9623485159     0.0000000000
+-1 1
+C        -0.6645000000    0.0000000000   -0.1764707059
+C         0.6645000000    0.0000000000   -0.1764707059
+H        -1.1590800000    0.0000000000    0.7858782941
+H         1.1590800000    0.0000000000    0.7858782941
+H        -1.1590800000    0.0000000000   -1.1388187059
+H         1.1590800000    0.0000000000   -1.1388187059
+H         0.0000000000    0.0000000000    2.8235292941
 $end
 
 $rem
-        method eom-ccsd
-        basis gen
-        EA_STATES [0,0,10,0,0,0,0,0]
-        complex_ccman 1
-        xc_grid 000250000974
-        scf_convergence 8
-        thresh 14
-        mem_total 95000
-        threads 12
+	method eom-ccsd
+	basis gen
+        EA_STATES [0,10,0,0]
+	complex_ccman 1
+	xc_grid 000250000974
+	scf_convergence 8
+	thresh 14
+	mem_total 95000
+	threads 12
 $end
 
 $complex_ccman
-        cap_type 2
-        proj_cap 3
-	CAP_ETA         50
-	ETA_STEP        50
-	NSTEPS          100
-        cap_x 3500
+	cap_type 2 
+	proj_cap 3
+	cap_eta 300 
+	cap_x 3500
 $end
 
 $basis
