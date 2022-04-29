@@ -1,0 +1,2241 @@
+/src/tsommerfeld/qchem/exe/qcprog.exe .cap.inp.10390.qcin.1 /src/jdavis/qchem.scratch/qchem10390/
+
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 5.4 (devel), Q-Chem, Inc., Pleasanton, CA (2021)
+
+ E. Epifanovsky,  A. T. B. Gilbert,  Xintian Feng,  Joonho Lee,  Yuezhi Mao,  
+ N. Mardirossian,  P. Pokhilko,  A. White,  M. Wormit,  M. P. Coons,  
+ A. L. Dempwolff,  Zhengting Gan,  D. Hait,  P. R. Horn,  L. D. Jacobson,  
+ I. Kaliman,  J. Kussmann,  A. W. Lange,  Ka Un Lao,  D. S. Levine,  Jie Liu,  
+ S. C. McKenzie,  A. F. Morrison,  K. Nanda,  F. Plasser,  D. R. Rehn,  
+ M. L. Vidal,  Zhi-Qiang You,  Ying Zhu,  B. Alam,  B. Albrecht,  
+ A. Aldossary,  E. Alguire,  J. H. Andersen,  D. Barton,  K. Begam,  A. Behn,  
+ Y. A. Bernard,  E. J. Berquist,  H. Burton,  A. Carreras,  K. Carter-Fenk,  
+ R. Chakraborty,  A. D. Chien,  K. D. Closser,  V. Cofer-Shabica,  
+ S. Dasgupta,  Jia Deng,  M. de Wergifosse,  M. Diedenhofen,  Hainam Do,  
+ S. Ehlert,  Po-Tung Fang,  S. Fatehi,  Qingguo Feng,  T. Friedhoff,  
+ J. Gayvert,  Qinghui Ge,  G. Gidofalvi,  M. Goldey,  J. Gomes,  
+ C. Gonzalez-Espinoza,  S. Gulania,  A. Gunina,  M. W. D. Hanson-Heine,  
+ P. H. P. Harbach,  A. W. Hauser,  M. F. Herbst,  M. Hernandez Vera,  
+ M. Hodecker,  Z. C. Holden,  S. Houck,  Xunkun Huang,  Kerwin Hui,  
+ B. C. Huynh,  M. Ivanov,  Hyunjun Ji,  Hanjie Jiang,  B. Kaduk,  S. Kaehler,  
+ K. Khistyaev,  Jaehoon Kim,  P. Klunzinger,  Z. Koczor-Benda,  
+ Joong Hoon Koh,  D. Kosenkov,  L. Koulias,  T. Kowalczyk,  C. M. Krauter,  
+ K. Kue,  A. Kunitsa,  T. Kus,  A. Landau,  K. V. Lawler,  D. Lefrancois,  
+ S. Lehtola,  Rain Li,  Yi-Pei Li,  Jiashu Liang,  M. Liebenthal,  
+ Hung-Hsuan Lin,  You-Sheng Lin,  Fenglai Liu,  Kuan-Yu Liu,  
+ M. Loipersberger,  A. Luenser,  A. Manjanath,  P. Manohar,  E. Mansoor,  
+ S. F. Manzer,  Shan-Ping Mao,  A. V. Marenich,  T. Markovich,  S. Mason,  
+ S. A. Maurer,  P. F. McLaughlin,  M. F. S. J. Menger,  J.-M. Mewes,  
+ S. A. Mewes,  P. Morgante,  J. W. Mullinax,  K. J. Oosterbaan,  G. Paran,  
+ Alexander C. Paul,  Suranjan K. Paul,  F. Pavosevic,  Zheng Pei,  S. Prager,  
+ E. I. Proynov,  E. Ramos,  B. Rana,  A. E. Rask,  A. Rettig,  R. M. Richard,  
+ F. Rob,  E. Rossomme,  T. Scheele,  M. Scheurer,  M. Schneider,  
+ N. Sergueev,  S. M. Sharada,  W. Skomorowski,  D. W. Small,  C. J. Stein,  
+ Yu-Chuan Su,  E. J. Sundstrom,  Zhen Tao,  J. Thirman,  T. Tsuchimochi,  
+ N. M. Tubman,  S. P. Veccham,  O. Vydrov,  J. Wenzel,  J. Witte,  A. Yamada,  
+ Kun Yao,  S. Yeganeh,  S. R. Yost,  A. Zech,  Igor Ying Zhang,  Xing Zhang,  
+ Yu Zhang,  D. Zuev,  A. Aspuru-Guzik,  A. T. Bell,  N. A. Besley,  
+ K. B. Bravaya,  B. R. Brooks,  D. Casanova,  Jeng-Da Chai,  S. Coriani,  
+ C. J. Cramer,  A. E. DePrince, III,  R. A. DiStasio Jr.,  A. Dreuw,  
+ B. D. Dunietz,  T. R. Furlani,  W. A. Goddard III,  S. Grimme,  
+ S. Hammes-Schiffer,  T. Head-Gordon,  W. J. Hehre,  Chao-Ping Hsu,  
+ T.-C. Jagau,  Yousung Jung,  A. Klamt,  Jing Kong,  D. S. Lambrecht,  
+ WanZhen Liang,  N. J. Mayhall,  C. W. McCurdy,  J. B. Neaton,  
+ C. Ochsenfeld,  J. A. Parkhill,  R. Peverati,  V. A. Rassolov,  Yihan Shao,  
+ L. V. Slipchenko,  T. Stauch,  R. P. Steele,  J. E. Subotnik,  
+ A. J. W. Thom,  A. Tkatchenko,  D. G. Truhlar,  T. Van Voorhis,  
+ T. A. Wesolowski,  K. B. Whaley,  H. L. Woodcock III,  P. M. Zimmerman,  
+ S. Faraji,  P. M. W. Gill,  M. Head-Gordon,  J. M. Herbert,  A. I. Krylov
+
+ Additional authors for Version 5.4.1: 
+ S. Kotaru,  Shaozhi Li,  Xiangyuan Li,  F. Matz,  A. Molle,  Haisheng Ren,  
+ Yingli Su,  Hung-Yi Tsai,  C. Utku,  Fang Wang
+
+ Contributors to earlier versions of Q-Chem not listed above: 
+ R. D. Adamson,  B. Austin,  R. Baer,  J. Baker,  G. J. O. Beran,  
+ K. Brandhorst,  S. T. Brown,  E. F. C. Byrd,  A. K. Chakraborty,  
+ G. K. L. Chan,  Chun-Min Chang,  Yunqing Chen,  C.-L. Cheng,  
+ Siu Hung Chien,  D. M. Chipman,  D. L. Crittenden,  H. Dachsel,  
+ R. J. Doerksen,  A. D. Dutoi,  R. G. Edgar,  J. Fosso-Tande,  
+ L. Fusti-Molnar,  D. Ghosh,  A. Ghysels,  A. Golubeva-Zadorozhnaya,  
+ J. Gonthier,  M. S. Gordon,  S. R. Gwaltney,  G. Hawkins,  J. E. Herr,  
+ A. Heyden,  S. Hirata,  E. G. Hohenstein,  G. Kedziora,  F. J. Keil,  
+ C. Kelley,  Jihan Kim,  R. A. King,  R. Z. Khaliullin,  P. P. Korambath,  
+ W. Kurlancheek,  A. Laurent,  A. M. Lee,  M. S. Lee,  S. V. Levchenko,  
+ Ching Yeh Lin,  D. Liotard,  E. Livshits,  R. C. Lochan,  I. Lotan,  
+ L. A. Martinez-Martinez,  P. E. Maslen,  N. Nair,  D. P. O'Neill,  
+ D. Neuhauser,  E. Neuscamman,  C. M. Oana,  R. Olivares-Amaya,  R. Olson,  
+ T. M. Perrine,  B. Peters,  P. A. Pieniazek,  A. Prociuk,  Y. M. Rhee,  
+ J. Ritchie,  M. A. Rohrdanz,  E. Rosta,  N. J. Russ,  H. F. Schaefer III,  
+ M. W. Schmidt,  N. E. Schultz,  S. Sharma,  N. Shenvi,  C. D. Sherrill,  
+ A. C. Simmonett,  A. Sodt,  T. Stein,  D. Stuck,  K. S. Thanthiriwatte,  
+ V. Vanovschi,  L. Vogt,  Tao Wang,  A. Warshel,  M. A. Watson,  
+ C. F. Williams,  Q. Wu,  X. Xu,  Jun Yang,  W. Zhang,  Yan Zhao
+
+ Please cite Q-Chem as follows:
+ Y. Shao et al., Mol. Phys. 113, 184-215 (2015)
+ DOI: 10.1080/00268976.2014.952696
+
+ Q-Chem 5.4.1 for Intel X86 EM64T Linux
+
+ Parts of Q-Chem use Armadillo 9.900.5 (Nocturnal Misbehaviour).
+ http://arma.sourceforge.net/
+
+ Q-Chem begins on Thu Apr 28 20:32:56 2022  
+
+ Host: node02
+0
+
+     Scratch files written to /src/jdavis/qchem.scratch/qchem10390//
+ Processing $rem in /src/tsommerfeld/qchem/config/preferences:
+ Processing $rem in /home/jdavis/.qchemrc:
+
+ Checking the input file for inconsistencies... 	...done.
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+$comment
+	H_Ethylene CAP-ADC(2) optx
+	Basis: C: jun-TZ+4p1d, H: TZ
+$end
+
+$molecule
+-1 1
+C         0.0000000000    0.0000000000    0.8417902907
+C         0.0000000000    0.0000000000   -0.4872097093
+H         0.9623488518    0.0000000000    1.3363703127
+H         0.9623489048    0.0000000000   -0.9817896873
+H        -0.9623488518    0.0000000000    1.3363703127
+H        -0.9623489048    0.0000000000   -0.9817896873
+H         0.0000000000    0.0000000000   -2.8366446508
+$end
+
+$rem
+	basis gen
+	method adc(2)
+        EE_STATES [0,0,0,10]
+	scf_convergence 8
+	thresh 14
+	adc_cap 1
+	cap_type 2
+	cap_x 1500
+	cap_x_end 5000
+	cap_x_step 500
+	xc_grid 000250000974
+	adc_print 3
+	adc_davidson_conv 5
+	adc_nguess_singles 100
+	adc_nguess_doubles 50
+	adc_davidson_maxsubspace 400
+	adc_davidson_maxiter 40
+	adc_davidson_thresh 14
+	mem_total 95000
+	threads 12
+$end
+
+$basis
+C     1
+S    8   1.00
+   8236.0000000              0.0005310
+   1235.0000000              0.0041080
+    280.8000000              0.0210870
+     79.2700000              0.0818530
+     25.5900000              0.2348170
+      8.9970000              0.4344010
+      3.3190000              0.3461290
+      0.3643000             -0.0089830
+S    1   1.00
+      0.9059000              1.0000000
+S    8   1.00
+   8236.0000000             -0.0001130
+   1235.0000000             -0.0008780
+    280.8000000             -0.0045400
+     79.2700000             -0.0181330
+     25.5900000             -0.0557600
+      8.9970000             -0.1268950
+      3.3190000             -0.1703520
+      0.3643000              0.5986840
+S    1   1.00
+      0.1285000              1.0000000
+S    1   1.00
+      0.0440200              1.0000000
+P    3   1.00
+     18.7100000              0.0140310
+      4.1330000              0.0868660
+      1.2000000              0.2902160
+P    1   1.00
+      0.3827000              1.0000000
+P    1   1.00
+      0.1209000              1.0000000
+P    1   1.00
+      0.0356900              1.0000000
+P    1   1.0
+      0.0237933 1.0
+P    1   1.0
+      0.0158622 1.0
+P    1   1.0
+      0.0105748 1.0
+P    1   1.0
+      0.0070498 1.0
+D    1   1.00
+      1.0970000              1.0000000
+D    1   1.00
+      0.3180000              1.0000000
+D    1   1.00
+      0.1000000              1.0000000
+D    1   1.00
+      0.0500000 1.0
+F    1   1.00
+      0.7610000              1.0000000
+****
+C     2
+S    8   1.00
+   8236.0000000              0.0005310
+   1235.0000000              0.0041080
+    280.8000000              0.0210870
+     79.2700000              0.0818530
+     25.5900000              0.2348170
+      8.9970000              0.4344010
+      3.3190000              0.3461290
+      0.3643000             -0.0089830
+S    1   1.00
+      0.9059000              1.0000000
+S    8   1.00
+   8236.0000000             -0.0001130
+   1235.0000000             -0.0008780
+    280.8000000             -0.0045400
+     79.2700000             -0.0181330
+     25.5900000             -0.0557600
+      8.9970000             -0.1268950
+      3.3190000             -0.1703520
+      0.3643000              0.5986840
+S    1   1.00
+      0.1285000              1.0000000
+S    1   1.00
+      0.0440200              1.0000000
+P    3   1.00
+     18.7100000              0.0140310
+      4.1330000              0.0868660
+      1.2000000              0.2902160
+P    1   1.00
+      0.3827000              1.0000000
+P    1   1.00
+      0.1209000              1.0000000
+P    1   1.00
+      0.0356900              1.0000000
+P    1   1.0
+      0.0237933 1.0
+P    1   1.0
+      0.0158622 1.0
+P    1   1.0
+      0.0105748 1.0
+P    1   1.0
+      0.0070498 1.0
+D    1   1.00
+      1.0970000              1.0000000
+D    1   1.00
+      0.3180000              1.0000000
+D    1   1.00
+      0.1000000              1.0000000
+D    1   1.00
+      0.0500000 1.0
+F    1   1.00
+      0.7610000              1.0000000
+****
+H     3
+cc-pVTZ
+****
+H     4
+cc-pVTZ
+****
+H     5
+cc-pVTZ
+****
+H     6
+cc-pVTZ
+****
+H     7
+aug-cc-pVTZ
+****
+$end
+--------------------------------------------------------------
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      C       0.0000000000     0.0000000000     0.8417902855
+    2      C       0.0000000000     0.0000000000    -0.4872097145
+    3      H       0.9623488518     0.0000000000     1.3363703075
+    4      H       0.9623489048     0.0000000000    -0.9817896925
+    5      H      -0.9623488518     0.0000000000     1.3363703075
+    6      H      -0.9623489048     0.0000000000    -0.9817896925
+    7      H       0.0000000000     0.0000000000    -2.8366446560
+ ----------------------------------------------------------------
+ Molecular Point Group                 C2v   NOp =  4
+ Largest Abelian Subgroup              C2v   NOp =  4
+ Nuclear Repulsion Energy =          36.55739271 hartrees
+ There are        9 alpha and        9 beta electrons
+ Requested basis set is non-standard
+ There are 66 shells and 182 basis functions
+ Total memory of 95000 MB is distributed as follows: 
+   MEM_STATIC is set to 192 MB
+   QALLOC/CCMAN JOB total memory use is  94808 MB
+ Warning: actual memory use might exceed 95000 MB
+
+ Total QAlloc Memory Limit  95000 MB
+ Mega-Array Size       188 MB
+ MEM_STATIC part       192 MB
+
+                       Distance Matrix (Angstroms)
+             C (  1)   C (  2)   H (  3)   H (  4)   H (  5)   H (  6)
+   C (  2)  1.329000
+   H (  3)  1.082000  2.061931
+   H (  4)  2.061931  1.082000  2.318160
+   H (  5)  1.082000  2.061931  1.924698  3.013026
+   H (  6)  2.061931  1.082000  3.013026  1.924698  2.318160
+   H (  7)  3.678435  2.349435  4.282542  2.089642  4.282542  2.089642
+
+ 
+ A cutoff of  1.0D-14 yielded   2193 shell pairs
+ There are     16741 function pairs (     20464 Cartesian)
+ Smallest overlap matrix eigenvalue = 2.09E-06
+
+ Scale SEOQF with 1.000000e-02/1.000000e-02/1.000000e-02
+
+ Standard Electronic Orientation quadrupole field applied
+ Nucleus-field energy     =    -0.0000000002 hartrees
+ ================ Generating on-the-fly SAD Guess ================
+Attempting to make child job directory: /src/jdavis/qchem.scratch/qchem10390//Frg1/
+Attempting to make child job directory: /src/jdavis/qchem.scratch/qchem10390//Frg2/
+Creating input file /src/jdavis/qchem.scratch/qchem10390/Frg1.input
+using default PutDataFrgm: nothing
+calling putenv with: QCSCRATCH=/src/jdavis/qchem.scratch/qchem10390/ 
+Spawning Job For Fragment 0
+Done Job For Fragment 0
+calling putenv with: QCSCRATCH=/src/jdavis/qchem.scratch 
+calling putenv with: QCTHREADS=1 
+Creating input file /src/jdavis/qchem.scratch/qchem10390/Frg2.input
+using default PutDataFrgm: nothing
+calling putenv with: QCSCRATCH=/src/jdavis/qchem.scratch/qchem10390/ 
+Spawning Job For Fragment 1
+Done Job For Fragment 1
+calling putenv with: QCSCRATCH=/src/jdavis/qchem.scratch 
+calling putenv with: QCTHREADS=1 
+ Time for running child jobs:  CPU 2.15 s  wall 53.83 s
+ ============= Method Specific SAD Guess Constructed =============
+ Guess from on-the-fly superposition of atomic densities
+ Warning: Energy on first SCF cycle will be non-variational
+ A restricted Hartree-Fock SCF calculation will be
+ performed using Pulay DIIS extrapolation
+ SCF converges when DIIS error is below 1.0E-08
+ using 12 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module                
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh 
+ -------------------------------------------------------
+ ---------------------------------------
+  Cycle       Energy         DIIS Error
+ ---------------------------------------
+    1     -78.8458413840      2.75E-02
+    2     -78.4620556250      2.73E-03
+    3     -78.5216438424      9.26E-04
+    4     -78.5261510969      3.51E-04
+    5     -78.5269735356      9.34E-05
+    6     -78.5270698450      2.89E-05
+    7     -78.5270836369      1.37E-05
+    8     -78.5270867987      3.18E-06
+    9     -78.5270870828      7.08E-07
+   10     -78.5270871022      1.75E-07
+   11     -78.5270871042      3.69E-08
+   12     -78.5270871042      9.09E-09 Convergence criterion met
+ ---------------------------------------
+ SCF time:  CPU 62.98 s  wall 5.25 s
+ SCF   energy in the final basis set = -78.52708710
+ Total energy in the final basis set = -78.52708710
+================================================================================
+|                                                                              |
+|                                 A D C  M A N                                 |
+|                                                                              |
+ ------------------------------------------------------------------------------ 
+|                                                                              |
+| Components:                                                                  |
+|                                                                              |
+| - libvmm - 1.3-trunk                                                         |
+|   Authors:                                                                   |
+|   Evgeny Epifanovsky, Ilya Kaliman                                           |
+|                                                                              |
+| - libtensor - 2.5-trunk                                                      |
+|   Authors:                                                                   |
+|   Evgeny Epifanovsky, Michael Wormit, Dmitry Zuev, Sam Manzer,               |
+|   Ilya Kaliman                                                               |
+|                                                                              |
+| - libwfa - 1.1-trunk                                                         |
+|   Authors:                                                                   |
+|   Felix Plasser, Stefanie Mewes (Baeppler), Benjamin Thomitzni,              |
+|   Michael Wormit, Feng Chen, Anna I. Krylov, Pavel Pokhilko                  |
+|                                                                              |
+| - libadc - 1.1-trunk                                                         |
+|   Authors:                                                                   |
+|   Michael Wormit, Adrian L. Dempwolff, Philipp H. P. Harbach,                |
+|   Caroline Krauter, Dirk Rehn, Matthias Schneider, Jan Wenzel                |
+|                                                                              |
+| - adcman - 2.6-trunk                                                         |
+|   Authors:                                                                   |
+|   Michael Wormit, Adrian L. Dempwolff, Philipp H. P. Harbach,                |
+|   Caroline Krauter, Daniel Lefrancois, Jan-Michael Mewes, Dirk Rehn,         |
+|   Matthias Schneider, Jan Wenzel, Andreas Dreuw                              |
+|                                                                              |
+| Authors of earlier versions of ADCMAN:                                       |
+| Andreas Dreuw, Jan Hendrik Starcke, Dirk Rehn, Michael Wormit                |
+|                                                                              |
+================================================================================
+
+  Import QC data ...  CPU 0.00 s  wall 0.00 s
+ 
+ Alpha MOs, Restricted
+ -- Occupied --                  
+-11.070 -11.065  -0.883  -0.623  -0.505  -0.410  -0.357  -0.223
+  1 A1    2 A1    3 A1    4 A1    1 B1    5 A1    2 B1    1 B2                 
+ -0.040
+  6 A1                                                                         
+ -- Virtual --                   
+  0.057   0.058   0.060   0.068   0.068   0.076   0.094   0.094
+  3 B1    2 B2    7 A1    4 B1    3 B2    8 A1    9 A1    5 B1                 
+  0.096   0.114   0.115   0.121   0.133   0.147   0.150   0.174
+  4 B2    6 B1    5 B2   10 A1   11 A1    7 B1    6 B2    8 B1                 
+  0.177   0.184   0.202   0.229   0.229   0.232   0.249   0.253
+  7 B2   12 A1   13 A1    9 B1   14 A1    8 B2   15 A1   10 B1                 
+  0.254   0.256   0.263   0.307   0.309   0.315   0.319   0.322
+  1 A2    9 B2   16 A1   17 A1   10 B2   11 B1    2 A2   18 A1                 
+  0.330   0.357   0.359   0.380   0.385   0.417   0.419   0.429
+ 11 B2   19 A1   12 B1   12 B2   13 B1   20 A1   13 B2   14 B1                 
+  0.437   0.459   0.486   0.505   0.512   0.525   0.538   0.577
+ 21 A1   22 A1   14 B2   23 A1   15 B1    3 A2   24 A1   16 B1                 
+  0.603   0.612   0.622   0.639   0.651   0.652   0.729   0.738
+ 25 A1   17 B1   26 A1    4 A2   27 A1   15 B2   28 A1   18 B1                 
+  0.792   0.834   0.853   0.893   0.900   0.913   0.917   0.936
+ 16 B2   19 B1   29 A1   30 A1   17 B2   31 A1   20 B1   21 B1                 
+  0.979   1.003   1.003   1.052   1.157   1.158   1.169   1.222
+ 32 A1   33 A1   18 B2   34 A1   35 A1   22 B1    5 A2   19 B2                 
+  1.261   1.292   1.295   1.301   1.338   1.359   1.366   1.369
+ 23 B1   36 A1    6 A2   20 B2   37 A1   21 B2   24 B1   38 A1                 
+  1.391   1.417   1.436   1.597   1.665   1.677   1.683   1.724
+ 22 B2    7 A2   25 B1   39 A1   23 B2   40 A1   26 B1   27 B1                 
+  1.787   1.838   1.853   1.907   2.018   2.173   2.198   2.258
+ 41 A1    8 A2   42 A1   28 B1   43 A1   44 A1   45 A1   29 B1                 
+  2.734   2.905   2.909   2.936   2.945   2.956   3.058   3.077
+ 24 B2   30 B1   46 A1   47 A1   25 B2   31 B1   32 B1   26 B2                 
+  3.145   3.153   3.178   3.225   3.260   3.292   3.337   3.387
+ 48 A1    9 A2   49 A1   33 B1   27 B2   34 B1   50 A1   10 A2                 
+  3.422   3.424   3.459   3.610   3.611   3.639   3.654   3.656
+ 11 A2   28 B2   51 A1   35 B1   52 A1   12 A2   29 B2   53 A1                 
+  3.669   3.702   3.776   3.791   3.826   3.836   3.844   3.865
+ 36 B1   54 A1   30 B2   13 A2   55 A1   14 A2   56 A1   37 B1                 
+  3.883   3.958   3.986   4.081   4.142   4.172   4.192   4.201
+ 31 B2   38 B1   39 B1   57 A1   32 B2   58 A1   40 B1   41 B1                 
+  4.223   4.273   4.276   4.387   4.387   4.421   4.458   4.489
+ 33 B2   59 A1   15 A2   34 B2   60 A1   42 B1   16 A2   61 A1                 
+  4.504   4.535   4.597   4.693   4.825   4.844   4.846   4.948
+ 35 B2   36 B2   43 B1   62 A1   17 A2   63 A1   44 B1   64 A1                 
+  4.962   5.017   5.104   5.234   5.251   5.326   5.382   5.485
+ 65 A1   37 B2   38 B2   66 A1   45 B1   46 B1   18 A2   67 A1                 
+  5.550   5.587   5.645   5.700   5.843   5.900   6.300   6.377
+ 68 A1   19 A2   47 B1   39 B2   48 B1   69 A1   49 B1   70 A1                 
+  6.507   6.854   7.058  13.182  15.708
+ 50 B1   71 A1   51 B1   72 A1   73 A1                                         
+ 
+ Beta MOs, Restricted
+ -- Occupied --                  
+-11.070 -11.065  -0.883  -0.623  -0.505  -0.410  -0.357  -0.223
+  1 A1    2 A1    3 A1    4 A1    1 B1    5 A1    2 B1    1 B2                 
+ -0.040
+  6 A1                                                                         
+ -- Virtual --                   
+  0.057   0.058   0.060   0.068   0.068   0.076   0.094   0.094
+  3 B1    2 B2    7 A1    4 B1    3 B2    8 A1    9 A1    5 B1                 
+  0.096   0.114   0.115   0.121   0.133   0.147   0.150   0.174
+  4 B2    6 B1    5 B2   10 A1   11 A1    7 B1    6 B2    8 B1                 
+  0.177   0.184   0.202   0.229   0.229   0.232   0.249   0.253
+  7 B2   12 A1   13 A1    9 B1   14 A1    8 B2   15 A1   10 B1                 
+  0.254   0.256   0.263   0.307   0.309   0.315   0.319   0.322
+  1 A2    9 B2   16 A1   17 A1   10 B2   11 B1    2 A2   18 A1                 
+  0.330   0.357   0.359   0.380   0.385   0.417   0.419   0.429
+ 11 B2   19 A1   12 B1   12 B2   13 B1   20 A1   13 B2   14 B1                 
+  0.437   0.459   0.486   0.505   0.512   0.525   0.538   0.577
+ 21 A1   22 A1   14 B2   23 A1   15 B1    3 A2   24 A1   16 B1                 
+  0.603   0.612   0.622   0.639   0.651   0.652   0.729   0.738
+ 25 A1   17 B1   26 A1    4 A2   27 A1   15 B2   28 A1   18 B1                 
+  0.792   0.834   0.853   0.893   0.900   0.913   0.917   0.936
+ 16 B2   19 B1   29 A1   30 A1   17 B2   31 A1   20 B1   21 B1                 
+  0.979   1.003   1.003   1.052   1.157   1.158   1.169   1.222
+ 32 A1   33 A1   18 B2   34 A1   35 A1   22 B1    5 A2   19 B2                 
+  1.261   1.292   1.295   1.301   1.338   1.359   1.366   1.369
+ 23 B1   36 A1    6 A2   20 B2   37 A1   21 B2   24 B1   38 A1                 
+  1.391   1.417   1.436   1.597   1.665   1.677   1.683   1.724
+ 22 B2    7 A2   25 B1   39 A1   23 B2   40 A1   26 B1   27 B1                 
+  1.787   1.838   1.853   1.907   2.018   2.173   2.198   2.258
+ 41 A1    8 A2   42 A1   28 B1   43 A1   44 A1   45 A1   29 B1                 
+  2.734   2.905   2.909   2.936   2.945   2.956   3.058   3.077
+ 24 B2   30 B1   46 A1   47 A1   25 B2   31 B1   32 B1   26 B2                 
+  3.145   3.153   3.178   3.225   3.260   3.292   3.337   3.387
+ 48 A1    9 A2   49 A1   33 B1   27 B2   34 B1   50 A1   10 A2                 
+  3.422   3.424   3.459   3.610   3.611   3.639   3.654   3.656
+ 11 A2   28 B2   51 A1   35 B1   52 A1   12 A2   29 B2   53 A1                 
+  3.669   3.702   3.776   3.791   3.826   3.836   3.844   3.865
+ 36 B1   54 A1   30 B2   13 A2   55 A1   14 A2   56 A1   37 B1                 
+  3.883   3.958   3.986   4.081   4.142   4.172   4.192   4.201
+ 31 B2   38 B1   39 B1   57 A1   32 B2   58 A1   40 B1   41 B1                 
+  4.223   4.273   4.276   4.387   4.387   4.421   4.458   4.489
+ 33 B2   59 A1   15 A2   34 B2   60 A1   42 B1   16 A2   61 A1                 
+  4.504   4.535   4.597   4.693   4.825   4.844   4.846   4.948
+ 35 B2   36 B2   43 B1   62 A1   17 A2   63 A1   44 B1   64 A1                 
+  4.962   5.017   5.104   5.234   5.251   5.326   5.382   5.485
+ 65 A1   37 B2   38 B2   66 A1   45 B1   46 B1   18 A2   67 A1                 
+  5.550   5.587   5.645   5.700   5.843   5.900   6.300   6.377
+ 68 A1   19 A2   47 B1   39 B2   48 B1   69 A1   49 B1   70 A1                 
+  6.507   6.854   7.058  13.182  15.708
+ 50 B1   71 A1   51 B1   72 A1   73 A1                                         
+  Import AO data ...  CPU 0.04 s  wall 0.04 s
+  Using point group: C2v
+  Irreducible representations in point group: A1 A2 B1 B2
+  Molecular orbitals: 
+  Occupied MOs:
+  Block   0:   1 ( A1) A   2 ( A1) A   3 ( A1) A   4 ( A1) A   5 ( A1) A
+                  -11.07      -11.06     -0.8835     -0.6227     -0.4099
+               6 ( A1) A
+                -0.04021
+  Block   1:   1 ( B1) A   2 ( B1) A
+                 -0.5049     -0.3569
+  Block   2:   1 ( B2) A
+                 -0.2227
+  Block   3:   1 ( A1) B   2 ( A1) B   3 ( A1) B   4 ( A1) B   5 ( A1) B
+                  -11.07      -11.06     -0.8835     -0.6227     -0.4099
+               6 ( A1) B
+                -0.04021
+  Block   4:   1 ( B1) B   2 ( B1) B
+                 -0.5049     -0.3569
+  Block   5:   1 ( B2) B
+                 -0.2227
+  Virtual MOs:
+  Block   0:   7 ( A1) A   8 ( A1) A   9 ( A1) A  10 ( A1) A  11 ( A1) A
+                 0.06037     0.07555     0.09401      0.1212      0.1334
+              12 ( A1) A  13 ( A1) A  14 ( A1) A  15 ( A1) A  16 ( A1) A
+                  0.1836      0.2019      0.2294      0.2488      0.2625
+              17 ( A1) A  18 ( A1) A  19 ( A1) A  20 ( A1) A
+                  0.3068       0.322      0.3567      0.4173
+  Block   1:  21 ( A1) A  22 ( A1) A  23 ( A1) A  24 ( A1) A  25 ( A1) A
+                   0.437      0.4585      0.5054      0.5385      0.6031
+              26 ( A1) A  27 ( A1) A  28 ( A1) A  29 ( A1) A  30 ( A1) A
+                  0.6217      0.6508      0.7291      0.8527      0.8933
+              31 ( A1) A  32 ( A1) A  33 ( A1) A  34 ( A1) A
+                  0.9135      0.9788       1.003       1.052
+  Block   2:  35 ( A1) A  36 ( A1) A  37 ( A1) A  38 ( A1) A  39 ( A1) A
+                   1.157       1.292       1.338       1.369       1.597
+              40 ( A1) A  41 ( A1) A  42 ( A1) A  43 ( A1) A  44 ( A1) A
+                   1.677       1.787       1.853       2.018       2.173
+              45 ( A1) A  46 ( A1) A  47 ( A1) A  48 ( A1) A
+                   2.198       2.909       2.936       3.145
+  Block   3:  49 ( A1) A  50 ( A1) A  51 ( A1) A  52 ( A1) A  53 ( A1) A
+                   3.178       3.337       3.459       3.611       3.656
+              54 ( A1) A  55 ( A1) A  56 ( A1) A  57 ( A1) A  58 ( A1) A
+                   3.702       3.826       3.844       4.081       4.172
+              59 ( A1) A  60 ( A1) A
+                   4.273       4.387
+  Block   4:  61 ( A1) A  62 ( A1) A  63 ( A1) A  64 ( A1) A  65 ( A1) A
+                   4.489       4.693       4.844       4.948       4.962
+              66 ( A1) A  67 ( A1) A  68 ( A1) A  69 ( A1) A  70 ( A1) A
+                   5.234       5.485        5.55         5.9       6.377
+              71 ( A1) A  72 ( A1) A  73 ( A1) A
+                   6.854       13.18       15.71
+  Block   5:   1 ( A2) A   2 ( A2) A   3 ( A2) A   4 ( A2) A   5 ( A2) A
+                  0.2541      0.3193      0.5252      0.6395       1.169
+               6 ( A2) A   7 ( A2) A   8 ( A2) A   9 ( A2) A  10 ( A2) A
+                   1.295       1.417       1.838       3.153       3.387
+  Block   6:  11 ( A2) A  12 ( A2) A  13 ( A2) A  14 ( A2) A  15 ( A2) A
+                   3.422       3.639       3.791       3.836       4.276
+              16 ( A2) A  17 ( A2) A  18 ( A2) A  19 ( A2) A
+                   4.458       4.825       5.382       5.587
+  Block   7:   3 ( B1) A   4 ( B1) A   5 ( B1) A   6 ( B1) A   7 ( B1) A
+                 0.05723     0.06789     0.09448      0.1137       0.147
+               8 ( B1) A   9 ( B1) A  10 ( B1) A  11 ( B1) A  12 ( B1) A
+                  0.1743      0.2291      0.2533      0.3145      0.3593
+              13 ( B1) A  14 ( B1) A
+                  0.3855      0.4289
+  Block   8:  15 ( B1) A  16 ( B1) A  17 ( B1) A  18 ( B1) A  19 ( B1) A
+                  0.5122       0.577      0.6118      0.7378      0.8338
+              20 ( B1) A  21 ( B1) A  22 ( B1) A  23 ( B1) A  24 ( B1) A
+                  0.9174      0.9355       1.158       1.261       1.366
+              25 ( B1) A  26 ( B1) A
+                   1.436       1.683
+  Block   9:  27 ( B1) A  28 ( B1) A  29 ( B1) A  30 ( B1) A  31 ( B1) A
+                   1.724       1.907       2.258       2.905       2.956
+              32 ( B1) A  33 ( B1) A  34 ( B1) A  35 ( B1) A  36 ( B1) A
+                   3.058       3.225       3.292        3.61       3.669
+              37 ( B1) A  38 ( B1) A
+                   3.865       3.958
+  Block  10:  39 ( B1) A  40 ( B1) A  41 ( B1) A  42 ( B1) A  43 ( B1) A
+                   3.986       4.192       4.201       4.421       4.597
+              44 ( B1) A  45 ( B1) A  46 ( B1) A  47 ( B1) A  48 ( B1) A
+                   4.846       5.251       5.326       5.645       5.843
+              49 ( B1) A  50 ( B1) A  51 ( B1) A
+                     6.3       6.507       7.058
+  Block  11:   2 ( B2) A   3 ( B2) A   4 ( B2) A   5 ( B2) A   6 ( B2) A
+                 0.05767     0.06833     0.09581      0.1149      0.1502
+               7 ( B2) A   8 ( B2) A   9 ( B2) A  10 ( B2) A  11 ( B2) A
+                  0.1768      0.2323      0.2561      0.3092      0.3301
+              12 ( B2) A  13 ( B2) A
+                  0.3802      0.4185
+  Block  12:  14 ( B2) A  15 ( B2) A  16 ( B2) A  17 ( B2) A  18 ( B2) A
+                  0.4864       0.652      0.7915      0.8997       1.003
+              19 ( B2) A  20 ( B2) A  21 ( B2) A  22 ( B2) A  23 ( B2) A
+                   1.222       1.301       1.359       1.391       1.665
+              24 ( B2) A  25 ( B2) A  26 ( B2) A  27 ( B2) A
+                   2.734       2.945       3.077        3.26
+  Block  13:  28 ( B2) A  29 ( B2) A  30 ( B2) A  31 ( B2) A  32 ( B2) A
+                   3.424       3.654       3.776       3.883       4.142
+              33 ( B2) A  34 ( B2) A  35 ( B2) A  36 ( B2) A  37 ( B2) A
+                   4.223       4.387       4.504       4.535       5.017
+              38 ( B2) A  39 ( B2) A
+                   5.104         5.7
+  Block  14:   7 ( A1) B   8 ( A1) B   9 ( A1) B  10 ( A1) B  11 ( A1) B
+                 0.06037     0.07555     0.09401      0.1212      0.1334
+              12 ( A1) B  13 ( A1) B  14 ( A1) B  15 ( A1) B  16 ( A1) B
+                  0.1836      0.2019      0.2294      0.2488      0.2625
+              17 ( A1) B  18 ( A1) B  19 ( A1) B  20 ( A1) B
+                  0.3068       0.322      0.3567      0.4173
+  Block  15:  21 ( A1) B  22 ( A1) B  23 ( A1) B  24 ( A1) B  25 ( A1) B
+                   0.437      0.4585      0.5054      0.5385      0.6031
+              26 ( A1) B  27 ( A1) B  28 ( A1) B  29 ( A1) B  30 ( A1) B
+                  0.6217      0.6508      0.7291      0.8527      0.8933
+              31 ( A1) B  32 ( A1) B  33 ( A1) B  34 ( A1) B
+                  0.9135      0.9788       1.003       1.052
+  Block  16:  35 ( A1) B  36 ( A1) B  37 ( A1) B  38 ( A1) B  39 ( A1) B
+                   1.157       1.292       1.338       1.369       1.597
+              40 ( A1) B  41 ( A1) B  42 ( A1) B  43 ( A1) B  44 ( A1) B
+                   1.677       1.787       1.853       2.018       2.173
+              45 ( A1) B  46 ( A1) B  47 ( A1) B  48 ( A1) B
+                   2.198       2.909       2.936       3.145
+  Block  17:  49 ( A1) B  50 ( A1) B  51 ( A1) B  52 ( A1) B  53 ( A1) B
+                   3.178       3.337       3.459       3.611       3.656
+              54 ( A1) B  55 ( A1) B  56 ( A1) B  57 ( A1) B  58 ( A1) B
+                   3.702       3.826       3.844       4.081       4.172
+              59 ( A1) B  60 ( A1) B
+                   4.273       4.387
+  Block  18:  61 ( A1) B  62 ( A1) B  63 ( A1) B  64 ( A1) B  65 ( A1) B
+                   4.489       4.693       4.844       4.948       4.962
+              66 ( A1) B  67 ( A1) B  68 ( A1) B  69 ( A1) B  70 ( A1) B
+                   5.234       5.485        5.55         5.9       6.377
+              71 ( A1) B  72 ( A1) B  73 ( A1) B
+                   6.854       13.18       15.71
+  Block  19:   1 ( A2) B   2 ( A2) B   3 ( A2) B   4 ( A2) B   5 ( A2) B
+                  0.2541      0.3193      0.5252      0.6395       1.169
+               6 ( A2) B   7 ( A2) B   8 ( A2) B   9 ( A2) B  10 ( A2) B
+                   1.295       1.417       1.838       3.153       3.387
+  Block  20:  11 ( A2) B  12 ( A2) B  13 ( A2) B  14 ( A2) B  15 ( A2) B
+                   3.422       3.639       3.791       3.836       4.276
+              16 ( A2) B  17 ( A2) B  18 ( A2) B  19 ( A2) B
+                   4.458       4.825       5.382       5.587
+  Block  21:   3 ( B1) B   4 ( B1) B   5 ( B1) B   6 ( B1) B   7 ( B1) B
+                 0.05723     0.06789     0.09448      0.1137       0.147
+               8 ( B1) B   9 ( B1) B  10 ( B1) B  11 ( B1) B  12 ( B1) B
+                  0.1743      0.2291      0.2533      0.3145      0.3593
+              13 ( B1) B  14 ( B1) B
+                  0.3855      0.4289
+  Block  22:  15 ( B1) B  16 ( B1) B  17 ( B1) B  18 ( B1) B  19 ( B1) B
+                  0.5122       0.577      0.6118      0.7378      0.8338
+              20 ( B1) B  21 ( B1) B  22 ( B1) B  23 ( B1) B  24 ( B1) B
+                  0.9174      0.9355       1.158       1.261       1.366
+              25 ( B1) B  26 ( B1) B
+                   1.436       1.683
+  Block  23:  27 ( B1) B  28 ( B1) B  29 ( B1) B  30 ( B1) B  31 ( B1) B
+                   1.724       1.907       2.258       2.905       2.956
+              32 ( B1) B  33 ( B1) B  34 ( B1) B  35 ( B1) B  36 ( B1) B
+                   3.058       3.225       3.292        3.61       3.669
+              37 ( B1) B  38 ( B1) B
+                   3.865       3.958
+  Block  24:  39 ( B1) B  40 ( B1) B  41 ( B1) B  42 ( B1) B  43 ( B1) B
+                   3.986       4.192       4.201       4.421       4.597
+              44 ( B1) B  45 ( B1) B  46 ( B1) B  47 ( B1) B  48 ( B1) B
+                   4.846       5.251       5.326       5.645       5.843
+              49 ( B1) B  50 ( B1) B  51 ( B1) B
+                     6.3       6.507       7.058
+  Block  25:   2 ( B2) B   3 ( B2) B   4 ( B2) B   5 ( B2) B   6 ( B2) B
+                 0.05767     0.06833     0.09581      0.1149      0.1502
+               7 ( B2) B   8 ( B2) B   9 ( B2) B  10 ( B2) B  11 ( B2) B
+                  0.1768      0.2323      0.2561      0.3092      0.3301
+              12 ( B2) B  13 ( B2) B
+                  0.3802      0.4185
+  Block  26:  14 ( B2) B  15 ( B2) B  16 ( B2) B  17 ( B2) B  18 ( B2) B
+                  0.4864       0.652      0.7915      0.8997       1.003
+              19 ( B2) B  20 ( B2) B  21 ( B2) B  22 ( B2) B  23 ( B2) B
+                   1.222       1.301       1.359       1.391       1.665
+              24 ( B2) B  25 ( B2) B  26 ( B2) B  27 ( B2) B
+                   2.734       2.945       3.077        3.26
+  Block  27:  28 ( B2) B  29 ( B2) B  30 ( B2) B  31 ( B2) B  32 ( B2) B
+                   3.424       3.654       3.776       3.883       4.142
+              33 ( B2) B  34 ( B2) B  35 ( B2) B  36 ( B2) B  37 ( B2) B
+                   4.223       4.387       4.504       4.535       5.017
+              38 ( B2) B  39 ( B2) B
+                   5.104         5.7
+  Import MO data ...  CPU 0.11 s  wall 0.03 s
+  Import HF data ...  CPU 2.42 s  wall 0.41 s
+  Import 2e integrals ...  CPU 92.49 s  wall 8.49 s
+  Import CAP matrix ...  CPU 109.03 s  wall 9.09 s
+
+--------------------------------------------------------------------------------
+                                   HF Summary                                   
+--------------------------------------------------------------------------------
+  Energy:                                                  -78.5270871042 a.u.
+  Dip. moment [a.u.]:                  [   0.000000,    0.000000,    5.103477]
+  Total dipole [Debye]:                                              12.971748
+  <r^2> [a.u.]:                        [  28.421500,   18.396807,  117.768456]
+  Total <r^2> [a.u.]:                                               164.586763
+--------------------------------------------------------------------------------
+  HF properties ...  CPU 1.05 s  wall 0.06 s
+  MP(1) calculation ...  CPU 2.87 s  wall 1.07 s
+  N^6 prerequesite intermediates ...  CPU 9.35 s  wall 1.02 s
+
+--------------------------------------------------------------------------------
+                                 MP(2) Summary                                  
+--------------------------------------------------------------------------------
+  MP energy contribution:                                   -0.4026925464 a.u.
+  Total energy:                                            -78.9297796506 a.u.
+  Dip. moment [a.u.]:                  [  -0.000000,   -0.000000,    5.112944]
+  Total dipole [Debye]:                                              12.995811
+  <r^2> [a.u.]:                        [  28.788533,   18.614072,  118.027804]
+  Total <r^2> [a.u.]:                                               165.430409
+--------------------------------------------------------------------------------
+  MP(2) calculation ...  CPU 3.93 s  wall 1.49 s
+  Start ADC(2)-s ...  CPU 0.15 s  wall 0.03 s
+  ADC(2) intermediates ...  CPU 0.45 s  wall 0.08 s
+  Starting Davidson for singlet states of irrep B2 ... 
+--------------------------------------------------------------------------------
+   It NVec Conv  Avg. Norm  Max. Norm  Conv. states           Remark
+--------------------------------------------------------------------------------
+       150    0  5.635e-02  3.290e-01  0.0629 n n n n n n n n Guess.
+    1  160    0  2.098e-02  1.850e-01  0.0300 n n n n n n n n 
+    2  170    0  1.035e-02  9.709e-02  0.0299 n n n n n n n n 
+    3  180    0  1.900e-03  1.831e-02  0.0299 n n n n n n n n 
+    4  190    1  3.552e-04  3.478e-03  0.0299 n y n n n n n n 
+    5  200    6  6.416e-05  6.331e-04  0.0299 y y y y n y n n 
+    6  210    8  2.082e-05  2.056e-04  0.0299 y y y y y y y n 
+    7  220    9  3.083e-06  3.043e-05  0.0299 y y y y y y y y 
+    8  230   10  5.090e-07  5.029e-06  0.0299 y y y y y y y y Converged.
+--------------------------------------------------------------------------------
+  Davidson Summary: 
+ ------------------------------------------------------------
+  State  0: excitation energy =   0.0299 a.u.   (converged)
+  State  1: excitation energy =   0.0347 a.u.   (converged)
+  State  2: excitation energy =   0.0542 a.u.   (converged)
+  State  3: excitation energy =   0.0619 a.u.   (converged)
+  State  4: excitation energy =   0.0943 a.u.   (converged)
+  State  5: excitation energy =   0.0966 a.u.   (converged)
+  State  6: excitation energy =   0.1234 a.u.   (converged)
+  State  7: excitation energy =   0.1689 a.u.   (converged)
+  State  8: excitation energy =   0.1927 a.u.   (converged)
+  State  9: excitation energy =   0.1993 a.u.   (converged)
+ ------------------------------------------------------------
+
+  Singlet states of irrep B2 ...  CPU 1038.01 s  wall 176.61 s
+  TDMs ...  CPU 15.96 s  wall 2.75 s
+  SDMs ...  CPU 30.95 s  wall 5.30 s
+  Transition properties ...  CPU 1.26 s  wall 0.20 s
+  Properties ...  CPU 8.14 s  wall 1.27 s
+  ISR TDMS ...  CPU 182.21 s  wall 30.90 s
+  ISR transition properties ...  CPU 12.70 s  wall 1.67 s
+  Sum-over-states TPA ...  CPU 0.00 s  wall 0.00 s
+
+--------------------------------------------------------------------------------
+                             Excited State Summary
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+  Excited state 1 (singlet, B2)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  1 (1) B2                                    R^2 =  2.15082e-09
+
+  Total energy:                                            -78.8998832078 a.u.
+  Excitation energy:                                               0.813524 eV
+
+  Osc. strength:                                                      0.001885
+  Trans. dip. moment [a.u.]:           [   0.000000,    0.307525,   -0.000000]
+  <i|r^2|0> [a.u.]:                    [  -0.000000,   -0.000000,    0.000000]
+  Two-photon absorption cross-section (SoS) [a.u.]:              161403.515373
+  Two-photon absorption matrix (SoS) [a.u.]:
+                                       |   -0.000000   -0.000000    0.000000 |
+                                       |   -0.000000   -0.000000  142.040274 |
+                                       |    0.000000  142.040274    0.000000 |
+
+  Dip. moment [a.u.]:                  [  -0.000000,   -0.000000,   -2.508862]
+  Total dipole [Debye]:                                               6.376891
+  <r^2> [a.u.]:                        [  97.145238,  233.783467,  158.678738]
+  Total <r^2> [a.u.]:                                               489.607443
+
+  V1^2 = 0.8952, V2^2 = 0.1048
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     6 (A1) A               2 (B2) A                 -0.5447
+     6 (A1) A               3 (B2) A                 -0.3330
+     6 (A1) A               4 (B2) A                 -0.1450
+     6 (A1) A               5 (B2) A                 -0.1287
+     6 (A1) A   6 (A1) B   13 (A1) A    2 (B2) B      0.0518
+     6 (A1) A               7 (B2) A                 -0.0403
+     6 (A1) A   6 (A1) B   13 (A1) A    3 (B2) B      0.0313
+     6 (A1) A   6 (A1) B   21 (A1) A    2 (B2) B     -0.0275
+     6 (A1) A   6 (A1) B   10 (A1) A    2 (B2) B      0.0262
+     6 (A1) A   6 (A1) B   14 (A1) A    2 (B2) B      0.0255
+     6 (A1) A               6 (B2) A                 -0.0248
+     6 (A1) A   6 (A1) B    9 (A1) A    2 (B2) B      0.0219
+     6 (A1) A   6 (A1) B   18 (A1) A    2 (B2) B      0.0215
+     6 (A1) A   6 (A1) B    7 (A1) A    2 (B2) B      0.0212
+     6 (A1) A   6 (A1) B   19 (A1) A    2 (B2) B     -0.0189
+     6 (A1) A   6 (A1) B   30 (A1) A    2 (B2) B     -0.0173
+     6 (A1) A   6 (A1) B   16 (A1) A    2 (B2) B     -0.0170
+     6 (A1) A   6 (A1) B   21 (A1) A    3 (B2) B     -0.0166
+     6 (A1) A   6 (A1) B   10 (A1) A    3 (B2) B      0.0157
+     6 (A1) A   6 (A1) B   14 (A1) A    3 (B2) B      0.0150
+     6 (A1) A   6 (A1) B   15 (A1) A    2 (B2) B      0.0133
+     6 (A1) A   6 (A1) B   18 (A1) A    3 (B2) B      0.0129
+     6 (A1) A   6 (A1) B    9 (A1) A    3 (B2) B      0.0126
+     6 (A1) A   1 (B2) B    2 (B2) A   10 (B2) B     -0.0121
+     6 (A1) A   1 (B2) A    2 (B2) A   10 (B2) A     -0.0118
+     6 (A1) A   6 (A1) B    7 (A1) A    3 (B2) B      0.0118
+     6 (A1) A   6 (A1) B   13 (A1) A    4 (B2) B      0.0118
+     6 (A1) A   6 (A1) B   19 (A1) A    3 (B2) B     -0.0118
+     6 (A1) A   6 (A1) B   13 (A1) A    5 (B2) B      0.0108
+     6 (A1) A   6 (A1) B   30 (A1) A    3 (B2) B     -0.0104
+     6 (A1) A   6 (A1) B   16 (A1) A    3 (B2) B     -0.0099
+     6 (A1) A   6 (A1) B   23 (A1) A    2 (B2) B     -0.0099
+     6 (A1) A               9 (B2) A                 -0.0092
+     6 (A1) A   6 (A1) B   29 (A1) A    2 (B2) B     -0.0091
+     6 (A1) A   1 (B2) B    2 (B2) A    8 (B2) B     -0.0079
+     6 (A1) A   6 (A1) B   15 (A1) A    3 (B2) B      0.0078
+     6 (A1) A   6 (A1) B   17 (A1) A    2 (B2) B      0.0078
+     6 (A1) A   1 (B2) A    2 (B2) A    8 (B2) A     -0.0077
+     6 (A1) A              11 (B2) A                  0.0074
+     6 (A1) A   6 (A1) B   25 (A1) A    2 (B2) B     -0.0073
+    ---------------------------------------------------------
+  ----------------------------------------------------------------------------
+
+
+  Excited state 2 (singlet, B2)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  2 (1) B2                                    R^2 =  1.43155e-09
+
+  Total energy:                                            -78.8950469180 a.u.
+  Excitation energy:                                               0.945126 eV
+
+  Osc. strength:                                                      0.011525
+  Trans. dip. moment [a.u.]:           [   0.000000,    0.705495,   -0.000000]
+  <i|r^2|0> [a.u.]:                    [   0.000000,    0.000000,    0.000000]
+  Two-photon absorption cross-section (SoS) [a.u.]:                1203.482834
+  Two-photon absorption matrix (SoS) [a.u.]:
+                                       |   -0.000000   -0.000000    0.000000 |
+                                       |   -0.000000    0.000000   12.265209 |
+                                       |    0.000000   12.265209   -0.000000 |
+
+  Dip. moment [a.u.]:                  [  -0.000000,   -0.000000,    1.656456]
+  Total dipole [Debye]:                                               4.210292
+  <r^2> [a.u.]:                        [  88.259486,  207.116313,  271.805528]
+  Total <r^2> [a.u.]:                                               567.181327
+
+  V1^2 = 0.8942, V2^2 = 0.1058
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     6 (A1) A               3 (B2) A                 -0.5430
+     6 (A1) A               2 (B2) A                  0.3484
+     6 (A1) A               5 (B2) A                 -0.1548
+     6 (A1) A               4 (B2) A                  0.0726
+     6 (A1) A   6 (A1) B   13 (A1) A    3 (B2) B      0.0519
+     6 (A1) A               7 (B2) A                 -0.0358
+     6 (A1) A   6 (A1) B   13 (A1) A    2 (B2) B     -0.0337
+     6 (A1) A   6 (A1) B   21 (A1) A    3 (B2) B     -0.0272
+     6 (A1) A   6 (A1) B   10 (A1) A    3 (B2) B      0.0263
+     6 (A1) A   6 (A1) B   14 (A1) A    3 (B2) B      0.0247
+     6 (A1) A   6 (A1) B   18 (A1) A    3 (B2) B      0.0212
+     6 (A1) A   6 (A1) B    9 (A1) A    3 (B2) B      0.0209
+     6 (A1) A   6 (A1) B    7 (A1) A    3 (B2) B      0.0204
+     6 (A1) A   6 (A1) B   19 (A1) A    3 (B2) B     -0.0195
+     6 (A1) A   6 (A1) B   21 (A1) A    2 (B2) B      0.0177
+     6 (A1) A   6 (A1) B   10 (A1) A    2 (B2) B     -0.0172
+     6 (A1) A   6 (A1) B   30 (A1) A    3 (B2) B     -0.0171
+     6 (A1) A   6 (A1) B   14 (A1) A    2 (B2) B     -0.0165
+     6 (A1) A   6 (A1) B   16 (A1) A    3 (B2) B     -0.0163
+     6 (A1) A               6 (B2) A                  0.0160
+     6 (A1) A   6 (A1) B    9 (A1) A    2 (B2) B     -0.0144
+     6 (A1) A   6 (A1) B    7 (A1) A    2 (B2) B     -0.0143
+     6 (A1) A   6 (A1) B   18 (A1) A    2 (B2) B     -0.0139
+     6 (A1) A   6 (A1) B   13 (A1) A    5 (B2) B      0.0133
+     6 (A1) A   6 (A1) B   15 (A1) A    3 (B2) B      0.0128
+     6 (A1) A   6 (A1) B   19 (A1) A    2 (B2) B      0.0122
+     6 (A1) A   6 (A1) B   30 (A1) A    2 (B2) B      0.0111
+     6 (A1) A   1 (B2) B    3 (B2) A   10 (B2) B     -0.0110
+     6 (A1) A   6 (A1) B   16 (A1) A    2 (B2) B      0.0109
+     6 (A1) A   1 (B2) A    3 (B2) A   10 (B2) A     -0.0108
+     6 (A1) A   6 (A1) B   23 (A1) A    3 (B2) B     -0.0091
+     6 (A1) A   6 (A1) B   29 (A1) A    3 (B2) B     -0.0089
+     6 (A1) A   6 (A1) B   15 (A1) A    2 (B2) B     -0.0086
+     6 (A1) A   1 (B2) B    2 (B2) A   10 (B2) B      0.0080
+     6 (A1) A   1 (B2) A    2 (B2) A   10 (B2) A      0.0078
+     6 (A1) A   6 (A1) B   17 (A1) A    3 (B2) B      0.0077
+     6 (A1) A   6 (A1) B   25 (A1) A    3 (B2) B     -0.0075
+     6 (A1) A   6 (A1) B   11 (A1) A    3 (B2) B     -0.0072
+     6 (A1) A   6 (A1) B   21 (A1) A    5 (B2) B     -0.0072
+     6 (A1) A   1 (B2) B    3 (B2) A    8 (B2) B     -0.0071
+    ---------------------------------------------------------
+  ----------------------------------------------------------------------------
+
+
+  Excited state 3 (singlet, B2)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  3 (1) B2                                    R^2 =  5.92259e-09
+
+  Total energy:                                            -78.8756023009 a.u.
+  Excitation energy:                                               1.474241 eV
+
+  Osc. strength:                                                      0.009811
+  Trans. dip. moment [a.u.]:           [  -0.000000,   -0.521184,    0.000000]
+  <i|r^2|0> [a.u.]:                    [   0.000000,    0.000000,    0.000000]
+  Two-photon absorption cross-section (SoS) [a.u.]:              358014.661461
+  Two-photon absorption matrix (SoS) [a.u.]:
+                                       |    0.000000    0.000000    0.000000 |
+                                       |    0.000000    0.000000  211.546290 |
+                                       |    0.000000  211.546290   -0.000000 |
+
+  Dip. moment [a.u.]:                  [  -0.000000,   -0.000000,   -1.618447]
+  Total dipole [Debye]:                                               4.113684
+  <r^2> [a.u.]:                        [  79.085292,  179.584592,  137.977465]
+  Total <r^2> [a.u.]:                                               396.647349
+
+  V1^2 = 0.9012, V2^2 = 0.0988
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     6 (A1) A               4 (B2) A                  0.5302
+     6 (A1) A               5 (B2) A                  0.2922
+     6 (A1) A               7 (B2) A                  0.1538
+     6 (A1) A               2 (B2) A                 -0.1529
+     6 (A1) A               6 (B2) A                  0.1449
+     6 (A1) A               3 (B2) A                 -0.1164
+     6 (A1) A   6 (A1) B   13 (A1) A    4 (B2) B     -0.0477
+     6 (A1) A               9 (B2) A                  0.0378
+     6 (A1) A   6 (A1) B   21 (A1) A    4 (B2) B      0.0261
+     6 (A1) A   6 (A1) B   13 (A1) A    5 (B2) B     -0.0261
+     6 (A1) A   6 (A1) B   14 (A1) A    4 (B2) B     -0.0240
+     6 (A1) A   6 (A1) B   10 (A1) A    4 (B2) B     -0.0238
+     6 (A1) A              11 (B2) A                 -0.0218
+     6 (A1) A   6 (A1) B   18 (A1) A    4 (B2) B     -0.0202
+     6 (A1) A               8 (B2) A                  0.0200
+     6 (A1) A   6 (A1) B    9 (A1) A    4 (B2) B     -0.0198
+     6 (A1) A   6 (A1) B    7 (A1) A    4 (B2) B     -0.0184
+     6 (A1) A   6 (A1) B   19 (A1) A    4 (B2) B      0.0174
+     6 (A1) A   6 (A1) B   30 (A1) A    4 (B2) B      0.0166
+     6 (A1) A   6 (A1) B   16 (A1) A    4 (B2) B      0.0161
+     6 (A1) A   6 (A1) B   13 (A1) A    2 (B2) B      0.0160
+     6 (A1) A   6 (A1) B   21 (A1) A    5 (B2) B      0.0140
+     6 (A1) A   6 (A1) B   14 (A1) A    5 (B2) B     -0.0127
+     6 (A1) A   6 (A1) B   15 (A1) A    4 (B2) B     -0.0126
+     6 (A1) A   1 (B2) B    4 (B2) A   10 (B2) B      0.0119
+     6 (A1) A   6 (A1) B   10 (A1) A    5 (B2) B     -0.0119
+     6 (A1) A   6 (A1) B   13 (A1) A    7 (B2) B     -0.0119
+     6 (A1) A   6 (A1) B   13 (A1) A    3 (B2) B      0.0118
+     6 (A1) A   1 (B2) A    4 (B2) A   10 (B2) A      0.0117
+     6 (A1) A   6 (A1) B   18 (A1) A    5 (B2) B     -0.0108
+     6 (A1) A   6 (A1) B    9 (A1) A    5 (B2) B     -0.0105
+     6 (A1) A   6 (A1) B   13 (A1) A    6 (B2) B     -0.0101
+     6 (A1) A   6 (A1) B   19 (A1) A    5 (B2) B      0.0098
+     6 (A1) A   6 (A1) B   23 (A1) A    4 (B2) B      0.0097
+     6 (A1) A   6 (A1) B    7 (A1) A    5 (B2) B     -0.0090
+     6 (A1) A   6 (A1) B   30 (A1) A    5 (B2) B      0.0089
+     6 (A1) A   6 (A1) B   29 (A1) A    4 (B2) B      0.0088
+     6 (A1) A   6 (A1) B   16 (A1) A    5 (B2) B      0.0084
+     6 (A1) A   6 (A1) B   10 (A1) A    2 (B2) B      0.0084
+     6 (A1) A              13 (B2) A                  0.0081
+    ---------------------------------------------------------
+  ----------------------------------------------------------------------------
+
+
+  Excited state 4 (singlet, B2)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  4 (1) B2                                    R^2 =  5.49983e-09
+
+  Total energy:                                            -78.8679017665 a.u.
+  Excitation energy:                                               1.683783 eV
+
+  Osc. strength:                                                      0.050340
+  Trans. dip. moment [a.u.]:           [  -0.000000,   -1.104676,    0.000000]
+  <i|r^2|0> [a.u.]:                    [  -0.000000,    0.000000,    0.000000]
+  Two-photon absorption cross-section (SoS) [a.u.]:               73228.954140
+  Two-photon absorption matrix (SoS) [a.u.]:
+                                       |    0.000000    0.000000    0.000000 |
+                                       |    0.000000   -0.000000   95.674549 |
+                                       |    0.000000   95.674549   -0.000000 |
+
+  Dip. moment [a.u.]:                  [  -0.000000,    0.000000,    0.795691]
+  Total dipole [Debye]:                                               2.022446
+  <r^2> [a.u.]:                        [  67.175336,  143.824066,  210.788403]
+  Total <r^2> [a.u.]:                                               421.787805
+
+  V1^2 = 0.9006, V2^2 = 0.0994
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     6 (A1) A               5 (B2) A                  0.5083
+     6 (A1) A               4 (B2) A                 -0.3228
+     6 (A1) A               7 (B2) A                  0.1941
+     6 (A1) A               3 (B2) A                 -0.1644
+     6 (A1) A               6 (B2) A                 -0.1127
+     6 (A1) A               2 (B2) A                  0.0579
+     6 (A1) A               8 (B2) A                 -0.0511
+     6 (A1) A   6 (A1) B   13 (A1) A    5 (B2) B     -0.0469
+     6 (A1) A              10 (B2) A                 -0.0421
+     6 (A1) A               9 (B2) A                  0.0338
+     6 (A1) A   6 (A1) B   13 (A1) A    4 (B2) B      0.0298
+     6 (A1) A              12 (B2) A                  0.0261
+     6 (A1) A              11 (B2) A                 -0.0253
+     6 (A1) A   6 (A1) B   21 (A1) A    5 (B2) B      0.0248
+     6 (A1) A   6 (A1) B   10 (A1) A    5 (B2) B     -0.0233
+     6 (A1) A   6 (A1) B   14 (A1) A    5 (B2) B     -0.0221
+     6 (A1) A   6 (A1) B   18 (A1) A    5 (B2) B     -0.0192
+     6 (A1) A   6 (A1) B    9 (A1) A    5 (B2) B     -0.0189
+     6 (A1) A   6 (A1) B   19 (A1) A    5 (B2) B      0.0178
+     6 (A1) A   6 (A1) B   13 (A1) A    3 (B2) B      0.0166
+     6 (A1) A   6 (A1) B    7 (A1) A    5 (B2) B     -0.0166
+     6 (A1) A   6 (A1) B   21 (A1) A    4 (B2) B     -0.0160
+     6 (A1) A   6 (A1) B   13 (A1) A    7 (B2) B     -0.0158
+     6 (A1) A   6 (A1) B   30 (A1) A    5 (B2) B      0.0157
+     6 (A1) A   6 (A1) B   10 (A1) A    4 (B2) B      0.0152
+     6 (A1) A   6 (A1) B   14 (A1) A    4 (B2) B      0.0148
+     6 (A1) A   6 (A1) B   16 (A1) A    5 (B2) B      0.0146
+     6 (A1) A   6 (A1) B    9 (A1) A    4 (B2) B      0.0128
+     6 (A1) A   6 (A1) B   18 (A1) A    4 (B2) B      0.0126
+     6 (A1) A   6 (A1) B    7 (A1) A    4 (B2) B      0.0121
+     6 (A1) A   6 (A1) B   15 (A1) A    5 (B2) B     -0.0116
+     6 (A1) A   6 (A1) B   19 (A1) A    4 (B2) B     -0.0108
+     6 (A1) A   6 (A1) B   30 (A1) A    4 (B2) B     -0.0102
+     6 (A1) A   6 (A1) B   16 (A1) A    4 (B2) B     -0.0098
+     6 (A1) A   1 (B2) B    5 (B2) A   10 (B2) B      0.0096
+     6 (A1) A   1 (B2) A    5 (B2) A   10 (B2) A      0.0093
+     6 (A1) A   6 (A1) B   13 (A1) A    6 (B2) B      0.0089
+     6 (A1) A   6 (A1) B   21 (A1) A    7 (B2) B      0.0088
+     6 (A1) A   6 (A1) B   10 (A1) A    3 (B2) B      0.0087
+     6 (A1) A   6 (A1) B   21 (A1) A    3 (B2) B     -0.0086
+    ---------------------------------------------------------
+  ----------------------------------------------------------------------------
+
+
+  Excited state 5 (singlet, B2)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  5 (1) B2                                    R^2 =  3.96949e-08
+
+  Total energy:                                            -78.8355103492 a.u.
+  Excitation energy:                                               2.565198 eV
+
+  Osc. strength:                                                      0.017629
+  Trans. dip. moment [a.u.]:           [   0.000000,    0.529630,   -0.000000]
+  <i|r^2|0> [a.u.]:                    [   0.000000,   -0.000000,   -0.000000]
+  Two-photon absorption cross-section (SoS) [a.u.]:                2238.973377
+  Two-photon absorption matrix (SoS) [a.u.]:
+                                       |   -0.000000   -0.000000    0.000000 |
+                                       |   -0.000000    0.000000   16.729366 |
+                                       |    0.000000   16.729366    0.000000 |
+
+  Dip. moment [a.u.]:                  [  -0.000000,    0.000000,   -3.358744]
+  Total dipole [Debye]:                                               8.537078
+  <r^2> [a.u.]:                        [  47.734064,   84.101340,  142.370051]
+  Total <r^2> [a.u.]:                                               274.205455
+
+  V1^2 = 0.9095, V2^2 = 0.0905
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     6 (A1) A               6 (B2) A                  0.4539
+     6 (A1) A               8 (B2) A                  0.2839
+     6 (A1) A              10 (B2) A                  0.2487
+     6 (A1) A               7 (B2) A                 -0.2033
+     6 (A1) A               4 (B2) A                 -0.1443
+     6 (A1) A               5 (B2) A                  0.1350
+     6 (A1) A               9 (B2) A                 -0.1276
+     6 (A1) A              12 (B2) A                 -0.0750
+     6 (A1) A              14 (B2) A                 -0.0440
+     6 (A1) A   6 (A1) B   13 (A1) A    6 (B2) B     -0.0380
+     6 (A1) A   6 (A1) B   21 (A1) A    6 (B2) B      0.0215
+     6 (A1) A              15 (B2) A                 -0.0206
+     6 (A1) A   6 (A1) B   14 (A1) A    6 (B2) B     -0.0198
+     6 (A1) A   6 (A1) B   10 (A1) A    6 (B2) B     -0.0187
+     6 (A1) A               3 (B2) A                 -0.0171
+     6 (A1) A   6 (A1) B   18 (A1) A    6 (B2) B     -0.0166
+     6 (A1) A   6 (A1) B   13 (A1) A    7 (B2) B      0.0165
+     6 (A1) A   6 (A1) B   13 (A1) A    8 (B2) B     -0.0163
+     6 (A1) A   6 (A1) B   13 (A1) A    4 (B2) B      0.0157
+     6 (A1) A   6 (A1) B    9 (A1) A    6 (B2) B     -0.0156
+     5 (A1) A              10 (B2) A                  0.0152
+     6 (A1) A              11 (B2) A                 -0.0147
+     6 (A1) A   6 (A1) B    7 (A1) A    6 (B2) B     -0.0142
+     6 (A1) A   6 (A1) B   30 (A1) A    6 (B2) B      0.0140
+     6 (A1) A   6 (A1) B   19 (A1) A    6 (B2) B      0.0136
+     6 (A1) A   6 (A1) B   16 (A1) A    6 (B2) B      0.0132
+     6 (A1) A   6 (A1) B   13 (A1) A    5 (B2) B     -0.0129
+     6 (A1) A   1 (B2) A    6 (B2) A   10 (B2) A      0.0121
+     6 (A1) A              18 (B2) A                  0.0119
+     5 (A1) A               8 (B2) A                  0.0118
+     6 (A1) A   6 (A1) B   21 (A1) A    8 (B2) B      0.0116
+     6 (A1) A   1 (B2) B    6 (B2) A   10 (B2) B      0.0103
+     6 (A1) A   6 (A1) B   15 (A1) A    6 (B2) B     -0.0102
+     6 (A1) A   6 (A1) B   14 (A1) A    8 (B2) B     -0.0101
+     6 (A1) A               2 (B2) A                  0.0101
+     6 (A1) A   6 (A1) B   21 (A1) A    7 (B2) B     -0.0099
+     6 (A1) A   6 (A1) B   13 (A1) A   10 (B2) B     -0.0092
+     6 (A1) A   6 (A1) B   21 (A1) A   10 (B2) B      0.0088
+     6 (A1) A   6 (A1) B   23 (A1) A    6 (B2) B      0.0086
+     6 (A1) A   6 (A1) B   14 (A1) A    7 (B2) B      0.0085
+    ---------------------------------------------------------
+  ----------------------------------------------------------------------------
+
+
+  Excited state 6 (singlet, B2)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  6 (1) B2                                    R^2 =  2.27753e-08
+
+  Total energy:                                            -78.8331442415 a.u.
+  Excitation energy:                                               2.629583 eV
+
+  Osc. strength:                                                      0.027631
+  Trans. dip. moment [a.u.]:           [  -0.000000,   -0.654896,    0.000000]
+  <i|r^2|0> [a.u.]:                    [  -0.000000,    0.000000,    0.000000]
+  Two-photon absorption cross-section (SoS) [a.u.]:              625959.750688
+  Two-photon absorption matrix (SoS) [a.u.]:
+                                       |    0.000000    0.000000    0.000000 |
+                                       |    0.000000    0.000000  279.723022 |
+                                       |    0.000000  279.723022   -0.000000 |
+
+  Dip. moment [a.u.]:                  [  -0.000000,   -0.000000,    2.512541]
+  Total dipole [Debye]:                                               6.386243
+  <r^2> [a.u.]:                        [  64.023608,  134.027737,  124.414678]
+  Total <r^2> [a.u.]:                                               322.466023
+
+  V1^2 = 0.9099, V2^2 = 0.0901
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     6 (A1) A               7 (B2) A                  0.4482
+     6 (A1) A               6 (B2) A                  0.3663
+     6 (A1) A               9 (B2) A                  0.2194
+     6 (A1) A               5 (B2) A                 -0.1924
+     6 (A1) A               4 (B2) A                 -0.1244
+     6 (A1) A              10 (B2) A                 -0.1029
+     6 (A1) A              11 (B2) A                 -0.0573
+     6 (A1) A               8 (B2) A                 -0.0480
+     6 (A1) A   6 (A1) B   13 (A1) A    7 (B2) B     -0.0362
+     6 (A1) A              12 (B2) A                  0.0352
+     6 (A1) A   6 (A1) B   13 (A1) A    6 (B2) B     -0.0315
+     6 (A1) A              13 (B2) A                  0.0267
+     6 (A1) A               3 (B2) A                  0.0226
+     6 (A1) A   6 (A1) B   21 (A1) A    7 (B2) B      0.0214
+     6 (A1) A   6 (A1) B   14 (A1) A    7 (B2) B     -0.0196
+     6 (A1) A   6 (A1) B   13 (A1) A    5 (B2) B      0.0195
+     6 (A1) A   6 (A1) B   21 (A1) A    6 (B2) B      0.0177
+     6 (A1) A   6 (A1) B   14 (A1) A    6 (B2) B     -0.0161
+     6 (A1) A   6 (A1) B   18 (A1) A    7 (B2) B     -0.0158
+     6 (A1) A   6 (A1) B   10 (A1) A    6 (B2) B     -0.0155
+     6 (A1) A   6 (A1) B   10 (A1) A    7 (B2) B     -0.0149
+     6 (A1) A   6 (A1) B   19 (A1) A    7 (B2) B      0.0136
+     6 (A1) A   6 (A1) B    9 (A1) A    7 (B2) B     -0.0136
+     6 (A1) A   6 (A1) B   18 (A1) A    6 (B2) B     -0.0135
+     6 (A1) A   6 (A1) B   16 (A1) A    7 (B2) B      0.0135
+     6 (A1) A   6 (A1) B   13 (A1) A    4 (B2) B      0.0134
+     6 (A1) A   6 (A1) B   30 (A1) A    7 (B2) B      0.0134
+     6 (A1) A   6 (A1) B    9 (A1) A    6 (B2) B     -0.0128
+     6 (A1) A   6 (A1) B   13 (A1) A    9 (B2) B     -0.0122
+     6 (A1) A   6 (A1) B   15 (A1) A    7 (B2) B     -0.0117
+     6 (A1) A   6 (A1) B    7 (A1) A    6 (B2) B     -0.0117
+     6 (A1) A   6 (A1) B   10 (A1) A    5 (B2) B      0.0117
+     6 (A1) A   6 (A1) B    7 (A1) A    7 (B2) B     -0.0115
+     6 (A1) A               2 (B2) A                  0.0115
+     6 (A1) A   6 (A1) B   19 (A1) A    6 (B2) B      0.0114
+     6 (A1) A   6 (A1) B   30 (A1) A    6 (B2) B      0.0113
+     6 (A1) A   6 (A1) B   16 (A1) A    6 (B2) B      0.0108
+     6 (A1) A   6 (A1) B   21 (A1) A    5 (B2) B     -0.0097
+     6 (A1) A   6 (A1) B   21 (A1) A    9 (B2) B      0.0096
+     6 (A1) A              15 (B2) A                  0.0089
+    ---------------------------------------------------------
+  ----------------------------------------------------------------------------
+
+
+  Excited state 7 (singlet, B2)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  7 (1) B2                                    R^2 =  9.73717e-08
+
+  Total energy:                                            -78.8063308472 a.u.
+  Excitation energy:                                               3.359213 eV
+
+  Osc. strength:                                                      0.013231
+  Trans. dip. moment [a.u.]:           [  -0.000000,   -0.400964,   -0.000000]
+  <i|r^2|0> [a.u.]:                    [   0.000000,   -0.000000,   -0.000000]
+  Two-photon absorption cross-section (SoS) [a.u.]:              632472.828190
+  Two-photon absorption matrix (SoS) [a.u.]:
+                                       |   -0.000000   -0.000000   -0.000000 |
+                                       |   -0.000000   -0.000000 -281.174507 |
+                                       |   -0.000000 -281.174507    0.000000 |
+
+  Dip. moment [a.u.]:                  [  -0.000000,    0.000000,   -0.374684]
+  Total dipole [Debye]:                                               0.952353
+  <r^2> [a.u.]:                        [  46.398641,   79.523462,  147.281629]
+  Total <r^2> [a.u.]:                                               273.203732
+
+  V1^2 = 0.9100, V2^2 = 0.0900
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     6 (A1) A              10 (B2) A                  0.3709
+     6 (A1) A               7 (B2) A                  0.3520
+     6 (A1) A               8 (B2) A                  0.2478
+     6 (A1) A               6 (B2) A                 -0.2370
+     6 (A1) A               9 (B2) A                 -0.1856
+     6 (A1) A              11 (B2) A                 -0.1050
+     6 (A1) A               5 (B2) A                 -0.1038
+     6 (A1) A              12 (B2) A                 -0.1014
+     6 (A1) A              14 (B2) A                 -0.0713
+     6 (A1) A              13 (B2) A                 -0.0363
+     6 (A1) A              15 (B2) A                 -0.0354
+     6 (A1) A   6 (A1) B   13 (A1) A    7 (B2) B     -0.0344
+     6 (A1) A   6 (A1) B   13 (A1) A    6 (B2) B      0.0234
+     6 (A1) A              18 (B2) A                  0.0208
+     5 (A1) A              10 (B2) A                  0.0203
+     6 (A1) A               4 (B2) A                  0.0168
+     6 (A1) A   6 (A1) B   21 (A1) A    7 (B2) B      0.0168
+     6 (A1) A   6 (A1) B   13 (A1) A   10 (B2) B     -0.0164
+     6 (A1) A   6 (A1) B   10 (A1) A    7 (B2) B     -0.0157
+     6 (A1) A   6 (A1) B   14 (A1) A    7 (B2) B     -0.0154
+     6 (A1) A   6 (A1) B   13 (A1) A    8 (B2) B     -0.0148
+     6 (A1) A   6 (A1) B   19 (A1) A    7 (B2) B      0.0137
+     6 (A1) A   6 (A1) B   21 (A1) A   10 (B2) B      0.0136
+     6 (A1) A   6 (A1) B   18 (A1) A    7 (B2) B     -0.0135
+     6 (A1) A   6 (A1) B    9 (A1) A    7 (B2) B     -0.0131
+     6 (A1) A   6 (A1) B   21 (A1) A    6 (B2) B     -0.0120
+     6 (A1) A   6 (A1) B   10 (A1) A    6 (B2) B      0.0119
+     6 (A1) A   6 (A1) B    7 (A1) A    7 (B2) B     -0.0115
+     6 (A1) A   6 (A1) B   14 (A1) A    6 (B2) B      0.0112
+     5 (A1) A               8 (B2) A                  0.0111
+     6 (A1) A   6 (A1) B   14 (A1) A   10 (B2) B     -0.0109
+     6 (A1) A   6 (A1) B   16 (A1) A    7 (B2) B      0.0108
+     6 (A1) A   6 (A1) B   30 (A1) A    7 (B2) B      0.0108
+     5 (A1) A              14 (B2) A                 -0.0104
+     6 (A1) A   6 (A1) B   21 (A1) A    8 (B2) B      0.0104
+     6 (A1) A   6 (A1) B   13 (A1) A    9 (B2) B      0.0103
+     6 (A1) A   6 (A1) B   30 (A1) A   10 (B2) B      0.0101
+     6 (A1) A   6 (A1) B    9 (A1) A    6 (B2) B      0.0099
+     6 (A1) A   6 (A1) B   13 (A1) A    5 (B2) B      0.0096
+     6 (A1) A   6 (A1) B   18 (A1) A    6 (B2) B      0.0095
+    ---------------------------------------------------------
+  ----------------------------------------------------------------------------
+
+
+  Excited state 8 (singlet, B2)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  8 (1) B2                                    R^2 =  7.62147e-07
+
+  Total energy:                                            -78.7608298624 a.u.
+  Excitation energy:                                               4.597358 eV
+
+  Osc. strength:                                                      0.004980
+  Trans. dip. moment [a.u.]:           [  -0.000000,   -0.210272,    0.000000]
+  <i|r^2|0> [a.u.]:                    [   0.000000,   -0.000000,   -0.000000]
+  Two-photon absorption cross-section (SoS) [a.u.]:              340762.951601
+  Two-photon absorption matrix (SoS) [a.u.]:
+                                       |   -0.000000   -0.000000    0.000000 |
+                                       |   -0.000000    0.000000  206.386455 |
+                                       |    0.000000  206.386455   -0.000000 |
+
+  Dip. moment [a.u.]:                  [  -0.000000,   -0.000000,   -0.419970]
+  Total dipole [Debye]:                                               1.067457
+  <r^2> [a.u.]:                        [  54.903224,  106.671200,  111.018005]
+  Total <r^2> [a.u.]:                                               272.592429
+
+  V1^2 = 0.9102, V2^2 = 0.0898
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     6 (A1) A               9 (B2) A                  0.4914
+     6 (A1) A               8 (B2) A                  0.4043
+     6 (A1) A               6 (B2) A                 -0.1393
+     6 (A1) A              13 (B2) A                  0.1076
+     6 (A1) A               7 (B2) A                 -0.0952
+     6 (A1) A              11 (B2) A                 -0.0754
+     6 (A1) A              10 (B2) A                 -0.0449
+     6 (A1) A              14 (B2) A                 -0.0408
+     6 (A1) A   6 (A1) B   13 (A1) A    9 (B2) B     -0.0365
+     6 (A1) A   6 (A1) B   13 (A1) A    8 (B2) B     -0.0334
+     6 (A1) A   6 (A1) B   21 (A1) A    9 (B2) B      0.0230
+     6 (A1) A   6 (A1) B   14 (A1) A    9 (B2) B     -0.0207
+     6 (A1) A   6 (A1) B   21 (A1) A    8 (B2) B      0.0187
+     6 (A1) A   6 (A1) B   14 (A1) A    8 (B2) B     -0.0170
+     6 (A1) A   6 (A1) B   13 (A1) A    6 (B2) B      0.0166
+     6 (A1) A   6 (A1) B   10 (A1) A    9 (B2) B     -0.0164
+     6 (A1) A   6 (A1) B   10 (A1) A    8 (B2) B     -0.0162
+     6 (A1) A   6 (A1) B   18 (A1) A    9 (B2) B     -0.0161
+     6 (A1) A   6 (A1) B   18 (A1) A    8 (B2) B     -0.0149
+     6 (A1) A   6 (A1) B   30 (A1) A    9 (B2) B      0.0148
+     6 (A1) A   6 (A1) B    9 (A1) A    9 (B2) B     -0.0137
+     6 (A1) A   6 (A1) B    9 (A1) A    8 (B2) B     -0.0137
+     6 (A1) A   6 (A1) B   16 (A1) A    9 (B2) B      0.0133
+     6 (A1) A   6 (A1) B   13 (A1) A    7 (B2) B      0.0128
+     6 (A1) A   6 (A1) B   30 (A1) A    8 (B2) B      0.0123
+     6 (A1) A   6 (A1) B   19 (A1) A    9 (B2) B      0.0123
+     6 (A1) A   6 (A1) B   19 (A1) A    8 (B2) B      0.0123
+     6 (A1) A   6 (A1) B   15 (A1) A    9 (B2) B     -0.0122
+     6 (A1) A   6 (A1) B    7 (A1) A    8 (B2) B     -0.0122
+     6 (A1) A              17 (B2) A                  0.0120
+     6 (A1) A   6 (A1) B    7 (A1) A    9 (B2) B     -0.0120
+     6 (A1) A   6 (A1) B   16 (A1) A    8 (B2) B      0.0117
+     6 (A1) A               5 (B2) A                  0.0102
+     6 (A1) A   1 (B2) A    8 (B2) A   10 (B2) A      0.0102
+     6 (A1) A              12 (B2) A                 -0.0100
+     6 (A1) A   1 (B2) B    8 (B2) A   10 (B2) B      0.0098
+     6 (A1) A   6 (A1) B   23 (A1) A    9 (B2) B      0.0096
+     6 (A1) A   6 (A1) B   10 (A1) A    6 (B2) B      0.0093
+     6 (A1) A   1 (B2) B    9 (B2) A   10 (B2) B      0.0091
+     6 (A1) A   6 (A1) B   15 (A1) A    8 (B2) B     -0.0087
+    ---------------------------------------------------------
+  ----------------------------------------------------------------------------
+
+
+  Excited state 9 (singlet, B2)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  9 (1) B2                                    R^2 =  5.02946e-06
+
+  Total energy:                                            -78.7371188231 a.u.
+  Excitation energy:                                               5.242568 eV
+
+  Osc. strength:                                                      0.027259
+  Trans. dip. moment [a.u.]:           [  -0.000000,    0.460683,    0.000000]
+  <i|r^2|0> [a.u.]:                    [  -0.000000,    0.000000,   -0.000000]
+  Two-photon absorption cross-section (SoS) [a.u.]:             27420671.131694
+  Two-photon absorption matrix (SoS) [a.u.]:
+                                       |    0.000000    0.000000    0.000000 |
+                                       |    0.000000    0.000000 1851.373515 |
+                                       |    0.000000 1851.373515   -0.000000 |
+
+  Dip. moment [a.u.]:                  [  -0.000000,    0.000000,   -0.789521]
+  Total dipole [Debye]:                                               2.006762
+  <r^2> [a.u.]:                        [  45.046840,   76.509755,  149.241257]
+  Total <r^2> [a.u.]:                                               270.797852
+
+  V1^2 = 0.9074, V2^2 = 0.0926
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     6 (A1) A              10 (B2) A                 -0.3738
+     6 (A1) A               8 (B2) A                  0.3639
+     6 (A1) A               9 (B2) A                 -0.2826
+     6 (A1) A              11 (B2) A                  0.2420
+     6 (A1) A              14 (B2) A                  0.1337
+     6 (A1) A               7 (B2) A                  0.1088
+     6 (A1) A              12 (B2) A                  0.0881
+     6 (A1) A              13 (B2) A                  0.0582
+     6 (A1) A   6 (A1) B   13 (A1) A    8 (B2) B     -0.0336
+     6 (A1) A              15 (B2) A                  0.0292
+     6 (A1) A   6 (A1) B   13 (A1) A    9 (B2) B      0.0242
+     6 (A1) A   6 (A1) B   13 (A1) A   10 (B2) B      0.0240
+     6 (A1) A   6 (A1) B   21 (A1) A    8 (B2) B      0.0186
+     6 (A1) A   6 (A1) B   14 (A1) A    8 (B2) B     -0.0173
+     6 (A1) A   6 (A1) B   10 (A1) A    8 (B2) B     -0.0169
+     5 (A1) A              10 (B2) A                 -0.0160
+     6 (A1) A              18 (B2) A                 -0.0152
+     6 (A1) A   6 (A1) B   21 (A1) A   10 (B2) B     -0.0152
+     6 (A1) A   6 (A1) B   18 (A1) A    8 (B2) B     -0.0149
+     6 (A1) A   6 (A1) B   21 (A1) A    9 (B2) B     -0.0147
+     6 (A1) A   6 (A1) B   13 (A1) A   11 (B2) B     -0.0143
+     6 (A1) A   6 (A1) B   13 (A1) A    7 (B2) B     -0.0141
+     6 (A1) A   6 (A1) B    9 (A1) A    8 (B2) B     -0.0140
+     6 (A1) A   6 (A1) B   19 (A1) A    8 (B2) B      0.0134
+     6 (A1) A   1 (B2) A    8 (B2) A   10 (B2) A      0.0134
+     6 (A1) A   6 (A1) B   14 (A1) A   10 (B2) B      0.0133
+     6 (A1) A   6 (A1) B   14 (A1) A    9 (B2) B      0.0130
+     6 (A1) A   6 (A1) B    7 (A1) A    8 (B2) B     -0.0128
+     6 (A1) A   6 (A1) B   21 (A1) A   11 (B2) B      0.0123
+     6 (A1) A               5 (B2) A                 -0.0121
+     6 (A1) A   1 (B2) B    8 (B2) A   10 (B2) B      0.0117
+     6 (A1) A   6 (A1) B   30 (A1) A    8 (B2) B      0.0115
+     6 (A1) A   6 (A1) B   16 (A1) A    8 (B2) B      0.0113
+     6 (A1) A   6 (A1) B   18 (A1) A   10 (B2) B      0.0113
+     6 (A1) A   6 (A1) B   10 (A1) A   10 (B2) B      0.0112
+     6 (A1) A   6 (A1) B   10 (A1) A    9 (B2) B      0.0111
+     6 (A1) A   6 (A1) B   30 (A1) A   10 (B2) B     -0.0108
+     6 (A1) A               6 (B2) A                 -0.0108
+     6 (A1) A   6 (A1) B   18 (A1) A    9 (B2) B      0.0107
+     6 (A1) A   6 (A1) B   19 (A1) A    9 (B2) B     -0.0100
+    ---------------------------------------------------------
+  ----------------------------------------------------------------------------
+
+
+  Excited state 10 (singlet, B2)                                    [converged]
+  ----------------------------------------------------------------------------
+  Term symbol:  10 (1) B2                                   R^2 =  1.52464e-07
+
+  Total energy:                                            -78.7304728187 a.u.
+  Excitation energy:                                               5.423415 eV
+
+  Osc. strength:                                                      0.000002
+  Trans. dip. moment [a.u.]:           [  -0.000000,   -0.003817,   -0.000000]
+  <i|r^2|0> [a.u.]:                    [   0.000000,    0.000000,    0.000000]
+  Two-photon absorption cross-section (SoS) [a.u.]:                  32.013218
+  Two-photon absorption matrix (SoS) [a.u.]:
+                                       |    0.000000    0.000000   -0.000000 |
+                                       |    0.000000    0.000000   -2.000413 |
+                                       |   -0.000000   -2.000413    0.000000 |
+
+  Dip. moment [a.u.]:                  [   0.000000,   -0.000000,  -21.089107]
+  Total dipole [Debye]:                                              53.603174
+  <r^2> [a.u.]:                        [ 203.480491,  357.567488,  493.432777]
+  Total <r^2> [a.u.]:                                              1054.480756
+
+  V1^2 = 0.0041, V2^2 = 0.9959
+
+  Important amplitudes:
+      occ i      occ j       vir a       vir b          v   
+    ---------------------------------------------------------
+     6 (A1) A   6 (A1) B    7 (A1) A    2 (B2) B     -0.3523
+     6 (A1) A               2 (B2) A                 -0.0449
+     6 (A1) A   6 (A1) B    9 (A1) A    2 (B2) B      0.0110
+     6 (A1) A   6 (A1) B   13 (A1) A    2 (B2) B      0.0093
+     6 (A1) A   6 (A1) B   10 (A1) A    2 (B2) B      0.0082
+     5 (A1) A               2 (B2) A                 -0.0045
+     6 (A1) A   6 (A1) B    8 (A1) A    2 (B2) B     -0.0045
+     6 (A1) A   6 (A1) B   14 (A1) A    2 (B2) B      0.0042
+     6 (A1) A   6 (A1) B   21 (A1) A    2 (B2) B     -0.0032
+     6 (A1) A   6 (A1) B   18 (A1) A    2 (B2) B      0.0029
+     6 (A1) A              10 (B2) A                  0.0028
+     6 (A1) A               9 (B2) A                  0.0028
+     6 (A1) A   6 (A1) B   16 (A1) A    2 (B2) B     -0.0025
+     6 (A1) A   6 (A1) B   19 (A1) A    2 (B2) B     -0.0024
+     6 (A1) A               8 (B2) A                 -0.0024
+     6 (A1) A               4 (B2) A                  0.0022
+     6 (A1) A   6 (A1) B   15 (A1) A    2 (B2) B      0.0021
+     6 (A1) A   6 (A1) B   11 (A1) A    2 (B2) B     -0.0018
+     6 (A1) A   6 (A1) B   30 (A1) A    2 (B2) B     -0.0017
+     6 (A1) A              12 (B2) A                 -0.0015
+     6 (A1) A   1 (B2) B    2 (B2) A   10 (B2) B     -0.0014
+     6 (A1) A   1 (B2) A    2 (B2) A   10 (B2) A     -0.0014
+     6 (A1) A              11 (B2) A                 -0.0011
+     6 (A1) A   6 (A1) B   23 (A1) A    2 (B2) B     -0.0011
+     6 (A1) A   6 (A1) B   12 (A1) A    2 (B2) B      0.0011
+     6 (A1) A   6 (A1) B   17 (A1) A    2 (B2) B      0.0011
+     4 (A1) A               2 (B2) A                  0.0010
+     6 (A1) A   1 (B2) B    2 (B2) A    8 (B2) B     -0.0010
+     6 (A1) A   1 (B2) A    2 (B2) A    8 (B2) A     -0.0010
+     6 (A1) A               7 (B2) A                 -0.0009
+     6 (A1) A   6 (A1) B   29 (A1) A    2 (B2) B     -0.0009
+     6 (A1) A              14 (B2) A                 -0.0009
+     6 (A1) A   6 (A1) B    7 (A1) A    3 (B2) B     -0.0009
+     6 (A1) A   6 (A1) B   25 (A1) A    2 (B2) B     -0.0008
+     6 (A1) A               3 (B2) A                  0.0007
+     6 (A1) A   6 (A1) B   31 (A1) A    2 (B2) B     -0.0007
+     6 (A1) A               5 (B2) A                  0.0006
+     6 (A1) A   6 (A1) B   28 (A1) A    2 (B2) B      0.0005
+     6 (A1) A   2 (B1) B    2 (B2) A   15 (B1) B     -0.0005
+     6 (A1) A   2 (B1) A   15 (B1) A    2 (B2) A      0.0005
+    ---------------------------------------------------------
+  ----------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+  Printing results ...  CPU 0.76 s  wall 0.60 s
+
+--------------------------------------------------------------------------------
+                               Transition Summary                               
+--------------------------------------------------------------------------------
+
+  Transition from excited state   1 to excited state   2:
+  -------------------------------------------------------
+  Transition:  1 (1) B2  ->  2 (1) B2
+  Excitation energy:                                               0.131602 eV
+  Osc. strength:                                                      0.222592
+  Trans. dip. moment [a.u.]:           [  -0.000000,    0.000000,    8.308909]
+  <i|r^2|0> [a.u.]:                    [   1.297128,    3.921862,  -19.598437]
+
+  Transition from excited state   1 to excited state   3:
+  -------------------------------------------------------
+  Transition:  1 (1) B2  ->  3 (1) B2
+  Excitation energy:                                               0.660717 eV
+  Osc. strength:                                                      0.002119
+  Trans. dip. moment [a.u.]:           [  -0.000000,    0.000000,   -0.361815]
+  <i|r^2|0> [a.u.]:                    [  29.996927,   89.976704,   30.110330]
+
+  Transition from excited state   2 to excited state   3:
+  -------------------------------------------------------
+  Transition:  2 (1) B2  ->  3 (1) B2
+  Excitation energy:                                               0.529115 eV
+  Osc. strength:                                                      0.155830
+  Trans. dip. moment [a.u.]:           [  -0.000000,    0.000000,    3.467143]
+  <i|r^2|0> [a.u.]:                    [   1.673601,    5.040106,   -4.585947]
+
+  Transition from excited state   1 to excited state   4:
+  -------------------------------------------------------
+  Transition:  1 (1) B2  ->  4 (1) B2
+  Excitation energy:                                               0.870259 eV
+  Osc. strength:                                                      0.000071
+  Trans. dip. moment [a.u.]:           [  -0.000000,    0.000000,   -0.057817]
+  <i|r^2|0> [a.u.]:                    [  -0.088497,   -0.255673,   -4.437769]
+
+  Transition from excited state   2 to excited state   4:
+  -------------------------------------------------------
+  Transition:  2 (1) B2  ->  4 (1) B2
+  Excitation energy:                                               0.738657 eV
+  Osc. strength:                                                      0.001069
+  Trans. dip. moment [a.u.]:           [  -0.000000,    0.000000,    0.242990]
+  <i|r^2|0> [a.u.]:                    [  21.791719,   65.361639,   64.490468]
+
+  Transition from excited state   3 to excited state   4:
+  -------------------------------------------------------
+  Transition:  3 (1) B2  ->  4 (1) B2
+  Excitation energy:                                               0.209542 eV
+  Osc. strength:                                                      0.203321
+  Trans. dip. moment [a.u.]:           [   0.000000,   -0.000000,    6.293270]
+  <i|r^2|0> [a.u.]:                    [   1.105976,    3.335203,  -11.367502]
+
+  Transition from excited state   1 to excited state   5:
+  -------------------------------------------------------
+  Transition:  1 (1) B2  ->  5 (1) B2
+  Excitation energy:                                               1.751675 eV
+  Osc. strength:                                                      0.003513
+  Trans. dip. moment [a.u.]:           [  -0.000000,   -0.000000,   -0.286091]
+  <i|r^2|0> [a.u.]:                    [  -3.348057,  -10.019221,   -4.146983]
+
+  Transition from excited state   2 to excited state   5:
+  -------------------------------------------------------
+  Transition:  2 (1) B2  ->  5 (1) B2
+  Excitation energy:                                               1.620072 eV
+  Osc. strength:                                                      0.008421
+  Trans. dip. moment [a.u.]:           [   0.000000,   -0.000000,   -0.460620]
+  <i|r^2|0> [a.u.]:                    [   4.800825,   14.344771,   14.918388]
+
+  Transition from excited state   3 to excited state   5:
+  -------------------------------------------------------
+  Transition:  3 (1) B2  ->  5 (1) B2
+  Excitation energy:                                               1.090957 eV
+  Osc. strength:                                                      0.009081
+  Trans. dip. moment [a.u.]:           [   0.000000,   -0.000000,    0.582896]
+  <i|r^2|0> [a.u.]:                    [ -11.718011,  -35.206031,  -14.295168]
+
+  Transition from excited state   4 to excited state   5:
+  -------------------------------------------------------
+  Transition:  4 (1) B2  ->  5 (1) B2
+  Excitation energy:                                               0.881415 eV
+  Osc. strength:                                                      0.032430
+  Trans. dip. moment [a.u.]:           [  -0.000000,    0.000000,   -1.225471]
+  <i|r^2|0> [a.u.]:                    [  15.515693,   46.834068,   49.053394]
+
+  Transition from excited state   1 to excited state   6:
+  -------------------------------------------------------
+  Transition:  1 (1) B2  ->  6 (1) B2
+  Excitation energy:                                               1.816060 eV
+  Osc. strength:                                                      0.002257
+  Trans. dip. moment [a.u.]:           [  -0.000000,    0.000000,    0.225212]
+  <i|r^2|0> [a.u.]:                    [  -6.647586,  -19.906453,   -6.575069]
+
+  Transition from excited state   2 to excited state   6:
+  -------------------------------------------------------
+  Transition:  2 (1) B2  ->  6 (1) B2
+  Excitation energy:                                               1.684457 eV
+  Osc. strength:                                                      0.039866
+  Trans. dip. moment [a.u.]:           [   0.000000,    0.000000,   -0.982857]
+  <i|r^2|0> [a.u.]:                    [  -2.763234,   -8.268092,   -5.734230]
+
+  Transition from excited state   3 to excited state   6:
+  -------------------------------------------------------
+  Transition:  3 (1) B2  ->  6 (1) B2
+  Excitation energy:                                               1.155343 eV
+  Osc. strength:                                                      0.000360
+  Trans. dip. moment [a.u.]:           [   0.000000,    0.000000,    0.112717]
+  <i|r^2|0> [a.u.]:                    [ -24.514180,  -73.597739,  -22.447664]
+
+  Transition from excited state   4 to excited state   6:
+  -------------------------------------------------------
+  Transition:  4 (1) B2  ->  6 (1) B2
+  Excitation energy:                                               0.945800 eV
+  Osc. strength:                                                      0.236405
+  Trans. dip. moment [a.u.]:           [   0.000000,   -0.000000,   -3.194104]
+  <i|r^2|0> [a.u.]:                    [  -8.712716,  -26.279657,  -19.164846]
+
+  Transition from excited state   5 to excited state   6:
+  -------------------------------------------------------
+  Transition:  5 (1) B2  ->  6 (1) B2
+  Excitation energy:                                               0.064385 eV
+  Osc. strength:                                                      0.016494
+  Trans. dip. moment [a.u.]:           [  -0.000000,    0.000000,   -3.233599]
+  <i|r^2|0> [a.u.]:                    [   7.873356,   24.157627,   -3.473137]
+
+  Transition from excited state   1 to excited state   7:
+  -------------------------------------------------------
+  Transition:  1 (1) B2  ->  7 (1) B2
+  Excitation energy:                                               2.545689 eV
+  Osc. strength:                                                      0.001419
+  Trans. dip. moment [a.u.]:           [   0.000000,    0.000000,    0.150861]
+  <i|r^2|0> [a.u.]:                    [   0.441492,    1.340256,    1.001860]
+
+  Transition from excited state   2 to excited state   7:
+  -------------------------------------------------------
+  Transition:  2 (1) B2  ->  7 (1) B2
+  Excitation energy:                                               2.414087 eV
+  Osc. strength:                                                      0.000072
+  Trans. dip. moment [a.u.]:           [  -0.000000,   -0.000000,    0.034850]
+  <i|r^2|0> [a.u.]:                    [  -3.794286,  -11.431059,  -10.992255]
+
+  Transition from excited state   3 to excited state   7:
+  -------------------------------------------------------
+  Transition:  3 (1) B2  ->  7 (1) B2
+  Excitation energy:                                               1.884972 eV
+  Osc. strength:                                                      0.025235
+  Trans. dip. moment [a.u.]:           [  -0.000000,   -0.000000,    0.739211]
+  <i|r^2|0> [a.u.]:                    [   0.963265,    2.848024,    2.226643]
+
+  Transition from excited state   4 to excited state   7:
+  -------------------------------------------------------
+  Transition:  4 (1) B2  ->  7 (1) B2
+  Excitation energy:                                               1.675430 eV
+  Osc. strength:                                                      0.000092
+  Trans. dip. moment [a.u.]:           [   0.000000,    0.000000,    0.047372]
+  <i|r^2|0> [a.u.]:                    [ -11.031776,  -32.720692,  -33.439352]
+
+  Transition from excited state   5 to excited state   7:
+  -------------------------------------------------------
+  Transition:  5 (1) B2  ->  7 (1) B2
+  Excitation energy:                                               0.794015 eV
+  Osc. strength:                                                      0.026081
+  Trans. dip. moment [a.u.]:           [   0.000000,   -0.000000,    1.157886]
+  <i|r^2|0> [a.u.]:                    [ -15.586272,  -48.448038,  -46.001977]
+
+  Transition from excited state   6 to excited state   7:
+  -------------------------------------------------------
+  Transition:  6 (1) B2  ->  7 (1) B2
+  Excitation energy:                                               0.729630 eV
+  Osc. strength:                                                      0.129506
+  Trans. dip. moment [a.u.]:           [  -0.000000,   -0.000000,    2.691624]
+  <i|r^2|0> [a.u.]:                    [   5.985778,   18.657871,   15.594974]
+
+  Transition from excited state   1 to excited state   8:
+  -------------------------------------------------------
+  Transition:  1 (1) B2  ->  8 (1) B2
+  Excitation energy:                                               3.783834 eV
+  Osc. strength:                                                      0.000413
+  Trans. dip. moment [a.u.]:           [  -0.000000,   -0.000000,   -0.066770]
+  <i|r^2|0> [a.u.]:                    [   3.604064,   10.846800,    3.907267]
+
+  Transition from excited state   2 to excited state   8:
+  -------------------------------------------------------
+  Transition:  2 (1) B2  ->  8 (1) B2
+  Excitation energy:                                               3.652232 eV
+  Osc. strength:                                                      0.037716
+  Trans. dip. moment [a.u.]:           [  -0.000000,    0.000000,    0.649242]
+  <i|r^2|0> [a.u.]:                    [   0.440706,    1.331213,    0.049596]
+
+  Transition from excited state   3 to excited state   8:
+  -------------------------------------------------------
+  Transition:  3 (1) B2  ->  8 (1) B2
+  Excitation energy:                                               3.123117 eV
+  Osc. strength:                                                      0.000358
+  Trans. dip. moment [a.u.]:           [   0.000000,   -0.000000,   -0.068416]
+  <i|r^2|0> [a.u.]:                    [   7.278548,   21.689155,    6.890073]
+
+  Transition from excited state   4 to excited state   8:
+  -------------------------------------------------------
+  Transition:  4 (1) B2  ->  8 (1) B2
+  Excitation energy:                                               2.913575 eV
+  Osc. strength:                                                      0.083350
+  Trans. dip. moment [a.u.]:           [  -0.000000,   -0.000000,    1.080591]
+  <i|r^2|0> [a.u.]:                    [   0.784751,    2.325852,    0.044215]
+
+  Transition from excited state   5 to excited state   8:
+  -------------------------------------------------------
+  Transition:  5 (1) B2  ->  8 (1) B2
+  Excitation energy:                                               2.032159 eV
+  Osc. strength:                                                      0.134601
+  Trans. dip. moment [a.u.]:           [   0.000000,   -0.000000,    1.644244]
+  <i|r^2|0> [a.u.]:                    [  -7.851385,  -23.566877,   -8.444203]
+
+  Transition from excited state   6 to excited state   8:
+  -------------------------------------------------------
+  Transition:  6 (1) B2  ->  8 (1) B2
+  Excitation energy:                                               1.967774 eV
+  Osc. strength:                                                      0.022102
+  Trans. dip. moment [a.u.]:           [   0.000000,   -0.000000,   -0.677100]
+  <i|r^2|0> [a.u.]:                    [ -19.787422,  -59.660175,  -18.234927]
+
+  Transition from excited state   7 to excited state   8:
+  -------------------------------------------------------
+  Transition:  7 (1) B2  ->  8 (1) B2
+  Excitation energy:                                               1.238145 eV
+  Osc. strength:                                                      0.392574
+  Trans. dip. moment [a.u.]:           [  -0.000000,    0.000000,   -3.597459]
+  <i|r^2|0> [a.u.]:                    [   0.312125,    0.973170,    2.763892]
+
+  Transition from excited state   1 to excited state   9:
+  -------------------------------------------------------
+  Transition:  1 (1) B2  ->  9 (1) B2
+  Excitation energy:                                               4.429044 eV
+  Osc. strength:                                                      0.005401
+  Trans. dip. moment [a.u.]:           [   0.000000,   -0.000000,    0.223101]
+  <i|r^2|0> [a.u.]:                    [   0.361100,    1.118071,    0.142802]
+
+  Transition from excited state   2 to excited state   9:
+  -------------------------------------------------------
+  Transition:  2 (1) B2  ->  9 (1) B2
+  Excitation energy:                                               4.297442 eV
+  Osc. strength:                                                      0.000032
+  Trans. dip. moment [a.u.]:           [   0.000000,    0.000000,   -0.017366]
+  <i|r^2|0> [a.u.]:                    [  -2.644810,   -7.924796,   -7.557317]
+
+  Transition from excited state   3 to excited state   9:
+  -------------------------------------------------------
+  Transition:  3 (1) B2  ->  9 (1) B2
+  Excitation energy:                                               3.768327 eV
+  Osc. strength:                                                      0.010689
+  Trans. dip. moment [a.u.]:           [  -0.000000,   -0.000000,    0.340269]
+  <i|r^2|0> [a.u.]:                    [   0.165794,    0.552141,    1.957258]
+
+  Transition from excited state   4 to excited state   9:
+  -------------------------------------------------------
+  Transition:  4 (1) B2  ->  9 (1) B2
+  Excitation energy:                                               3.558785 eV
+  Osc. strength:                                                      0.005059
+  Trans. dip. moment [a.u.]:           [   0.000000,   -0.000000,    0.240874]
+  <i|r^2|0> [a.u.]:                    [  -3.961760,  -12.055786,  -14.908515]
+
+  Transition from excited state   5 to excited state   9:
+  -------------------------------------------------------
+  Transition:  5 (1) B2  ->  9 (1) B2
+  Excitation energy:                                               2.677370 eV
+  Osc. strength:                                                      0.024359
+  Trans. dip. moment [a.u.]:           [  -0.000000,    0.000000,   -0.609391]
+  <i|r^2|0> [a.u.]:                    [  -7.127248,  -20.422690,  -17.663142]
+
+  Transition from excited state   6 to excited state   9:
+  -------------------------------------------------------
+  Transition:  6 (1) B2  ->  9 (1) B2
+  Excitation energy:                                               2.612985 eV
+  Osc. strength:                                                      0.040295
+  Trans. dip. moment [a.u.]:           [  -0.000000,   -0.000000,   -0.793373]
+  <i|r^2|0> [a.u.]:                    [   2.735650,    7.859878,    9.216591]
+
+  Transition from excited state   7 to excited state   9:
+  -------------------------------------------------------
+  Transition:  7 (1) B2  ->  9 (1) B2
+  Excitation energy:                                               1.883355 eV
+  Osc. strength:                                                      0.000009
+  Trans. dip. moment [a.u.]:           [  -0.000000,    0.000000,    0.014140]
+  <i|r^2|0> [a.u.]:                    [  13.476209,   41.695826,   39.524678]
+
+  Transition from excited state   8 to excited state   9:
+  -------------------------------------------------------
+  Transition:  8 (1) B2  ->  9 (1) B2
+  Excitation energy:                                               0.645210 eV
+  Osc. strength:                                                      0.138154
+  Trans. dip. moment [a.u.]:           [  -0.000000,    0.000000,   -2.956327]
+  <i|r^2|0> [a.u.]:                    [  -0.269660,   -0.777726,    2.884404]
+
+  Transition from excited state   1 to excited state  10:
+  -------------------------------------------------------
+  Transition:  1 (1) B2  ->  10 (1) B2
+  Excitation energy:                                               4.609891 eV
+  Osc. strength:                                                      0.027177
+  Trans. dip. moment [a.u.]:           [  -0.000000,    0.000000,    0.490542]
+  <i|r^2|0> [a.u.]:                    [  -2.254837,   -2.127742,   -6.358569]
+
+  Transition from excited state   2 to excited state  10:
+  -------------------------------------------------------
+  Transition:  2 (1) B2  ->  10 (1) B2
+  Excitation energy:                                               4.478289 eV
+  Osc. strength:                                                      0.013304
+  Trans. dip. moment [a.u.]:           [   0.000000,   -0.000000,   -0.348218]
+  <i|r^2|0> [a.u.]:                    [   1.700549,    1.820588,    4.195827]
+
+  Transition from excited state   3 to excited state  10:
+  -------------------------------------------------------
+  Transition:  3 (1) B2  ->  10 (1) B2
+  Excitation energy:                                               3.949174 eV
+  Osc. strength:                                                      0.003480
+  Trans. dip. moment [a.u.]:           [  -0.000000,    0.000000,    0.189640]
+  <i|r^2|0> [a.u.]:                    [  -0.903543,   -0.837290,   -2.674080]
+
+  Transition from excited state   4 to excited state  10:
+  -------------------------------------------------------
+  Transition:  4 (1) B2  ->  10 (1) B2
+  Excitation energy:                                               3.739632 eV
+  Osc. strength:                                                      0.000729
+  Trans. dip. moment [a.u.]:           [   0.000000,    0.000000,   -0.089189]
+  <i|r^2|0> [a.u.]:                    [   0.436189,    0.504958,    1.118757]
+
+  Transition from excited state   5 to excited state  10:
+  -------------------------------------------------------
+  Transition:  5 (1) B2  ->  10 (1) B2
+  Excitation energy:                                               2.858217 eV
+  Osc. strength:                                                      0.000008
+  Trans. dip. moment [a.u.]:           [   0.000000,   -0.000000,   -0.010816]
+  <i|r^2|0> [a.u.]:                    [   0.134848,    0.202642,    0.418447]
+
+  Transition from excited state   6 to excited state  10:
+  -------------------------------------------------------
+  Transition:  6 (1) B2  ->  10 (1) B2
+  Excitation energy:                                               2.793832 eV
+  Osc. strength:                                                      0.000028
+  Trans. dip. moment [a.u.]:           [   0.000000,    0.000000,   -0.020382]
+  <i|r^2|0> [a.u.]:                    [   0.097965,    0.037689,    0.311817]
+
+  Transition from excited state   7 to excited state  10:
+  -------------------------------------------------------
+  Transition:  7 (1) B2  ->  10 (1) B2
+  Excitation energy:                                               2.064202 eV
+  Osc. strength:                                                      0.000001
+  Trans. dip. moment [a.u.]:           [   0.000000,   -0.000000,   -0.005356]
+  <i|r^2|0> [a.u.]:                    [  -0.072277,   -0.226499,   -0.267191]
+
+  Transition from excited state   8 to excited state  10:
+  -------------------------------------------------------
+  Transition:  8 (1) B2  ->  10 (1) B2
+  Excitation energy:                                               0.826057 eV
+  Osc. strength:                                                      0.000040
+  Trans. dip. moment [a.u.]:           [  -0.000000,   -0.000000,    0.044225]
+  <i|r^2|0> [a.u.]:                    [  -0.152539,   -0.232551,   -0.449611]
+
+  Transition from excited state   9 to excited state  10:
+  -------------------------------------------------------
+  Transition:  9 (1) B2  ->  10 (1) B2
+  Excitation energy:                                               0.180847 eV
+  Osc. strength:                                                      0.000112
+  Trans. dip. moment [a.u.]:           [   0.000000,   -0.000000,   -0.159100]
+  <i|r^2|0> [a.u.]:                    [   1.195157,    2.184411,    2.553127]
+
+--------------------------------------------------------------------------------
+************************************************************
+The Hamiltonian subspace matrix:
+************************************************************
+2.98964427919358872e-02 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 3.47327326194689645e-02 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 5.41773497279043961e-02 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 6.18778841615624242e-02 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 9.42693014058475082e-02 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 9.66354090980214575e-02 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 1.23448803390841341e-01 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 1.68949788206418233e-01 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 1.92660827567730730e-01 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 1.99306831936019141e-01
+
+************************************************************
+************************************************************
+The real part of the CAP subspace matrix, onset=1500:
+************************************************************
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+
+************************************************************
+************************************************************
+The imaginary part of the CAP subspace matrix, onset=1500:
+************************************************************
+-9.16354786264304551e+01 -4.66205012294524934e+00 2.57134763573810581e+01 -5.79131818468251147e+00 -2.15692973504217704e+01 -4.24634746096086744e+01 1.54570321204530359e+00 1.97261927451895644e+01 -2.36577030983458325e+00 2.37161986791285795e+00
+-4.66205012294524934e+00 -7.20172602529816999e+01 -4.35575492955519028e+00 3.95523837274976415e+01 3.09829378256351333e+01 -1.69824024374502542e+01 -2.86324462162432667e+01 4.01019271976100278e+00 -1.16840184509945644e+01 -1.53305307193752105e+00
+2.57134763573810581e+01 -4.35575492955519028e+00 -6.46219976484646281e+01 3.14524206078624013e+00 1.02544169425753715e+01 1.64320551358485218e+01 -2.95364611560022305e-01 1.55610722259759306e+01 4.73166157272592258e-01 9.10251264385708581e-01
+-5.79131818468251147e+00 3.95523837274976415e+01 3.14524206078624013e+00 -7.03518812863601966e+01 -2.11574463899453704e+01 7.91385034626948958e+00 2.00281336762611417e+00 1.13357501967236063e+00 -1.60626424067318112e+01 -2.54172731728084411e-01
+-2.15692973504217704e+01 3.09829378256351333e+01 1.02544169425753715e+01 -2.11574463899453704e+01 -5.22606039103779523e+01 -1.41538441424552524e+01 3.44366898654824993e+01 1.23412888414651576e+01 4.45032286058990945e+00 -4.73948581550899251e-02
+-4.24634746096086744e+01 -1.69824024374502542e+01 1.64320551358485218e+01 7.91385034626948958e+00 -1.41538441424552524e+01 -7.39025310602588092e+01 -1.13279028510445965e+01 2.93207373832026086e+01 -2.36947834686593639e+00 -2.38897562313482373e-02
+1.54570321204530359e+00 -2.86324462162432667e+01 -2.95364611560022305e-01 2.00281336762611417e+00 3.44366898654824993e+01 -1.13279028510445965e+01 -5.27098452897570340e+01 -2.25966863663304451e+00 -2.61257755319643863e+01 1.60230307404598926e-01
+1.97261927451895644e+01 4.01019271976100278e+00 1.55610722259759306e+01 1.13357501967236063e+00 1.23412888414651576e+01 2.93207373832026086e+01 -2.25966863663304451e+00 -6.43558175755470501e+01 -5.83254868425422957e-01 -1.69342292272481806e-02
+-2.36577030983458325e+00 -1.16840184509945644e+01 4.73166157272592258e-01 -1.60626424067318112e+01 4.45032286058990945e+00 -2.36947834686593639e+00 -2.61257755319643863e+01 -5.83254868425422957e-01 -5.21302917644537303e+01 -4.73617717040207942e-01
+2.37161986791285795e+00 -1.53305307193752105e+00 9.10251264385708581e-01 -2.54172731728084411e-01 -4.73948581550899251e-02 -2.38897562313482373e-02 1.60230307404598926e-01 -1.69342292272481806e-02 -4.73617717040207942e-01 -1.18102794968675056e+02
+
+************************************************************
+************************************************************
+The real part of the CAP subspace matrix, onset=2000:
+************************************************************
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+
+************************************************************
+************************************************************
+The imaginary part of the CAP subspace matrix, onset=2000:
+************************************************************
+-8.33179233278568034e+01 -4.23617317638845137e+00 2.26870559953908320e+01 -5.43697432865676422e+00 -2.01585931022749776e+01 -3.95665128369017509e+01 1.53110931460323019e+00 1.87448221075320305e+01 -2.17926482282211964e+00 2.18779867934509475e+00
+-4.23617317638845137e+00 -6.50957217124064016e+01 -4.11994355990096661e+00 3.59398880786018751e+01 2.88921622171642412e+01 -1.57918485214270667e+01 -2.69664292457348260e+01 3.75240615071968442e+00 -1.11695507245464789e+01 -1.41330234838604429e+00
+2.26870559953908320e+01 -4.11994355990096661e+00 -5.68899540753712927e+01 2.97059207432210481e+00 9.97766115076867699e+00 1.61377423265772038e+01 -3.79221551317944494e-01 1.39684295411793684e+01 4.52131876601634175e-01 8.41121936277906657e-01
+-5.43697432865676422e+00 3.59398880786018751e+01 2.97059207432210481e+00 -6.21044121778859193e+01 -2.02241735286589410e+01 7.55687774450970373e+00 2.73680827958789363e+00 1.02911196723223664e+00 -1.47154658308430548e+01 -2.36292195291918972e-01
+-2.01585931022749776e+01 2.88921622171642412e+01 9.97766115076867699e+00 -2.02241735286589410e+01 -4.56143642742993620e+01 -1.31255754176858410e+01 3.17751457696787512e+01 1.17698766278428089e+01 4.90565670860105119e+00 -5.01909634670171176e-02
+-3.95665128369017509e+01 -1.57918485214270667e+01 1.61377423265772038e+01 7.55687774450970373e+00 -1.31255754176858410e+01 -6.55009614618179228e+01 -1.03702472098285412e+01 2.78023363147428455e+01 -2.48384013255825042e+00 -2.03878013578682390e-02
+1.53110931460323019e+00 -2.69664292457348260e+01 -3.79221551317944494e-01 2.73680827958789363e+00 3.17751457696787512e+01 -1.03702472098285412e+01 -4.60835575775492003e+01 -2.14543561629371071e+00 -2.43130768960652759e+01 1.48482536095907280e-01
+1.87448221075320305e+01 3.75240615071968442e+00 1.39684295411793684e+01 1.02911196723223664e+00 1.17698766278428089e+01 2.78023363147428455e+01 -2.14543561629371071e+00 -5.62455642920916574e+01 -5.79772081862452882e-01 -1.36489714762459344e-02
+-2.17926482282211964e+00 -1.11695507245464789e+01 4.52131876601634175e-01 -1.47154658308430548e+01 4.90565670860105119e+00 -2.48384013255825042e+00 -2.43130768960652759e+01 -5.79772081862452882e-01 -4.49329328446287377e+01 -4.57497609961090457e-01
+2.18779867934509475e+00 -1.41330234838604429e+00 8.41121936277906657e-01 -2.36292195291918972e-01 -5.01909634670171176e-02 -2.03878013578682390e-02 1.48482536095907280e-01 -1.36489714762459344e-02 -4.57497609961090457e-01 -1.08630729170686777e+02
+
+************************************************************
+************************************************************
+The real part of the CAP subspace matrix, onset=2500:
+************************************************************
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+
+************************************************************
+************************************************************
+The imaginary part of the CAP subspace matrix, onset=2500:
+************************************************************
+-7.63482750918478672e+01 -3.83190463799949743e+00 1.98454142014635551e+01 -5.09006404005380020e+00 -1.87834211507506730e+01 -3.67477375511769253e+01 1.51397528077340615e+00 1.77868066860678269e+01 -1.99914892156382562e+00 2.00926417493868703e+00
+-3.83190463799949743e+00 -5.94620046093530021e+01 -3.88608085009206317e+00 3.25124559084844833e+01 2.68605203899534146e+01 -1.46361875836450857e+01 -2.53391952138968080e+01 3.50278507116905891e+00 -1.06644987428336240e+01 -1.29685731395487047e+00
+1.98454142014635551e+01 -3.88608085009206317e+00 -5.05873222334281962e+01 2.79541137312355215e+00 9.66375829876611192e+00 1.57586011350230351e+01 -4.59525456197476423e-01 1.24215842355773987e+01 4.28626530951487394e-01 7.73764132307513286e-01
+-5.09006404005380020e+00 3.25124559084844833e+01 2.79541137312355215e+00 -5.53036884801122710e+01 -1.92390922614094961e+01 7.17135661993858520e+00 3.39962937859892822e+00 9.29713998973278333e-01 -1.33959418713040428e+01 -2.18858898888680320e-01
+-1.87834211507506730e+01 2.68605203899534146e+01 9.66375829876611192e+00 -1.92390922614094961e+01 -4.04556768843030881e+01 -1.21055663456872225e+01 2.91376554005395647e+01 1.11784736816150634e+01 5.27996214775105610e+00 -5.23284309987929880e-02
+-3.67477375511769253e+01 -1.46361875836450857e+01 1.57586011350230351e+01 7.17135661993858520e+00 -1.21055663456872225e+01 -5.86080444713218611e+01 -9.42353910169076414e+00 2.62405907301693375e+01 -2.56548707832639211e+00 -1.71053023509499386e-02
+1.51397528077340615e+00 -2.53391952138968080e+01 -4.59525456197476423e-01 3.39962937859892822e+00 2.91376554005395647e+01 -9.42353910169076414e+00 -4.09149155029464069e+01 -2.02929041308435076e+00 -2.25155716834729205e+01 1.36867692116427520e-01
+1.77868066860678269e+01 3.50278507116905891e+00 1.24215842355773987e+01 9.29713998973278333e-01 1.11784736816150634e+01 2.62405907301693375e+01 -2.02929041308435076e+00 -4.96748010821390125e+01 -5.73005465218867527e-01 -1.08113933863674232e-02
+-1.99914892156382562e+00 -1.06644987428336240e+01 4.28626530951487394e-01 -1.33959418713040428e+01 5.27996214775105610e+00 -2.56548707832639211e+00 -2.25155716834729205e+01 -5.73005465218867527e-01 -3.92434529512854056e+01 -4.39399334722754498e-01
+2.00926417493868703e+00 -1.29685731395487047e+00 7.73764132307513286e-01 -2.18858898888680320e-01 -5.23284309987929880e-02 -1.71053023509499386e-02 1.36867692116427520e-01 -1.08113933863674232e-02 -4.39399334722754498e-01 -1.00392202213645049e+02
+
+************************************************************
+************************************************************
+The real part of the CAP subspace matrix, onset=3000:
+************************************************************
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+
+************************************************************
+************************************************************
+The imaginary part of the CAP subspace matrix, onset=3000:
+************************************************************
+-7.00744438624870156e+01 -3.44921699756624989e+00 1.71883447578439856e+01 -4.75059679774232535e+00 -1.74440602203713198e+01 -3.40074028663179035e+01 1.49406616641222145e+00 1.68517085843124192e+01 -1.82519414393364054e+00 1.83800411453751167e+00
+-3.44921699756624989e+00 -5.44640553658452760e+01 -3.65416505972783634e+00 2.92697671519222453e+01 2.48891392626371228e+01 -1.35159545533611762e+01 -2.37494730085936077e+01 3.26122991119086780e+00 -1.01694231889094393e+01 -1.18511517780222175e+00
+1.71883447578439856e+01 -3.65416505972783634e+00 -4.50615808159285649e+01 2.61965976481228369e+00 9.31378628625521898e+00 1.52952372039703661e+01 -5.35308960634614195e-01 1.09217848175038874e+01 4.01978146986538665e-01 7.08975027051328199e-01
+-4.75059679774232535e+00 2.92697671519222453e+01 2.61965976481228369e+00 -4.92956853069002676e+01 -1.82100617110664444e+01 6.76081649149382891e+00 3.98240257033386458e+00 8.35900978576296638e-01 -1.21002155332325749e+01 -2.02235400201980442e-01
+-1.74440602203713198e+01 2.48891392626371228e+01 9.31378628625521898e+00 -1.82100617110664444e+01 -3.60980653741458752e+01 -1.11073842228344013e+01 2.65639986757622495e+01 1.05667875180392432e+01 5.55341573740981342e+00 -5.37200627571289627e-02
+-3.40074028663179035e+01 -1.35159545533611762e+01 1.52952372039703661e+01 6.76081649149382891e+00 -1.11073842228344013e+01 -5.25639632469956126e+01 -8.50409751031214789e+00 2.46387436172398608e+01 -2.60681502741400717e+00 -1.42079030296087781e-02
+1.49406616641222145e+00 -2.37494730085936077e+01 -5.35308960634614195e-01 3.98240257033386458e+00 2.65639986757622495e+01 -8.50409751031214789e+00 -3.65048958303630258e+01 -1.91264253068408729e+00 -2.07578648804191275e+01 1.25571003652178270e-01
+1.68517085843124192e+01 3.26122991119086780e+00 1.09217848175038874e+01 8.35900978576296638e-01 1.05667875180392432e+01 2.46387436172398608e+01 -1.91264253068408729e+00 -4.39869518290536092e+01 -5.62604314726246058e-01 -8.34255747391045473e-03
+-1.82519414393364054e+00 -1.01694231889094393e+01 4.01978146986538665e-01 -1.21002155332325749e+01 5.55341573740981342e+00 -2.60681502741400717e+00 -2.07578648804191275e+01 -5.62604314726246058e-01 -3.43939482608783251e+01 -4.19960113660675871e-01
+1.83800411453751167e+00 -1.18511517780222175e+00 7.08975027051328199e-01 -2.02235400201980442e-01 -5.37200627571289627e-02 -1.42079030296087781e-02 1.25571003652178270e-01 -8.34255747391045473e-03 -4.19960113660675871e-01 -9.28053795871274900e+01
+
+************************************************************
+************************************************************
+The real part of the CAP subspace matrix, onset=3500:
+************************************************************
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+
+************************************************************
+************************************************************
+The imaginary part of the CAP subspace matrix, onset=3500:
+************************************************************
+-6.42486606444329595e+01 -3.08799828837251678e+00 1.47154339610048819e+01 -4.41869450416630816e+00 -1.61407593829395104e+01 -3.13459635517985546e+01 1.47119718905533015e+00 1.59388710625285643e+01 -1.65715934368225204e+00 1.67476903840109070e+00
+-3.08799828837251678e+00 -4.98541568493124032e+01 -3.42424244629934549e+00 2.62113042667105134e+01 2.29791320047638052e+01 -1.24317273519852467e+01 -2.21961750696571940e+01 3.02760063070691920e+00 -9.68454217371974302e+00 -1.07862144007417715e+00
+1.47154339610048819e+01 -3.42424244629934549e+00 -4.00642341328431684e+01 2.44353364510779070e+00 8.92875907218845910e+00 1.47489588917011964e+01 -6.05785068750688271e-01 9.47095235722058604e+00 3.71552241815435114e-01 6.47087334731896613e-01
+-4.41869450416630816e+00 2.62113042667105134e+01 2.44353364510779070e+00 -4.38302505393165092e+01 -1.71447317406469821e+01 6.32903571366865503e+00 4.47765469598432464e+00 7.48392855737903151e-01 -1.08269514284791342e+01 -1.86578067649325829e-01
+-1.61407593829395104e+01 2.29791320047638052e+01 8.92875907218845910e+00 -1.71447317406469821e+01 -3.22638895017304463e+01 -1.01427918730245779e+01 2.40855299839984554e+01 9.93499695844157671e+00 5.71589089022964814e+00 -5.43114594523718963e-02
+-3.13459635517985546e+01 -1.24317273519852467e+01 1.47489588917011964e+01 6.32903571366865503e+00 -1.01427918730245779e+01 -4.71123164488031207e+01 -7.62496127322934925e+00 2.30019288661684911e+01 -2.60473315917506554e+00 -1.17757677622246908e-02
+1.47119718905533015e+00 -2.21961750696571940e+01 -6.05785068750688271e-01 4.47765469598432464e+00 2.40855299839984554e+01 -7.62496127322934925e+00 -3.25709972657675451e+01 -1.79687267845230614e+00 -1.90535329011560464e+01 1.14695200480756154e-01
+1.59388710625285643e+01 3.02760063070691920e+00 9.47095235722058604e+00 7.48392855737903151e-01 9.93499695844157671e+00 2.30019288661684911e+01 -1.79687267845230614e+00 -3.89264664905143576e+01 -5.48893890686560693e-01 -6.20246909905245412e-03
+-1.65715934368225204e+00 -9.68454217371974302e+00 3.71552241815435114e-01 -1.08269514284791342e+01 5.71589089022964814e+00 -2.60473315917506554e+00 -1.90535329011560464e+01 -5.48893890686560693e-01 -3.01252826751506930e+01 -3.99529570492090702e-01
+1.67476903840109070e+00 -1.07862144007417715e+00 6.47087334731896613e-01 -1.86578067649325829e-01 -5.43114594523718963e-02 -1.17757677622246908e-02 1.14695200480756154e-01 -6.20246909905245412e-03 -3.99529570492090702e-01 -8.56598740985294143e+01
+
+************************************************************
+************************************************************
+The real part of the CAP subspace matrix, onset=4000:
+************************************************************
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+
+************************************************************
+************************************************************
+The imaginary part of the CAP subspace matrix, onset=4000:
+************************************************************
+-5.87706526623956620e+01 -2.74811955108701866e+00 1.24260124683876878e+01 -4.09453584632809076e+00 -1.48738963351949067e+01 -2.87643089566902148e+01 1.44519460667144761e+00 1.50470253615076714e+01 -1.49476821971376905e+00 1.51979209158379591e+00
+-2.74811955108701866e+00 -4.55321538654055757e+01 -3.19639398793295371e+00 2.33364269245896736e+01 2.11316694688573321e+01 -1.13841883035323832e+01 -2.06783633828260562e+01 2.80167403024970429e+00 -9.20969123051676775e+00 -9.77559417161115718e-01
+1.24260124683876878e+01 -3.19639398793295371e+00 -3.54937648007689575e+01 2.26736994224891042e+00 8.51001393584452259e+00 1.41223240385181121e+01 -6.70282877944168964e-01 8.07264238478981078e+00 3.36721312109737103e-01 5.88224464350590726e-01
+-4.09453584632809076e+00 2.33364269245896736e+01 2.26736994224891042e+00 -3.88044689992990470e+01 -1.60503109747007713e+01 5.87990959039910344e+00 4.87965728943245125e+00 6.68040110902887285e-01 -9.57756465309442717e+00 -1.71937639456164193e-01
+-1.48738963351949067e+01 2.11316694688573321e+01 8.51001393584452259e+00 -1.60503109747007713e+01 -2.88272257407917500e+01 -9.22085484234662189e+00 2.17250743655190526e+01 9.28501523393362405e+00 5.76577284607936491e+00 -5.40959595611191224e-02
+-2.87643089566902148e+01 -1.13841883035323832e+01 1.41223240385181121e+01 5.87990959039910344e+00 -9.22085484234662189e+00 -4.21424519925142036e+01 -6.79546760434911690e+00 2.13387703435517579e+01 -2.56011602992235954e+00 -9.83405952355394242e-03
+1.44519460667144761e+00 -2.06783633828260562e+01 -6.70282877944168964e-01 4.87965728943245125e+00 2.17250743655190526e+01 -6.79546760434911690e+00 -2.89901536906132478e+01 -1.68272490755503057e+00 -1.74079211396544409e+01 1.04277269545153747e-01
+1.50470253615076714e+01 2.80167403024970429e+00 8.07264238478981078e+00 6.68040110902887285e-01 9.28501523393362405e+00 2.13387703435517579e+01 -1.68272490755503057e+00 -3.43799003612373042e+01 -5.32668641417323840e-01 -4.37001914329814868e-03
+-1.49476821971376905e+00 -9.20969123051676775e+00 3.36721312109737103e-01 -9.57756465309442717e+00 5.76577284607936491e+00 -2.56011602992235954e+00 -1.74079211396544409e+01 -5.32668641417323840e-01 -2.63263705151881808e+01 -3.78310790447466294e-01
+1.51979209158379591e+00 -9.77559417161115718e-01 5.88224464350590726e-01 -1.71937639456164193e-01 -5.40959595611191224e-02 -9.83405952355394242e-03 1.04277269545153747e-01 -4.37001914329814868e-03 -3.78310790447466294e-01 -7.88749154705916027e+01
+
+************************************************************
+************************************************************
+The real part of the CAP subspace matrix, onset=4500:
+************************************************************
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+
+************************************************************
+************************************************************
+The imaginary part of the CAP subspace matrix, onset=4500:
+************************************************************
+-5.35957719385194409e+01 -2.42945108351972960e+00 1.03190825093600509e+01 -3.77834471910999126e+00 -1.36441036379806775e+01 -2.62639584893401832e+01 1.41584047888679532e+00 1.41740570303430360e+01 -1.33772665230299381e+00 1.37310085130164050e+00
+-2.42945108351972960e+00 -4.14536062734004815e+01 -2.97074773343379039e+00 2.06443735346536030e+01 1.93480684629471895e+01 -1.03741999698735672e+01 -1.91952537594813251e+01 2.58311986584830189e+00 -8.74424209751575177e+00 -8.81966459393332070e-01
+1.03190825093600509e+01 -2.97074773343379039e+00 -3.13035094568606844e+01 2.09163847743522879e+00 8.05950661066226104e+00 1.34196195489427623e+01 -7.28120464425278779e-01 6.73266343618833485e+00 2.96885718947749455e-01 5.32418541408143264e-01
+-3.77834471910999126e+00 2.06443735346536030e+01 2.09163847743522879e+00 -3.41707227994408882e+01 -1.49338647357077310e+01 5.41755522981011595e+00 5.18430983960700864e+00 5.95764645276709803e-01 -8.35620079285413198e+00 -1.58306957814390581e-01
+-1.36441036379806775e+01 1.93480684629471895e+01 8.05950661066226104e+00 -1.49338647357077310e+01 -2.57202910546809100e+01 -8.34801977919638460e+00 1.94987165794744044e+01 8.62100105858130306e+00 5.70816733144118249e+00 -5.31122544861954565e-02
+-2.62639584893401832e+01 -1.03741999698735672e+01 1.34196195489427623e+01 5.41755522981011595e+00 -8.34801977919638460e+00 -3.75967358935201759e+01 -6.02172050932649228e+00 1.96621472172029392e+01 -2.47680561261980836e+00 -8.37108717073948086e-03
+1.41584047888679532e+00 -1.91952537594813251e+01 -7.28120464425278779e-01 5.18430983960700864e+00 1.94987165794744044e+01 -6.02172050932649228e+00 -2.57037239220542375e+01 -1.57022979799035545e+00 -1.58219813935275546e+01 9.43154940756884552e-02
+1.41740570303430360e+01 2.58311986584830189e+00 6.73266343618833485e+00 5.95764645276709803e-01 8.62100105858130306e+00 1.96621472172029392e+01 -1.57022979799035545e+00 -3.02835280405409648e+01 -5.14755001527364087e-01 -2.83210273679688302e-03
+-1.33772665230299381e+00 -8.74424209751575177e+00 2.96885718947749455e-01 -8.35620079285413198e+00 5.70816733144118249e+00 -2.47680561261980836e+00 -1.58219813935275546e+01 -5.14755001527364087e-01 -2.29387391363716979e+01 -3.56453192161372390e-01
+1.37310085130164050e+00 -8.81966459393332070e-01 5.32418541408143264e-01 -1.58306957814390581e-01 -5.31122544861954565e-02 -8.37108717073948086e-03 9.43154940756884552e-02 -2.83210273679688302e-03 -3.56453192161372390e-01 -7.24157988922556513e+01
+
+************************************************************
+************************************************************
+The real part of the CAP subspace matrix, onset=5000:
+************************************************************
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00 0.00000000000000000e+00
+
+************************************************************
+************************************************************
+The imaginary part of the CAP subspace matrix, onset=5000:
+************************************************************
+-4.87028704650020785e+01 -2.13185858941051709e+00 8.39323615898131337e+00 -3.47039916109973667e+00 -1.24523144849469567e+01 -2.38471422873644308e+01 1.38284030348641740e+00 1.33169642199942881e+01 -1.18577813347213645e+00 1.23463923004015896e+00
+-2.13185858941051709e+00 -3.75976686042817789e+01 -2.74750321645865636e+00 1.81342272160416833e+01 1.76298270686516503e+01 -9.40284591859184360e+00 -1.77463037671515877e+01 2.37151183268314147e+00 -8.28700780406385462e+00 -7.91821328530692758e-01
+8.39323615898131337e+00 -2.74750321645865636e+00 -2.74691755471046939e+01 1.91696719465311016e+00 7.58001313004959876e+00 1.26472336536623384e+01 -7.78496370248945690e-01 5.45952191967727618e+00 2.51582253924735211e-01 4.79662625991910119e-01
+-3.47039916109973667e+00 1.81342272160416833e+01 1.91696719465311016e+00 -2.99043735959251258e+01 -1.38026419925999271e+01 4.94643349092312956e+00 5.38909827052407131e+00 5.32483029273869146e-01 -7.16973548135150729e+00 -1.45641317146716853e-01
+-1.24523144849469567e+01 1.76298270686516503e+01 7.58001313004959876e+00 -1.38026419925999271e+01 -2.29003461484499695e+01 -7.52838509007669732e+00 1.74170636588196288e+01 7.94936173676285662e+00 5.55360411436626311e+00 -5.14379795930378914e-02
+-2.38471422873644308e+01 -9.40284591859184360e+00 1.26472336536623384e+01 4.94643349092312956e+00 -7.52838509007669732e+00 -3.34382770014530308e+01 -5.30702742575656750e+00 1.79890416236807056e+01 -2.36069406810020688e+00 -7.34668792381660586e-03
+1.38284030348641740e+00 -1.77463037671515877e+01 -7.78496370248945690e-01 5.38909827052407131e+00 1.74170636588196288e+01 -5.30702742575656750e+00 -2.26824791921676017e+01 -1.45887682568669863e+00 -1.42952871197157183e+01 8.47932955077583539e-02
+1.33169642199942881e+01 2.37151183268314147e+00 5.45952191967727618e+00 5.32483029273869146e-01 7.94936173676285662e+00 1.79890416236807056e+01 -1.45887682568669863e+00 -2.65915304366231950e+01 -4.95602597369675490e-01 -1.57348670808823239e-03
+-1.18577813347213645e+00 -8.28700780406385462e+00 2.51582253924735211e-01 -7.16973548135150729e+00 5.55360411436626311e+00 -2.36069406810020688e+00 -1.42952871197157183e+01 -4.95602597369675490e-01 -1.99223337385891490e+01 -3.34107329886066728e-01
+1.23463923004015896e+00 -7.91821328530692758e-01 4.79662625991910119e-01 -1.45641317146716853e-01 -5.14379795930378914e-02 -7.34668792381660586e-03 8.47932955077583539e-02 -1.57348670808823239e-03 -3.34107329886066728e-01 -6.62661812130603209e+01
+
+************************************************************
+  Printing results (es2es) ...  CPU 0.02 s  wall 0.10 s
+  Time of ADC calculation:  CPU 1511.89 s  wall 241.19 s
+--------------------------------------------------------------------------------
+================================================================================
+ 
+ --------------------------------------------------------------
+             Orbital Energies (a.u.) and Symmetries
+ --------------------------------------------------------------
+ 
+ Alpha MOs, Restricted
+ -- Occupied --                  
+-11.070 -11.065  -0.883  -0.623  -0.505  -0.410  -0.357  -0.223
+  1 A1    2 A1    3 A1    4 A1    1 B1    5 A1    2 B1    1 B2                 
+ -0.040
+  6 A1                                                                         
+ -- Virtual --                   
+  0.057   0.058   0.060   0.068   0.068   0.076   0.094   0.094
+  3 B1    2 B2    7 A1    4 B1    3 B2    8 A1    9 A1    5 B1                 
+  0.096   0.114   0.115   0.121   0.133   0.147   0.150   0.174
+  4 B2    6 B1    5 B2   10 A1   11 A1    7 B1    6 B2    8 B1                 
+  0.177   0.184   0.202   0.229   0.229   0.232   0.249   0.253
+  7 B2   12 A1   13 A1    9 B1   14 A1    8 B2   15 A1   10 B1                 
+  0.254   0.256   0.263   0.307   0.309   0.315   0.319   0.322
+  1 A2    9 B2   16 A1   17 A1   10 B2   11 B1    2 A2   18 A1                 
+  0.330   0.357   0.359   0.380   0.385   0.417   0.419   0.429
+ 11 B2   19 A1   12 B1   12 B2   13 B1   20 A1   13 B2   14 B1                 
+  0.437   0.459   0.486   0.505   0.512   0.525   0.538   0.577
+ 21 A1   22 A1   14 B2   23 A1   15 B1    3 A2   24 A1   16 B1                 
+  0.603   0.612   0.622   0.639   0.651   0.652   0.729   0.738
+ 25 A1   17 B1   26 A1    4 A2   27 A1   15 B2   28 A1   18 B1                 
+  0.792   0.834   0.853   0.893   0.900   0.913   0.917   0.936
+ 16 B2   19 B1   29 A1   30 A1   17 B2   31 A1   20 B1   21 B1                 
+  0.979   1.003   1.003   1.052   1.157   1.158   1.169   1.222
+ 32 A1   33 A1   18 B2   34 A1   35 A1   22 B1    5 A2   19 B2                 
+  1.261   1.292   1.295   1.301   1.338   1.359   1.366   1.369
+ 23 B1   36 A1    6 A2   20 B2   37 A1   21 B2   24 B1   38 A1                 
+  1.391   1.417   1.436   1.597   1.665   1.677   1.683   1.724
+ 22 B2    7 A2   25 B1   39 A1   23 B2   40 A1   26 B1   27 B1                 
+  1.787   1.838   1.853   1.907   2.018   2.173   2.198   2.258
+ 41 A1    8 A2   42 A1   28 B1   43 A1   44 A1   45 A1   29 B1                 
+  2.734   2.905   2.909   2.936   2.945   2.956   3.058   3.077
+ 24 B2   30 B1   46 A1   47 A1   25 B2   31 B1   32 B1   26 B2                 
+  3.145   3.153   3.178   3.225   3.260   3.292   3.337   3.387
+ 48 A1    9 A2   49 A1   33 B1   27 B2   34 B1   50 A1   10 A2                 
+  3.422   3.424   3.459   3.610   3.611   3.639   3.654   3.656
+ 11 A2   28 B2   51 A1   35 B1   52 A1   12 A2   29 B2   53 A1                 
+  3.669   3.702   3.776   3.791   3.826   3.836   3.844   3.865
+ 36 B1   54 A1   30 B2   13 A2   55 A1   14 A2   56 A1   37 B1                 
+  3.883   3.958   3.986   4.081   4.142   4.172   4.192   4.201
+ 31 B2   38 B1   39 B1   57 A1   32 B2   58 A1   40 B1   41 B1                 
+  4.223   4.273   4.276   4.387   4.387   4.421   4.458   4.489
+ 33 B2   59 A1   15 A2   34 B2   60 A1   42 B1   16 A2   61 A1                 
+  4.504   4.535   4.597   4.693   4.825   4.844   4.846   4.948
+ 35 B2   36 B2   43 B1   62 A1   17 A2   63 A1   44 B1   64 A1                 
+  4.962   5.017   5.104   5.234   5.251   5.326   5.382   5.485
+ 65 A1   37 B2   38 B2   66 A1   45 B1   46 B1   18 A2   67 A1                 
+  5.550   5.587   5.645   5.700   5.843   5.900   6.300   6.377
+ 68 A1   19 A2   47 B1   39 B2   48 B1   69 A1   49 B1   70 A1                 
+  6.507   6.854   7.058  13.182  15.708
+ 50 B1   71 A1   51 B1   72 A1   73 A1                                         
+ 
+ Beta MOs, Restricted
+ -- Occupied --                  
+-11.070 -11.065  -0.883  -0.623  -0.505  -0.410  -0.357  -0.223
+  1 A1    2 A1    3 A1    4 A1    1 B1    5 A1    2 B1    1 B2                 
+ -0.040
+  6 A1                                                                         
+ -- Virtual --                   
+  0.057   0.058   0.060   0.068   0.068   0.076   0.094   0.094
+  3 B1    2 B2    7 A1    4 B1    3 B2    8 A1    9 A1    5 B1                 
+  0.096   0.114   0.115   0.121   0.133   0.147   0.150   0.174
+  4 B2    6 B1    5 B2   10 A1   11 A1    7 B1    6 B2    8 B1                 
+  0.177   0.184   0.202   0.229   0.229   0.232   0.249   0.253
+  7 B2   12 A1   13 A1    9 B1   14 A1    8 B2   15 A1   10 B1                 
+  0.254   0.256   0.263   0.307   0.309   0.315   0.319   0.322
+  1 A2    9 B2   16 A1   17 A1   10 B2   11 B1    2 A2   18 A1                 
+  0.330   0.357   0.359   0.380   0.385   0.417   0.419   0.429
+ 11 B2   19 A1   12 B1   12 B2   13 B1   20 A1   13 B2   14 B1                 
+  0.437   0.459   0.486   0.505   0.512   0.525   0.538   0.577
+ 21 A1   22 A1   14 B2   23 A1   15 B1    3 A2   24 A1   16 B1                 
+  0.603   0.612   0.622   0.639   0.651   0.652   0.729   0.738
+ 25 A1   17 B1   26 A1    4 A2   27 A1   15 B2   28 A1   18 B1                 
+  0.792   0.834   0.853   0.893   0.900   0.913   0.917   0.936
+ 16 B2   19 B1   29 A1   30 A1   17 B2   31 A1   20 B1   21 B1                 
+  0.979   1.003   1.003   1.052   1.157   1.158   1.169   1.222
+ 32 A1   33 A1   18 B2   34 A1   35 A1   22 B1    5 A2   19 B2                 
+  1.261   1.292   1.295   1.301   1.338   1.359   1.366   1.369
+ 23 B1   36 A1    6 A2   20 B2   37 A1   21 B2   24 B1   38 A1                 
+  1.391   1.417   1.436   1.597   1.665   1.677   1.683   1.724
+ 22 B2    7 A2   25 B1   39 A1   23 B2   40 A1   26 B1   27 B1                 
+  1.787   1.838   1.853   1.907   2.018   2.173   2.198   2.258
+ 41 A1    8 A2   42 A1   28 B1   43 A1   44 A1   45 A1   29 B1                 
+  2.734   2.905   2.909   2.936   2.945   2.956   3.058   3.077
+ 24 B2   30 B1   46 A1   47 A1   25 B2   31 B1   32 B1   26 B2                 
+  3.145   3.153   3.178   3.225   3.260   3.292   3.337   3.387
+ 48 A1    9 A2   49 A1   33 B1   27 B2   34 B1   50 A1   10 A2                 
+  3.422   3.424   3.459   3.610   3.611   3.639   3.654   3.656
+ 11 A2   28 B2   51 A1   35 B1   52 A1   12 A2   29 B2   53 A1                 
+  3.669   3.702   3.776   3.791   3.826   3.836   3.844   3.865
+ 36 B1   54 A1   30 B2   13 A2   55 A1   14 A2   56 A1   37 B1                 
+  3.883   3.958   3.986   4.081   4.142   4.172   4.192   4.201
+ 31 B2   38 B1   39 B1   57 A1   32 B2   58 A1   40 B1   41 B1                 
+  4.223   4.273   4.276   4.387   4.387   4.421   4.458   4.489
+ 33 B2   59 A1   15 A2   34 B2   60 A1   42 B1   16 A2   61 A1                 
+  4.504   4.535   4.597   4.693   4.825   4.844   4.846   4.948
+ 35 B2   36 B2   43 B1   62 A1   17 A2   63 A1   44 B1   64 A1                 
+  4.962   5.017   5.104   5.234   5.251   5.326   5.382   5.485
+ 65 A1   37 B2   38 B2   66 A1   45 B1   46 B1   18 A2   67 A1                 
+  5.550   5.587   5.645   5.700   5.843   5.900   6.300   6.377
+ 68 A1   19 A2   47 B1   39 B2   48 B1   69 A1   49 B1   70 A1                 
+  6.507   6.854   7.058  13.182  15.708
+ 50 B1   71 A1   51 B1   72 A1   73 A1                                         
+ --------------------------------------------------------------
+ 
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -1.196491
+      2 C                     0.201091
+      3 H                     0.135325
+      4 H                     0.124176
+      5 H                     0.135325
+      6 H                     0.124176
+      7 H                    -0.523603
+  ----------------------------------------
+  Sum of atomic charges =    -1.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                -4.8032
+    Dipole Moment (Debye)
+         X       0.0000      Y       0.0000      Z      12.9717
+       Tot      12.9717
+    Quadrupole Moments (Debye-Ang)
+        XX     -20.4346     XY      -0.0000     YY     -24.7443
+        XZ       0.0000     YZ      -0.0000     ZZ     -66.0752
+    Octopole Moments (Debye-Ang^2)
+       XXX       0.0000    XXY       0.0000    XYY       0.0000
+       YYY       0.0000    XXZ      20.6524    XYZ       0.0000
+       YYZ      20.3898    XZZ       0.0000    YZZ       0.0000
+       ZZZ     183.6237
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX     -82.7912   XXXY      -0.0000   XXYY     -27.9412
+      XYYY      -0.0000   YYYY     -79.7303   XXXZ       0.0000
+      XXYZ       0.0000   XYYZ       0.0000   YYYZ       0.0000
+      XXZZ    -112.7660   XYZZ      -0.0000   YYZZ    -115.9395
+      XZZZ       0.0000   YZZZ       0.0000   ZZZZ    -950.5459
+ -----------------------------------------------------------------
+ Total job time:  326.43s(wall), 1610.12s(cpu) 
+ Thu Apr 28 20:38:23 2022
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using Q-Chem.  Have a nice day.  *
+        *                                                           *
+        *************************************************************
+
+
