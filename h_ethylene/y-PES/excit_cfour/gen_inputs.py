@@ -62,7 +62,7 @@ time xcfour
 	return string
 
 
-for R in np.linspace(2, 10, num=41, endpoint=True):
+for R in np.linspace(2, 10, num=121, endpoint=True):
 	input = open("input"+str(round(R,6)),"w")
 	input.write(infile(R))
 	os.chmod("input"+str(round(R,6)), 0o775)
